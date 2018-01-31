@@ -106,6 +106,7 @@ dialog_path = "/home/sanne/machine/data/CLEANED-BABI/babi-dialog"
 num_path = "/home/sanne/machine/data/CLEANED-BABI/babi-num"
 train_clean = "task1-trn.txt"
 test_clean = "task1-tst.txt"
+dev_clean = "task1-dev.txt"
 
 ### Training files
 fpath = os.path.join(path,trainfile)
@@ -127,7 +128,15 @@ readBabiLines(fpath,cpath, npath)
 cpath = os.path.join(dialog_path,test_clean)
 readBabiDialog(fpath,cpath)
 
+### development files
+fpath = os.path.join(path,devfile)
 
+cpath = os.path.join(line_path,dev_clean)
+npath = os.path.join(num_path,dev_clean)
+readBabiLines(fpath,cpath, npath)
+
+cpath = os.path.join(dialog_path,dev_clean)
+readBabiDialog(fpath,cpath)
 
 
 ### ### ### TASK 2: API refine
@@ -150,13 +159,14 @@ path = "/home/sanne/machine/data/BABI+raw/babi_plus"
 trainfile = "dialog-babi-task1-API-calls-trn.txt"
 testfile = "dialog-babi-task1-API-calls-tst.txt"
 #test_new_entities = "dialog-babi-task1-API-calls-tst-OOV.txt"
-#devfile = "dialog-babi-task1-API-calls-dev.txt"
+devfile = "dialog-babi-task1-API-calls-dev.txt"
 
 line_path = "/home/sanne/machine/data/CLEANED-BABI/babi+line"
 dialog_path = "/home/sanne/machine/data/CLEANED-BABI/babi+dialog"
 num_path = "/home/sanne/machine/data/CLEANED-BABI/babi+num"
 train_clean = "task1-trn.txt"
 test_clean = "task1-tst.txt"
+dev_clean = "task1-dev.txt"
 
 ### Training files
 fpath = os.path.join(path,trainfile)
@@ -178,3 +188,12 @@ readBabiLines(fpath,cpath, npath)
 cpath = os.path.join(dialog_path,test_clean)
 readBabiDialog(fpath,cpath)
 
+### development files
+fpath = os.path.join(path,devfile)
+
+cpath = os.path.join(line_path,dev_clean)
+npath = os.path.join(num_path,dev_clean)
+readBabiLines(fpath,cpath, npath)
+
+cpath = os.path.join(dialog_path,dev_clean)
+readBabiDialog(fpath,cpath)

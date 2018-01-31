@@ -1,0 +1,16 @@
+hi	hello what can i help you with today
+can you make a restaurant reservation in paris for two people in a moderate price range with italian cuisine	i'm on it
+<SILENCE>	ok let me look into some options for you
+<SILENCE>	api_call italian paris two moderate
+hello	hello what can i help you with today
+can you make a restaurant reservation for four people in bombay with indian cuisine	i'm on it
+<SILENCE>	which price range are looking for
+i am looking for a moderate restaurant	ok let me look into some options for you
+<SILENCE>	api_call indian bombay four moderate
+hello	hello what can i help you with today
+can you make a restaurant reservation with indian cuisine	i'm on it
+<SILENCE>	where should it be
+in paris	how many people would be in your party
+we will be two	which price range are looking for
+in a expensive price range please	ok let me look into some options for you
+<SILENCE>	api_call indian paris two expensive

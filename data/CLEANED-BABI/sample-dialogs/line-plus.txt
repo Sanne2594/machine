@@ -1,0 +1,15 @@
+hi	hello what can i help you with today
+i'd sorry yeah i'd like to book a table	i'm on it
+<SILENCE>	any preference on a type of cuisine
+with sorry yeah with british cuisine	where should it be
+in paris	how many people would be in your party
+we will be four	which price range are looking for
+in a expensive price range uhm sorry in a moderate price range please uhm yeah in a moderate price range please	ok let me look into some options for you
+<SILENCE>	api_call british paris four moderate
+hello	hello what can i help you with today
+can you uhm yeah can you book a table in madrid	i'm on it
+<SILENCE>	any preference on a type of cuisine
+with british cuisine	how many people would be in your party
+for two uhm yeah for two people please	which price range are looking for
+in a expensive sorry moderate price sorry yeah in a moderate price range please	ok let me look into some options for you
+<SILENCE>	api_call british madrid two moderate

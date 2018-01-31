@@ -1,0 +1,15 @@
+hi	hello what can i help you with today
+hi hello what can i help you with today  can you make a restaurant reservation with italian cuisine for six people in a cheap price range	i'm on it
+hi hello what can i help you with today can you make a restaurant reservation with italian cuisine for six people in a cheap price range i'm on it  <SILENCE>	where should it be
+hi hello what can i help you with today can you make a restaurant reservation with italian cuisine for six people in a cheap price range i'm on it <SILENCE> where should it be  rome please	ok let me look into some options for you
+hi hello what can i help you with today can you make a restaurant reservation with italian cuisine for six people in a cheap price range i'm on it <SILENCE> where should it be rome please ok let me look into some options for you  <SILENCE>	api_call italian rome six cheap
+ good morning	hello what can i help you with today
+good morning hello what can i help you with today  may i have a table with british cuisine in a cheap price range in london	i'm on it
+good morning hello what can i help you with today may i have a table with british cuisine in a cheap price range in london i'm on it  <SILENCE>	how many people would be in your party
+good morning hello what can i help you with today may i have a table with british cuisine in a cheap price range in london i'm on it <SILENCE> how many people would be in your party  for four please	ok let me look into some options for you
+good morning hello what can i help you with today may i have a table with british cuisine in a cheap price range in london i'm on it <SILENCE> how many people would be in your party for four please ok let me look into some options for you  <SILENCE>	api_call british london four cheap
+hi	hello what can i help you with today
+hi hello what can i help you with today  can you make a restaurant reservation with italian cuisine for six people in a cheap price range	i'm on it
+hi hello what can i help you with today can you make a restaurant reservation with italian cuisine for six people in a cheap price range i'm on it  <SILENCE>	where should it be
+hi hello what can i help you with today can you make a restaurant reservation with italian cuisine for six people in a cheap price range i'm on it <SILENCE> where should it be  rome please	ok let me look into some options for you
+hi hello what can i help you with today can you make a restaurant reservation with italian cuisine for six people in a cheap price range i'm on it <SILENCE> where should it be rome please ok let me look into some options for you  <SILENCE>	api_call italian rome six cheap
