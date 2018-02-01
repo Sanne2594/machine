@@ -73,3 +73,21 @@ loss, accuracy, seq_accuracy = evaluator.evaluate(seq2seq, test)
 
 print("Loss: %f, Word accuracy: %f, Sequence accuracy: %f" % (loss, accuracy, seq_accuracy))
 
+
+#########################################
+#Predict sentences
+
+f = open("data/CLEANED-BABI/sample-dialogs/dialog.txt","r")
+lines = f.readlines()
+f.close()
+
+predictor = Predictor(seq2seq, input_vocab, output_vocab)
+
+for line in lines:
+    input, exp = line.split("\t")
+
+    output = predictor.predict(input)
+
+    print("\n", input)
+    print("Output:", " ".join(output), "\nExpected:", exp)
+
