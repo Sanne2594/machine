@@ -69,5 +69,8 @@ predictor = Predictor(seq2seq, input_vocab, output_vocab)
 
 for line in lines:
     input,exp = line.split("\t")
+
     output = predictor.predict(input)
+
+    print("\n", input)
     print ("Output:", " ".join(output), "\nExpected:", exp)

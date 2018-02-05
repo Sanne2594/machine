@@ -23,6 +23,8 @@ parser.add_argument('--test_data', help='Path to test data')
 parser.add_argument('--cuda_device', default=0, type=int, help='set cuda device to use')
 parser.add_argument('--max_len', type=int, help='Maximum sequence length', default=50)
 parser.add_argument('--batch_size', type=int, help='Batch size', default=32)
+parser.add_argument('--predict', action='store_true')
+
 
 opt = parser.parse_args()
 
@@ -77,17 +79,30 @@ print("Loss: %f, Word accuracy: %f, Sequence accuracy: %f" % (loss, accuracy, se
 #########################################
 #Predict sentences
 
-f = open("data/CLEANED-BABI/sample-dialogs/dialog.txt","r")
-lines = f.readlines()
-f.close()
+if(opt.predict):
+    if("+dialog" in opt.test_data):
+        path = "data/CLEANED-BABI/sample-dialogs/dialog-plus.txt"
+        print("\nPredicting for Babi plus Dialogs\n")
+    elif("plus-dialog" in opt.test_data):
+        path = "data/CLEANED-BABI/sample-dialogs/dialog-plus.txt"
+        print("\nPredicting for Babi plus Dialogs\n")
+    elif("-dialog" in opt.test_data):
+        path = "data/CLEANED-BABI/sample-dialogs/dialog.txt"
+        print("\nPredicting for Babi Dialogs\n")
+    else:
+        print("Couldn't find matching sample dialog")
+        print(opt.test_data)
 
-predictor = Predictor(seq2seq, input_vocab, output_vocab)
 
-for line in lines:
-    input, exp = line.split("\t")
+    f = open(path,"r")
+    lines = f.readlines()
+    f.close()
 
-    output = predictor.predict(input)
+    predictor = Predictor(seq2seq, input_vocab, output_vocab)
 
-    print("\n", input)
-    print("Output:", " ".join(output), "\nExpected:", exp)
+    for line in lines:
+        input, exp = line.split("\t")
+        output = predictor.predict(input.split())
+        #print("\n", input)
+        print("Output:", " ".join(output), "\nExpected:", exp)
 
