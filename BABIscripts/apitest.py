@@ -1,10 +1,10 @@
 import os
 
 
-path = "/home/sanne/machine/data/CLEANED-BABI/babi+line"
+path = "/home/sanne/machine/data/CLEANED-BABI/babi-dialog"
 new_path = '/home/sanne/machine/data/CLEANED-BABI/api-only'
 
-file = "task1-tst.txt"
+file = "task1-dev.txt"
 
 
 def readBabiApi(fpath,api_path):
