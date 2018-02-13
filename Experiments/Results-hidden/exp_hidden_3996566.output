@@ -1,0 +1,55 @@
+Hidden state size experiments with: 100,200,300,400,500, and 600
+start training with 100 hidden nodes
+Cuda device set to 0
+Cuda device set to 0
+Loading checkpoints from model-exp-hid/acc_0.93_seq_acc_0.83_ppl_1.14_s3700
+Loss: 1.144570, Word accuracy: 0.929298, Sequence accuracy: 0.834248
+Cuda device set to 0
+Loading checkpoints from model-exp-hid/acc_0.93_seq_acc_0.83_ppl_1.14_s3700
+Loss: 2.662393, Word accuracy: 0.486500, Sequence accuracy: 0.003000
+
+start training with 200 hidden nodes
+Cuda device set to 1
+Cuda device set to 1
+Loading checkpoints from model-exp-hid/acc_0.93_seq_acc_0.83_ppl_1.14_s3780
+Loss: 1.143246, Word accuracy: 0.930629, Sequence accuracy: 0.834248
+Cuda device set to 1
+Loading checkpoints from model-exp-hid/acc_0.93_seq_acc_0.83_ppl_1.14_s3780
+Loss: 2.644408, Word accuracy: 0.495500, Sequence accuracy: 0.003000
+
+start training with 300 hidden nodes
+Cuda device set to 1
+Cuda device set to 1
+Loading checkpoints from model-exp-hid/acc_0.93_seq_acc_0.83_ppl_1.14_s3780
+Loss: 1.143246, Word accuracy: 0.930629, Sequence accuracy: 0.834248
+Cuda device set to 1
+Loading checkpoints from model-exp-hid/acc_0.93_seq_acc_0.83_ppl_1.14_s3780
+Loss: 2.644408, Word accuracy: 0.495500, Sequence accuracy: 0.003000
+
+start training with 400 hidden nodes
+Cuda device set to 1
+Cuda device set to 1
+Loading checkpoints from model-exp-hid/acc_0.98_seq_acc_0.87_ppl_1.04_s3780
+Loss: 1.038278, Word accuracy: 0.981573, Sequence accuracy: 0.866500
+Cuda device set to 1
+Loading checkpoints from model-exp-hid/acc_0.98_seq_acc_0.87_ppl_1.04_s3780
+Loss: 1.313590, Word accuracy: 0.866333, Sequence accuracy: 0.198000
+
+start training with 500 hidden nodes
+Cuda device set to 1
+Cuda device set to 1
+Loading checkpoints from model-exp-hid/acc_1.00_seq_acc_1.00_ppl_1.00_s3780
+Loss: 1.000004, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Cuda device set to 1
+Loading checkpoints from model-exp-hid/acc_1.00_seq_acc_1.00_ppl_1.00_s3780
+Loss: 1.000017, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+
+start training with 600 hidden nodes
+Cuda device set to 1
+Cuda device set to 1
+Loading checkpoints from model-exp-hid/acc_1.00_seq_acc_1.00_ppl_1.00_s3780
+Loss: 1.000002, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Cuda device set to 1
+Loading checkpoints from model-exp-hid/acc_1.00_seq_acc_1.00_ppl_1.00_s3780
+Loss: 1.000012, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+\n

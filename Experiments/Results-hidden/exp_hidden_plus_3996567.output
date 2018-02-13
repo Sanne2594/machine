@@ -1,0 +1,83 @@
+Hidden state size experiments with: 100,200,300,400,500, and 600 for babi plus model
+start training with 100 hidden nodes
+Cuda device set to 0
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_0.95_seq_acc_0.89_ppl_1.09_s3360
+Loss: 1.091940, Word accuracy: 0.954457, Sequence accuracy: 0.892996
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_0.95_seq_acc_0.89_ppl_1.09_s3360
+
+start training with 200 hidden nodes
+Cuda device set to 0
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_0.96_seq_acc_0.89_ppl_1.08_s2900
+Loss: 1.080730, Word accuracy: 0.959566, Sequence accuracy: 0.893182
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_0.96_seq_acc_0.89_ppl_1.08_s2900
+
+start training with 300 hidden nodes
+Cuda device set to 0
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_0.97_seq_acc_0.89_ppl_1.08_s3360
+Loss: 1.079497, Word accuracy: 0.965034, Sequence accuracy: 0.893368
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_0.97_seq_acc_0.89_ppl_1.08_s3360
+
+start training with 400 hidden nodes
+Cuda device set to 0
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_0.97_seq_acc_0.89_ppl_1.07_s3360
+Loss: 1.071640, Word accuracy: 0.970862, Sequence accuracy: 0.893740
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_0.97_seq_acc_0.89_ppl_1.07_s3360
+
+start training with 500 hidden nodes
+Cuda device set to 0
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_1.00_seq_acc_0.99_ppl_1.01_s3360
+Loss: 1.006843, Word accuracy: 0.998691, Sequence accuracy: 0.992012
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_1.00_seq_acc_0.99_ppl_1.01_s3360
+
+start training with 600 hidden nodes
+Cuda device set to 0
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s3300
+Loss: 1.001653, Word accuracy: 0.999820, Sequence accuracy: 0.999628
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s3300
+
+\n
+
+[sanne@gcn1 machine]$ ./dingen.sh
+
+100 hidden nodes
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_0.95_seq_acc_0.89_ppl_1.09_s3360
+Loss: 2.675237, Word accuracy: 0.487291, Sequence accuracy: 0.001733
+
+200 hidden nodes
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_0.96_seq_acc_0.89_ppl_1.08_s2900
+Loss: 2.393779, Word accuracy: 0.545061, Sequence accuracy: 0.003466
+
+300 hidden nodes
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_0.97_seq_acc_0.89_ppl_1.08_s3360
+Loss: 2.221110, Word accuracy: 0.612940, Sequence accuracy: 0.010399
+
+400 hidden nodes
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_0.97_seq_acc_0.89_ppl_1.07_s3360
+Loss: 1.938144, Word accuracy: 0.687753, Sequence accuracy: 0.022530
+
+500 hidden nodes
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_1.00_seq_acc_0.99_ppl_1.01_s3360
+Loss: 1.044233, Word accuracy: 0.987868, Sequence accuracy: 0.927210
+
+600 hidden nodes
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s3300
+Loss: 1.001110, Word accuracy: 0.999711, Sequence accuracy: 0.998267
+

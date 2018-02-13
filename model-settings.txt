@@ -1,0 +1,115 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                            %%
+%%                              Temp final model                              %%
+%%                                                                            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+model-exp-hid/acc_1.00_seq_acc_1.00_ppl_1.00_s3780
+
+Characteristics:
+attention=True, 
+batch_size=32, 
+bidirectional=False, 
+cuda_device=1, 
+dev='data/CLEANED-BABI/babi-dialog/task1-dev.txt', 
+dropout_p_decoder=0.2, 
+dropout_p_encoder=0.2, 
+embedding_size=128, 
+epochs=20, hidden_size=500, 
+load_checkpoint=None, 
+log_level='info', 
+lr=0.001, max_len=75, 
+n_layers=1, optim=None, 
+output_dir='model-exp-hid/', 
+print_every=200, 
+resume=False, 
+rnn_cell='lstm', 
+save_every=100, 
+src_vocab=50000, 
+teacher_forcing_ratio=0.5, 
+tgt_vocab=50000, 
+train='data/CLEANED-BABI/babi-dialog/task1-trn.txt'
+Optimizer: <torch.optim.adam.Adam object at 0x2b670c000710>, Scheduler: None
+
+Finished epoch 1: Train Perplexity: 13.4975, Dev Perplexity: 3.5729, Accuracy: 0.6455, Sequence Accuracy: 0.5436
+ Finished epoch 2: Train Perplexity: 3.1512, Dev Perplexity: 2.2832, Accuracy: 0.7372, Sequence Accuracy: 0.6314
+ Finished epoch 3: Train Perplexity: 4.0528, Dev Perplexity: 2.4538, Accuracy: 0.7325, Sequence Accuracy: 0.6083
+ Finished epoch 4: Train Perplexity: 2.0790, Dev Perplexity: 1.4953, Accuracy: 0.8448, Sequence Accuracy: 0.7016
+ Finished epoch 5: Train Perplexity: 1.6789, Dev Perplexity: 1.8844, Accuracy: 0.8376, Sequence Accuracy: 0.6751
+ Finished epoch 6: Train Perplexity: 1.5172, Dev Perplexity: 1.7191, Accuracy: 0.8457, Sequence Accuracy: 0.6615
+ Finished epoch 7: Train Perplexity: 1.4873, Dev Perplexity: 1.1882, Accuracy: 0.9255, Sequence Accuracy: 0.8256
+ Finished epoch 8: Train Perplexity: 1.2106, Dev Perplexity: 1.1523, Accuracy: 0.9286, Sequence Accuracy: 0.8346
+ Finished epoch 9: Train Perplexity: 1.1988, Dev Perplexity: 1.1452, Accuracy: 0.9331, Sequence Accuracy: 0.8336
+Finished epoch 10: Train Perplexity: 1.1922, Dev Perplexity: 1.1304, Accuracy: 0.9463, Sequence Accuracy: 0.8367
+Finished epoch 11: Train Perplexity: 1.1204, Dev Perplexity: 1.0815, Accuracy: 0.9622, Sequence Accuracy: 0.8397
+Finished epoch 12: Train Perplexity: 1.1034, Dev Perplexity: 1.0944, Accuracy: 0.9628, Sequence Accuracy: 0.8391
+Finished epoch 13: Train Perplexity: 1.0661, Dev Perplexity: 1.0488, Accuracy: 0.9785, Sequence Accuracy: 0.8658
+Finished epoch 14: Train Perplexity: 1.0191, Dev Perplexity: 1.0144, Accuracy: 0.9988, Sequence Accuracy: 0.9990
+Finished epoch 15: Train Perplexity: 1.0035, Dev Perplexity: 1.0000, Accuracy: 1.0000, Sequence Accuracy: 1.0000
+Finished epoch 16: Train Perplexity: 1.0016, Dev Perplexity: 1.0000, Accuracy: 1.0000, Sequence Accuracy: 1.0000
+Finished epoch 17: Train Perplexity: 1.0000, Dev Perplexity: 1.0000, Accuracy: 1.0000, Sequence Accuracy: 1.0000
+Finished epoch 18: Train Perplexity: 1.0000, Dev Perplexity: 1.0000, Accuracy: 1.0000, Sequence Accuracy: 1.0000
+Finished epoch 19: Train Perplexity: 1.0000, Dev Perplexity: 1.0000, Accuracy: 1.0000, Sequence Accuracy: 1.0000
+Finished epoch 20: Train Perplexity: 1.0000, Dev Perplexity: 1.0000, Accuracy: 1.0000, Sequence Accuracy: 1.0000
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                            %%
+%%                            Temp final plus model                           %%
+%%                                                                            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+model-exp-hid-plus/acc_1.00_seq_acc_0.99_ppl_1.01_s3360
+
+With chracteristics:
+
+attention=True, 
+batch_size=32, 
+bidirectional=False, 
+cuda_device=0, 
+dev='data/CLEANED-BABI/babi+dialog/task1-dev.txt', 
+dropout_p_decoder=0.2, 
+dropout_p_encoder=0.2, 
+embedding_size=128, 
+epochs=20, 
+hidden_size=500, 
+load_checkpoint=None, 
+log_level='info', 
+lr=0.001, 
+max_len=75, 
+n_layers=1, 
+optim=None, 
+output_dir='model-exp-hid-plus/', 
+print_every=200, 
+resume=False, 
+rnn_cell='lstm', 
+save_every=100, 
+src_vocab=50000, 
+teacher_forcing_ratio=0.5, 
+tgt_vocab=50000, 
+train='data/CLEANED-BABI/babi+dialog/task1-trn.txt'
+Optimizer: <torch.optim.adam.Adam object at 0x2b0a189035f8>, Scheduler: None
+
+Finished epoch 1: Train Perplexity: 11.1492, Dev Perplexity: 3.0911, Accuracy: 0.6134, Sequence Accuracy: 0.4523
+ Finished epoch 2: Train Perplexity: 2.9550, Dev Perplexity: 1.8518, Accuracy: 0.7989, Sequence Accuracy: 0.6844
+ Finished epoch 3: Train Perplexity: 1.7146, Dev Perplexity: 1.7494, Accuracy: 0.7956, Sequence Accuracy: 0.6645
+ Finished epoch 4: Train Perplexity: 1.4526, Dev Perplexity: 1.3598, Accuracy: 0.8936, Sequence Accuracy: 0.8235
+ Finished epoch 5: Train Perplexity: 1.3145, Dev Perplexity: 1.2950, Accuracy: 0.9031, Sequence Accuracy: 0.8248
+ Finished epoch 6: Train Perplexity: 1.1600, Dev Perplexity: 1.1357, Accuracy: 0.9474, Sequence Accuracy: 0.8837
+ Finished epoch 7: Train Perplexity: 1.1046, Dev Perplexity: 1.0933, Accuracy: 0.9556, Sequence Accuracy: 0.8930
+ Finished epoch 8: Train Perplexity: 1.0899, Dev Perplexity: 1.0953, Accuracy: 0.9547, Sequence Accuracy: 0.8932
+ Finished epoch 9: Train Perplexity: 1.0948, Dev Perplexity: 1.1030, Accuracy: 0.9532, Sequence Accuracy: 0.8923
+Finished epoch 10: Train Perplexity: 1.0986, Dev Perplexity: 1.0927, Accuracy: 0.9550, Sequence Accuracy: 0.8936
+Finished epoch 11: Train Perplexity: 1.0881, Dev Perplexity: 1.0931, Accuracy: 0.9600, Sequence Accuracy: 0.8930
+Finished epoch 12: Train Perplexity: 1.0809, Dev Perplexity: 1.0989, Accuracy: 0.9670, Sequence Accuracy: 0.8936
+Finished epoch 13: Train Perplexity: 1.0606, Dev Perplexity: 1.0607, Accuracy: 0.9732, Sequence Accuracy: 0.8975
+Finished epoch 14: Train Perplexity: 1.0436, Dev Perplexity: 1.0446, Accuracy: 0.9858, Sequence Accuracy: 0.9249
+Finished epoch 15: Train Perplexity: 1.0359, Dev Perplexity: 1.0537, Accuracy: 0.9882, Sequence Accuracy: 0.9420
+Finished epoch 16: Train Perplexity: 1.0163, Dev Perplexity: 1.0228, Accuracy: 0.9926, Sequence Accuracy: 0.9549
+Finished epoch 17: Train Perplexity: 1.0113, Dev Perplexity: 1.0196, Accuracy: 0.9930, Sequence Accuracy: 0.9513
+Finished epoch 18: Train Perplexity: 1.0128, Dev Perplexity: 1.0185, Accuracy: 0.9936, Sequence Accuracy: 0.9550
+Finished epoch 19: Train Perplexity: 1.0067, Dev Perplexity: 1.0293, Accuracy: 0.9967, Sequence Accuracy: 0.9907
+Finished epoch 20: Train Perplexity: 1.0028, Dev Perplexity: 1.0068, Accuracy: 0.9987, Sequence Accuracy: 0.9920
+
+
+
+
+
