@@ -1,0 +1,89 @@
+Make the table of Lemon
+start training babi
+Cuda device set to 0
+start training babi plus
+Cuda device set to 0
+
+ \nStart experiments 
+
+babi on babi
+Cuda device set to 0
+Loading checkpoints from model-comp/acc_1.00_seq_acc_1.00_ppl_1.00_s3780
+Loss: 1.000038, Word accuracy: 0.999977, Sequence accuracy: 0.999834
+Cuda device set to 0
+Loading checkpoints from model-comp/acc_1.00_seq_acc_1.00_ppl_1.00_s3780
+Loss: 1.000261, Word accuracy: 0.999833, Sequence accuracy: 0.999000
+
+babi plus on babi plus
+Cuda device set to 0
+Loading checkpoints from model-comp-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s3780
+Loss: 2.378412, Word accuracy: 0.923085, Sequence accuracy: 0.880550
+Cuda device set to 0
+Loading checkpoints from model-comp-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s3780
+Loss: 3.945438, Word accuracy: 0.901502, Sequence accuracy: 0.516464
+
+babi on babi plus
+Cuda device set to 0
+Loading checkpoints from model-comp/acc_1.00_seq_acc_1.00_ppl_1.00_s3780
+Loss: 2.033832, Word accuracy: 0.952942, Sequence accuracy: 0.909530
+Cuda device set to 0
+Loading checkpoints from model-comp/acc_1.00_seq_acc_1.00_ppl_1.00_s3780
+Loss: 2.896859, Word accuracy: 0.912189, Sequence accuracy: 0.544194
+
+babi plus on babi
+Cuda device set to 0
+Loading checkpoints from model-comp-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s3780
+Loss: 1.000005, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Cuda device set to 0
+Loading checkpoints from model-comp-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s3780
+Loss: 1.000019, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+
+
+
+Comparing models:
+
+
+babi plus on babi plus training
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_1.00_seq_acc_0.99_ppl_1.01_s3360
+Loss: 1.006843, Word accuracy: 0.998691, Sequence accuracy: 0.992012
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_1.00_seq_acc_0.99_ppl_1.01_s3360
+Loss: 1.044233, Word accuracy: 0.987868, Sequence accuracy: 0.927210
+
+babi plus on babi plus final
+Cuda device set to 0
+Loading checkpoints from model-comp-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s3780
+Loss: 2.378412, Word accuracy: 0.923085, Sequence accuracy: 0.880550
+Cuda device set to 0
+Loading checkpoints from model-comp-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s3780
+Loss: 3.945438, Word accuracy: 0.901502, Sequence accuracy: 0.516464
+
+
+
+
+redoing with training model:
+
+babi plus on babi
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_1.00_seq_acc_0.99_ppl_1.01_s3360
+Loss: 1.003531, Word accuracy: 0.998417, Sequence accuracy: 0.988529
+
+Loading checkpoints from model-exp-hid-plus/acc_1.00_seq_acc_0.99_ppl_1.01_s3360
+Loss: 1.026006, Word accuracy: 0.988500, Sequence accuracy: 0.931000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
