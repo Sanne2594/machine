@@ -1,0 +1,19 @@
+\n all the test sets
+babi plus on babi plus - train set 
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_1.00_seq_acc_0.99_ppl_1.01_s3360
+Loss: 1.001541, Word accuracy: 0.999381, Sequence accuracy: 0.995512
+babi plus on babi plus - dev set 
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_1.00_seq_acc_0.99_ppl_1.01_s3360
+Loss: 1.006843, Word accuracy: 0.998691, Sequence accuracy: 0.992012
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_1.00_seq_acc_0.99_ppl_1.01_s3360
+Loss: 1.044233, Word accuracy: 0.987868, Sequence accuracy: 0.927210
+babi plus on babi plus - test set 
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_1.00_seq_acc_0.99_ppl_1.01_s3360
+Loss: 1.004656, Word accuracy: 0.998870, Sequence accuracy: 0.993111
+Cuda device set to 0
+Loading checkpoints from model-exp-hid-plus/acc_1.00_seq_acc_0.99_ppl_1.01_s3360
+Loss: 1.034506, Word accuracy: 0.989756, Sequence accuracy: 0.940199

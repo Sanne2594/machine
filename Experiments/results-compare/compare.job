@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH -n 1
+#SBATCH -t 01:00:00
+#SBATCH -p gpu
+#SBATCH -o output/exp_hidden_%A.output
+#SBATCH -e output/exp_hidden_%A.error
+
+module load python/3.5.2
+module load cuda/8.0.44
+module load cudnn/8.0-v6.0
+
+./compare.sh
+

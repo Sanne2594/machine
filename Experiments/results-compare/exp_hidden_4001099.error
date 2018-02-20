@@ -1,0 +1,85 @@
+2018-02-14 13:30:50,989 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi+dialog/task1-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=20, hidden_size=500, load_checkpoint=None, log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-comp-plus/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi+dialog/task1-trn.txt')
+2018-02-14 13:30:56,004 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2b8dd6e3b7b8>, Scheduler: None
+2018-02-14 13:31:20,921 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 11.7616, Dev Perplexity: 4.5783, Accuracy: 0.6382, Sequence Accuracy: 0.5820
+2018-02-14 13:31:45,535 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 2.4202, Dev Perplexity: 1.7374, Accuracy: 0.8158, Sequence Accuracy: 0.7509
+2018-02-14 13:31:48,992 seq2seq.trainer.supervised_trainer INFO     Progress: 11%, Train Perplexity: 12.4833
+2018-02-14 13:32:10,371 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 1.5696, Dev Perplexity: 1.7958, Accuracy: 0.8503, Sequence Accuracy: 0.7866
+2018-02-14 13:32:15,640 seq2seq.trainer.supervised_trainer INFO     Progress: 17%, Train Perplexity: 1.4575
+2018-02-14 13:32:29,754 seq2seq.trainer.supervised_trainer INFO     Finished epoch 4: Train Perplexity: 1.3887, Dev Perplexity: 1.2305, Accuracy: 0.9270, Sequence Accuracy: 0.8605
+2018-02-14 13:32:42,068 seq2seq.trainer.supervised_trainer INFO     Progress: 23%, Train Perplexity: 1.2056
+2018-02-14 13:32:54,514 seq2seq.trainer.supervised_trainer INFO     Finished epoch 5: Train Perplexity: 1.1500, Dev Perplexity: 1.1031, Accuracy: 0.9550, Sequence Accuracy: 0.8943
+2018-02-14 13:33:08,636 seq2seq.trainer.supervised_trainer INFO     Progress: 29%, Train Perplexity: 1.0960
+2018-02-14 13:33:19,207 seq2seq.trainer.supervised_trainer INFO     Finished epoch 6: Train Perplexity: 1.0967, Dev Perplexity: 1.1040, Accuracy: 0.9552, Sequence Accuracy: 0.8924
+2018-02-14 13:33:38,216 seq2seq.trainer.supervised_trainer INFO     Finished epoch 7: Train Perplexity: 1.1015, Dev Perplexity: 1.0940, Accuracy: 0.9552, Sequence Accuracy: 0.8928
+2018-02-14 13:33:39,410 seq2seq.trainer.supervised_trainer INFO     Progress: 35%, Train Perplexity: 1.0938
+2018-02-14 13:34:03,067 seq2seq.trainer.supervised_trainer INFO     Finished epoch 8: Train Perplexity: 1.0917, Dev Perplexity: 1.0952, Accuracy: 0.9544, Sequence Accuracy: 0.8926
+2018-02-14 13:34:06,014 seq2seq.trainer.supervised_trainer INFO     Progress: 41%, Train Perplexity: 1.1005
+2018-02-14 13:34:26,939 seq2seq.trainer.supervised_trainer INFO     Finished epoch 9: Train Perplexity: 1.0967, Dev Perplexity: 1.1423, Accuracy: 0.9484, Sequence Accuracy: 0.8766
+2018-02-14 13:34:31,657 seq2seq.trainer.supervised_trainer INFO     Progress: 47%, Train Perplexity: 1.0817
+2018-02-14 13:34:46,476 seq2seq.trainer.supervised_trainer INFO     Finished epoch 10: Train Perplexity: 1.0770, Dev Perplexity: 1.0897, Accuracy: 0.9665, Sequence Accuracy: 0.8936
+2018-02-14 13:34:58,737 seq2seq.trainer.supervised_trainer INFO     Progress: 53%, Train Perplexity: 1.0872
+2018-02-14 13:35:11,337 seq2seq.trainer.supervised_trainer INFO     Finished epoch 11: Train Perplexity: 1.0807, Dev Perplexity: 1.0503, Accuracy: 0.9782, Sequence Accuracy: 0.9006
+2018-02-14 13:35:25,153 seq2seq.trainer.supervised_trainer INFO     Progress: 59%, Train Perplexity: 1.0480
+2018-02-14 13:35:36,054 seq2seq.trainer.supervised_trainer INFO     Finished epoch 12: Train Perplexity: 1.0416, Dev Perplexity: 1.0472, Accuracy: 0.9848, Sequence Accuracy: 0.9131
+2018-02-14 13:35:55,186 seq2seq.trainer.supervised_trainer INFO     Finished epoch 13: Train Perplexity: 1.0361, Dev Perplexity: 1.0935, Accuracy: 0.9862, Sequence Accuracy: 0.9595
+2018-02-14 13:35:56,070 seq2seq.trainer.supervised_trainer INFO     Progress: 65%, Train Perplexity: 1.0336
+2018-02-14 13:36:19,782 seq2seq.trainer.supervised_trainer INFO     Finished epoch 14: Train Perplexity: 1.0173, Dev Perplexity: 1.0315, Accuracy: 0.9931, Sequence Accuracy: 0.9675
+2018-02-14 13:36:22,484 seq2seq.trainer.supervised_trainer INFO     Progress: 71%, Train Perplexity: 1.0168
+2018-02-14 13:36:44,664 seq2seq.trainer.supervised_trainer INFO     Finished epoch 15: Train Perplexity: 1.0121, Dev Perplexity: 1.0060, Accuracy: 0.9992, Sequence Accuracy: 0.9957
+2018-02-14 13:36:49,218 seq2seq.trainer.supervised_trainer INFO     Progress: 77%, Train Perplexity: 1.0086
+2018-02-14 13:37:04,215 seq2seq.trainer.supervised_trainer INFO     Finished epoch 16: Train Perplexity: 1.0026, Dev Perplexity: 1.0016, Accuracy: 0.9996, Sequence Accuracy: 0.9972
+2018-02-14 13:37:15,843 seq2seq.trainer.supervised_trainer INFO     Progress: 83%, Train Perplexity: 1.0003
+2018-02-14 13:37:29,194 seq2seq.trainer.supervised_trainer INFO     Finished epoch 17: Train Perplexity: 1.0001, Dev Perplexity: 1.0009, Accuracy: 0.9998, Sequence Accuracy: 0.9989
+2018-02-14 13:37:42,396 seq2seq.trainer.supervised_trainer INFO     Progress: 89%, Train Perplexity: 1.0029
+2018-02-14 13:37:53,931 seq2seq.trainer.supervised_trainer INFO     Finished epoch 18: Train Perplexity: 1.0058, Dev Perplexity: 1.0103, Accuracy: 0.9986, Sequence Accuracy: 0.9978
+2018-02-14 13:38:13,166 seq2seq.trainer.supervised_trainer INFO     Finished epoch 19: Train Perplexity: 1.0010, Dev Perplexity: 1.0005, Accuracy: 0.9999, Sequence Accuracy: 0.9994
+2018-02-14 13:38:13,623 seq2seq.trainer.supervised_trainer INFO     Progress: 95%, Train Perplexity: 1.0027
+2018-02-14 13:38:42,801 seq2seq.trainer.supervised_trainer INFO     Finished epoch 20: Train Perplexity: 1.0000, Dev Perplexity: 1.0006, Accuracy: 0.9999, Sequence Accuracy: 0.9994
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b8dd6e3b518>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b8dd6e3b438>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2b8dd6e3b470>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b7fd8945908>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b7fd8945400>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2b7fd8945d68>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b23ec5bb400>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b23ec5bb908>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2b23ec5bbbe0>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b9865df0668>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b9865df0400>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2b9865df0208>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'

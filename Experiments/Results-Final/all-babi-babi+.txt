@@ -1,0 +1,13 @@
+15/02/2018 22:45:26 \n
+\nbabi on babi plus
+Cuda device set to 0
+Loading checkpoints from model-final/acc_1.00_seq_acc_1.00_ppl_1.00_s4600
+Loss: 2.249775, Word accuracy: 0.925381, Sequence accuracy: 0.881400
+Cuda device set to 0
+Loading checkpoints from model-final/acc_1.00_seq_acc_1.00_ppl_1.00_s4600
+Loss: 2.177283, Word accuracy: 0.927801, Sequence accuracy: 0.928497
+Cuda device set to 0
+Loading checkpoints from model-final/acc_1.00_seq_acc_1.00_ppl_1.00_s4600
+Loss: 3.099656, Word accuracy: 0.901993, Sequence accuracy: 0.508306
+
+

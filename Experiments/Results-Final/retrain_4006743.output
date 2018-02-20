@@ -1,0 +1,115 @@
+15/02/2018 13:54:08
+
+Training on babi
+Cuda device set to 0
+Train-scores
+Cuda device set to 0
+Loading checkpoints from model-final/acc_1.00_seq_acc_1.00_ppl_1.00_s4600
+Loss: 1.000002, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+
+Training on babi+
+Cuda device set to 0
+Train-scores
+Cuda device set to 0
+Loading checkpoints from model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000
+Loss: 1.000003, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+
+
+All the test sets
+
+babi on babi
+Cuda device set to 0
+Loading checkpoints from model-final/acc_1.00_seq_acc_1.00_ppl_1.00_s4600
+Loss: 1.000011, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Cuda device set to 0
+Loading checkpoints from model-final/acc_1.00_seq_acc_1.00_ppl_1.00_s4600
+Loss: 1.000055, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+
+babi plus on babi plus - test set 
+Cuda device set to 0
+Loading checkpoints from model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000
+Loss: 1.000130, Word accuracy: 0.999974, Sequence accuracy: 0.999814
+Cuda device set to 0
+Loading checkpoints from model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000
+Loss: 1.001389, Word accuracy: 0.999723, Sequence accuracy: 0.998339
+
+babi on babi plus
+Cuda device set to 0
+Loading checkpoints from model-final/acc_1.00_seq_acc_1.00_ppl_1.00_s4600
+Loss: 2.249775, Word accuracy: 0.925381, Sequence accuracy: 0.881400
+Cuda device set to 0
+Loading checkpoints from model-final/acc_1.00_seq_acc_1.00_ppl_1.00_s4600
+Loss: 3.099656, Word accuracy: 0.901993, Sequence accuracy: 0.508306
+
+Predicting for Babi plus Dialogs
+
+Output: i'm on it <eos> 
+Expected: hello what can i help you with today
+
+Output: i'm on it <eos> 
+Expected: i'm on it
+
+Output: how many people would be in your party <eos> 
+Expected: how many people would be in your party
+
+Output: ok let me look into some options for you <eos> 
+Expected: ok let me look into some options for you
+
+Output: api_call british london four cheap <eos> 
+Expected: api_call british london four cheap
+
+Output: i'm on it <eos> 
+Expected: hello what can i help you with today
+
+Output: i'm on it <eos> 
+Expected: i'm on it
+
+Output: any preference on a type of cuisine <eos> 
+Expected: any preference on a type of cuisine
+
+Output: how many people would be in your party <eos> 
+Expected: how many people would be in your party
+
+Output: which price range are looking for <eos> 
+Expected: which price range are looking for
+
+Output: ok let me look into some options for you <eos> 
+Expected: ok let me look into some options for you
+
+Output: api_call british london two cheap <eos> 
+Expected: api_call british london four cheap
+
+Output: hello what can i help you with today <eos> 
+Expected: hello what can i help you with today
+
+Output: i'm on it <eos> 
+Expected: i'm on it
+
+Output: ok let me look into some options for you <eos> 
+Expected: ok let me look into some options for you
+
+Output: api_call british london two cheap <eos> 
+Expected: api_call british london two moderate
+
+Output: hello what can i help you with today <eos> 
+Expected: hello what can i help you with today
+
+Output: i'm on it <eos> 
+Expected: i'm on it
+
+Output: which price range are looking for <eos> 
+Expected: which price range are looking for
+
+Output: ok let me look into some options for you <eos> 
+Expected: ok let me look into some options for you
+
+Output: api_call french london eight cheap <eos> 
+Expected: api_call french madrid eight moderate
+
+babi plus on babi
+Cuda device set to 0
+Loading checkpoints from model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000
+Loss: 1.000007, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Cuda device set to 0
+Loading checkpoints from model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000
+Loss: 1.000042, Word accuracy: 1.000000, Sequence accuracy: 1.000000

@@ -1,0 +1,108 @@
+15/02/2018 22:27:58 \n
+
+Predicting for Babi plus Dialogs with babi model.
+
+
+Input:good uhm yeah good morning
+Output: i'm on it <eos> 
+Expected: hello what can i help you with today
+
+Input:may sorry yeah may i have a table with korean uhm sorry british cuisine in a uhm cheap price range in london
+Output: i'm on it <eos> 
+Expected: i'm on it
+
+Input:<SILENCE>
+Output: how many people would be in your party <eos> 
+Expected: how many people would be in your party
+
+Input:for four please uhm yeah for four please
+Output: ok let me look into some options for you <eos> 
+Expected: ok let me look into some options for you
+
+Input:<SILENCE>
+Output: api_call british london four cheap <eos> 
+Expected: api_call british london four cheap
+
+
+
+
+
+
+
+Input:good morning uhm yeah good morning
+Output: i'm on it <eos> 
+Expected: hello what can i help you with today
+
+Input:i'd sorry yeah i'd like to book a table in london
+Output: i'm on it <eos> 
+Expected: i'm on it
+
+Input:<SILENCE>
+Output: any preference on a type of cuisine <eos> 
+Expected: any preference on a type of cuisine
+
+Input:with uhm yeah with british cuisine
+Output: how many people would be in your party <eos> 
+Expected: how many people would be in your party
+
+Input:for two no sorry four please
+Output: which price range are looking for <eos> 
+Expected: which price range are looking for
+
+Input:i am looking for a cheap restaurant sorry yeah i am looking for a cheap restaurant
+Output: ok let me look into some options for you <eos> 
+Expected: ok let me look into some options for you
+
+Input:<SILENCE>
+Output: api_call british london two cheap <eos> 
+Expected: api_call british london four cheap
+
+
+
+
+
+Input:good morning
+Output: hello what can i help you with today <eos> 
+Expected: hello what can i help you with today
+
+Input:can you book a table with french cuisine oh no with british cuisine in london in a uhm yeah can you book a table with british cuisine in london in a cheap price range no in a moderate price range for two
+Output: i'm on it <eos> 
+Expected: i'm on it
+
+Input:<SILENCE>
+Output: ok let me look into some options for you <eos> 
+Expected: ok let me look into some options for you
+
+Input:<SILENCE>
+Output: api_call british london two cheap <eos> 
+Expected: api_call british london two moderate
+
+
+
+
+
+Input: hi
+Output: hello what can i help you with today <eos> 
+Expected: hello what can i help you with today
+
+Input:i'd sorry yeah i'd like to book a table for eight people in london sorry madrid with vietnamese sorry french cuisineno in a moderate price range for two
+Output: i'm on it <eos> 
+Expected: i'm on it
+
+Input:<SILENCE>
+Output: which price range are looking for <eos> 
+Expected: which price range are looking for
+
+Input:in a cheap price range no in a moderate price range please
+Output: ok let me look into some options for you <eos> 
+Expected: ok let me look into some options for you
+
+Input:<SILENCE>
+Output: api_call french london eight cheap <eos> 
+Expected: api_call french madrid eight moderate
+
+
+
+
+
+

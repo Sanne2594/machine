@@ -1,0 +1,84 @@
+Traceback (most recent call last):
+  File "evaluate.py", line 39, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/nfs/home3/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 259, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'output/trainer_states.pt'
+Traceback (most recent call last):
+  File "evaluate.py", line 39, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/nfs/home3/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 259, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'output/trainer_states.pt'
+usage: train_model.py [-h] [--train TRAIN] [--dev DEV]
+                      [--output_dir OUTPUT_DIR] [--epochs EPOCHS]
+                      [--optim {adam,adadelta,adagrad,adamax,rmsprop,sgd}]
+                      [--max_len MAX_LEN] [--rnn_cell RNN_CELL]
+                      [--bidirectional] [--embedding_size EMBEDDING_SIZE]
+                      [--hidden_size HIDDEN_SIZE] [--n_layers N_LAYERS]
+                      [--src_vocab SRC_VOCAB] [--tgt_vocab TGT_VOCAB]
+                      [--dropout_p_encoder DROPOUT_P_ENCODER]
+                      [--dropout_p_decoder DROPOUT_P_DECODER]
+                      [--teacher_forcing_ratio TEACHER_FORCING_RATIO]
+                      [--attention] [--batch_size BATCH_SIZE] [--lr LR]
+                      [--load_checkpoint LOAD_CHECKPOINT]
+                      [--save_every SAVE_EVERY] [--print_every PRINT_EVERY]
+                      [--resume] [--log-level LOG_LEVEL]
+                      [--cuda_device CUDA_DEVICE]
+train_model.py: error: argument --output_dir: expected one argument
+Traceback (most recent call last):
+  File "evaluate.py", line 39, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/nfs/home3/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 259, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'output/trainer_states.pt'
+Traceback (most recent call last):
+  File "evaluate.py", line 39, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/nfs/home3/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 259, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'output/trainer_states.pt'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2ac82ac34518>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2ac82ac342b0>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2ac82ac34630>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b9ff93d1860>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b9ff93d1710>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2b9ff93d1668>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2ac3db015400>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2ac3db0154e0>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2ac3db0156a0>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
