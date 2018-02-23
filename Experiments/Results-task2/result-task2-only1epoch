@@ -1,0 +1,24 @@
+0/02/2018 18:02:04 \n
+Training on babi
+2018-02-20 18:02:07,441 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task2-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=1, hidden_size=500, load_checkpoint=None, log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-task2/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task2-trn.txt')
+
+Cuda device set to 0
+2018-02-20 18:02:12,444 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2b5e8eefa6a0>, Scheduler: None
+2018-02-20 18:02:44,622 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 22.4003, Dev Perplexity: 2.1301, Accuracy: 0.6991, Sequence Accuracy: 0.5286
+
+
+Train-scores
+Cuda device set to 0
+Loading checkpoints from model-task2/acc_0.70_seq_acc_0.53_ppl_2.13_s200
+Loss: 2.115824, Word accuracy: 0.699813, Sequence accuracy: 0.528784
+
+
+\nAll the test sets
+\nbabi on babi
+Cuda device set to 0
+Loading checkpoints from model-task2/acc_0.70_seq_acc_0.53_ppl_2.13_s200
+Loss: 2.130054, Word accuracy: 0.699074, Sequence accuracy: 0.528518
+
+
+
+

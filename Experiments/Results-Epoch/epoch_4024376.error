@@ -1,0 +1,151 @@
+2018-02-20 19:05:11,447 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task1-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=3, hidden_size=500, load_checkpoint=None, log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-epochs/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task2-trn.txt')
+2018-02-20 19:05:15,251 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2b407e5bb588>, Scheduler: None
+2018-02-20 19:05:46,542 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 22.9812, Dev Perplexity: 164.7222, Accuracy: 0.2683, Sequence Accuracy: 0.1663
+2018-02-20 19:06:01,739 seq2seq.trainer.supervised_trainer INFO     Progress: 66%, Train Perplexity: 70.9696
+2018-02-20 19:06:11,837 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 47.9883, Dev Perplexity: 1174.1933, Accuracy: 0.3786, Sequence Accuracy: 0.1997
+2018-02-20 19:06:27,219 seq2seq.trainer.supervised_trainer INFO     Progress: 100%, Train Perplexity: 1.9560
+2018-02-20 19:06:37,297 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 1.9560, Dev Perplexity: 1055.5670, Accuracy: 0.4212, Sequence Accuracy: 0.1992
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b407e5bb2e8>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b407e5bb1d0>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2b407e5bb208>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
+usage: train_model.py [-h] [--train TRAIN] [--dev DEV]
+                      [--output_dir OUTPUT_DIR] [--epochs EPOCHS]
+                      [--optim {adam,adadelta,adagrad,adamax,rmsprop,sgd}]
+                      [--max_len MAX_LEN] [--rnn_cell RNN_CELL]
+                      [--bidirectional] [--embedding_size EMBEDDING_SIZE]
+                      [--hidden_size HIDDEN_SIZE] [--n_layers N_LAYERS]
+                      [--src_vocab SRC_VOCAB] [--tgt_vocab TGT_VOCAB]
+                      [--dropout_p_encoder DROPOUT_P_ENCODER]
+                      [--dropout_p_decoder DROPOUT_P_DECODER]
+                      [--teacher_forcing_ratio TEACHER_FORCING_RATIO]
+                      [--attention] [--batch_size BATCH_SIZE] [--lr LR]
+                      [--load_checkpoint LOAD_CHECKPOINT]
+                      [--save_every SAVE_EVERY] [--print_every PRINT_EVERY]
+                      [--resume] [--log-level LOG_LEVEL]
+                      [--cuda_device CUDA_DEVICE]
+train_model.py: error: unrecognized arguments: --checkpoint_path model-epochs/acc_0.28_seq_acc_0.00_ppl_48.78_s100
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b137e5b3eb8>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b137ea752b0>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2b137ea75f98>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
+usage: train_model.py [-h] [--train TRAIN] [--dev DEV]
+                      [--output_dir OUTPUT_DIR] [--epochs EPOCHS]
+                      [--optim {adam,adadelta,adagrad,adamax,rmsprop,sgd}]
+                      [--max_len MAX_LEN] [--rnn_cell RNN_CELL]
+                      [--bidirectional] [--embedding_size EMBEDDING_SIZE]
+                      [--hidden_size HIDDEN_SIZE] [--n_layers N_LAYERS]
+                      [--src_vocab SRC_VOCAB] [--tgt_vocab TGT_VOCAB]
+                      [--dropout_p_encoder DROPOUT_P_ENCODER]
+                      [--dropout_p_decoder DROPOUT_P_DECODER]
+                      [--teacher_forcing_ratio TEACHER_FORCING_RATIO]
+                      [--attention] [--batch_size BATCH_SIZE] [--lr LR]
+                      [--load_checkpoint LOAD_CHECKPOINT]
+                      [--save_every SAVE_EVERY] [--print_every PRINT_EVERY]
+                      [--resume] [--log-level LOG_LEVEL]
+                      [--cuda_device CUDA_DEVICE]
+train_model.py: error: unrecognized arguments: --checkpoint_path model-epochs/acc_0.28_seq_acc_0.00_ppl_48.78_s100
+usage: train_model.py [-h] [--train TRAIN] [--dev DEV]
+                      [--output_dir OUTPUT_DIR] [--epochs EPOCHS]
+                      [--optim {adam,adadelta,adagrad,adamax,rmsprop,sgd}]
+                      [--max_len MAX_LEN] [--rnn_cell RNN_CELL]
+                      [--bidirectional] [--embedding_size EMBEDDING_SIZE]
+                      [--hidden_size HIDDEN_SIZE] [--n_layers N_LAYERS]
+                      [--src_vocab SRC_VOCAB] [--tgt_vocab TGT_VOCAB]
+                      [--dropout_p_encoder DROPOUT_P_ENCODER]
+                      [--dropout_p_decoder DROPOUT_P_DECODER]
+                      [--teacher_forcing_ratio TEACHER_FORCING_RATIO]
+                      [--attention] [--batch_size BATCH_SIZE] [--lr LR]
+                      [--load_checkpoint LOAD_CHECKPOINT]
+                      [--save_every SAVE_EVERY] [--print_every PRINT_EVERY]
+                      [--resume] [--log-level LOG_LEVEL]
+                      [--cuda_device CUDA_DEVICE]
+train_model.py: error: unrecognized arguments: --checkpoint_path model-epochs/acc_0.28_seq_acc_0.00_ppl_48.78_s100
+usage: train_model.py [-h] [--train TRAIN] [--dev DEV]
+                      [--output_dir OUTPUT_DIR] [--epochs EPOCHS]
+                      [--optim {adam,adadelta,adagrad,adamax,rmsprop,sgd}]
+                      [--max_len MAX_LEN] [--rnn_cell RNN_CELL]
+                      [--bidirectional] [--embedding_size EMBEDDING_SIZE]
+                      [--hidden_size HIDDEN_SIZE] [--n_layers N_LAYERS]
+                      [--src_vocab SRC_VOCAB] [--tgt_vocab TGT_VOCAB]
+                      [--dropout_p_encoder DROPOUT_P_ENCODER]
+                      [--dropout_p_decoder DROPOUT_P_DECODER]
+                      [--teacher_forcing_ratio TEACHER_FORCING_RATIO]
+                      [--attention] [--batch_size BATCH_SIZE] [--lr LR]
+                      [--load_checkpoint LOAD_CHECKPOINT]
+                      [--save_every SAVE_EVERY] [--print_every PRINT_EVERY]
+                      [--resume] [--log-level LOG_LEVEL]
+                      [--cuda_device CUDA_DEVICE]
+train_model.py: error: unrecognized arguments: --checkpoint_path model-epochs/acc_0.28_seq_acc_0.00_ppl_48.78_s100
+usage: train_model.py [-h] [--train TRAIN] [--dev DEV]
+                      [--output_dir OUTPUT_DIR] [--epochs EPOCHS]
+                      [--optim {adam,adadelta,adagrad,adamax,rmsprop,sgd}]
+                      [--max_len MAX_LEN] [--rnn_cell RNN_CELL]
+                      [--bidirectional] [--embedding_size EMBEDDING_SIZE]
+                      [--hidden_size HIDDEN_SIZE] [--n_layers N_LAYERS]
+                      [--src_vocab SRC_VOCAB] [--tgt_vocab TGT_VOCAB]
+                      [--dropout_p_encoder DROPOUT_P_ENCODER]
+                      [--dropout_p_decoder DROPOUT_P_DECODER]
+                      [--teacher_forcing_ratio TEACHER_FORCING_RATIO]
+                      [--attention] [--batch_size BATCH_SIZE] [--lr LR]
+                      [--load_checkpoint LOAD_CHECKPOINT]
+                      [--save_every SAVE_EVERY] [--print_every PRINT_EVERY]
+                      [--resume] [--log-level LOG_LEVEL]
+                      [--cuda_device CUDA_DEVICE]
+train_model.py: error: unrecognized arguments: --checkpoint_path model-epochs/acc_0.28_seq_acc_0.00_ppl_48.78_s100
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b9de609d0b8>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b9de609d208>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2b9de609d5c0>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
+usage: train_model.py [-h] [--train TRAIN] [--dev DEV]
+                      [--output_dir OUTPUT_DIR] [--epochs EPOCHS]
+                      [--optim {adam,adadelta,adagrad,adamax,rmsprop,sgd}]
+                      [--max_len MAX_LEN] [--rnn_cell RNN_CELL]
+                      [--bidirectional] [--embedding_size EMBEDDING_SIZE]
+                      [--hidden_size HIDDEN_SIZE] [--n_layers N_LAYERS]
+                      [--src_vocab SRC_VOCAB] [--tgt_vocab TGT_VOCAB]
+                      [--dropout_p_encoder DROPOUT_P_ENCODER]
+                      [--dropout_p_decoder DROPOUT_P_DECODER]
+                      [--teacher_forcing_ratio TEACHER_FORCING_RATIO]
+                      [--attention] [--batch_size BATCH_SIZE] [--lr LR]
+                      [--load_checkpoint LOAD_CHECKPOINT]
+                      [--save_every SAVE_EVERY] [--print_every PRINT_EVERY]
+                      [--resume] [--log-level LOG_LEVEL]
+                      [--cuda_device CUDA_DEVICE]
+train_model.py: error: unrecognized arguments: --checkpoint_path model-epochs/acc_0.28_seq_acc_0.00_ppl_48.78_s100
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2aec2cb81ef0>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2aec2cb81940>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2aec2cb81ac8>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'

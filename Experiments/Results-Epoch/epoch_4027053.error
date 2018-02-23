@@ -1,0 +1,56 @@
+4-6
+2018-02-21 09:37:11,356 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task2-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=3, hidden_size=500, load_checkpoint='acc_0.28_seq_acc_0.00_ppl_48.78_s100', log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-epochs/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task1-trn.txt')
+2018-02-21 09:37:11,657 root         INFO     loading checkpoint from model-epochs/acc_0.28_seq_acc_0.00_ppl_48.78_s100
+2018-02-21 09:37:15,064 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2b9aba9c9b00>, Scheduler: None
+2018-02-21 09:37:41,004 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 8.8965, Dev Perplexity: 26.0485, Accuracy: 0.4880, Sequence Accuracy: 0.3739
+2018-02-21 09:38:05,755 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 2.2093, Dev Perplexity: 140.4229, Accuracy: 0.3846, Sequence Accuracy: 0.3139
+2018-02-21 09:38:06,845 seq2seq.trainer.supervised_trainer INFO     Progress: 70%, Train Perplexity: 10.7763
+2018-02-21 09:38:35,617 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 1.9946, Dev Perplexity: 109.8240, Accuracy: 0.3747, Sequence Accuracy: 0.3141
+
+7-9
+2018-02-21 09:39:02,931 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task2-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=3, hidden_size=500, load_checkpoint='acc_0.31_seq_acc_0.00_ppl_6.80_s0', log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-epochs/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task1-trn.txt')
+2018-02-21 09:39:03,226 root         INFO     loading checkpoint from model-epochs/acc_0.31_seq_acc_0.00_ppl_6.80_s0
+2018-02-21 09:39:06,629 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2ab80922eef0>, Scheduler: None
+2018-02-21 09:39:32,668 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 9.5919, Dev Perplexity: 34.3113, Accuracy: 0.4456, Sequence Accuracy: 0.3718
+2018-02-21 09:39:57,813 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 3.6048, Dev Perplexity: 49.0635, Accuracy: 0.4129, Sequence Accuracy: 0.3012
+2018-02-21 09:39:58,879 seq2seq.trainer.supervised_trainer INFO     Progress: 70%, Train Perplexity: 12.7057
+2018-02-21 09:40:27,850 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 1.8989, Dev Perplexity: 65.0238, Accuracy: 0.4537, Sequence Accuracy: 0.3546
+
+10-12
+2018-02-21 09:40:55,173 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task2-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=3, hidden_size=500, load_checkpoint='acc_0.31_seq_acc_0.00_ppl_6.80_s0', log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-epochs/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task1-trn.txt')
+2018-02-21 09:40:55,470 root         INFO     loading checkpoint from model-epochs/acc_0.31_seq_acc_0.00_ppl_6.80_s0
+2018-02-21 09:40:58,884 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2b55d0affeb8>, Scheduler: None
+2018-02-21 09:41:24,446 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 11.1824, Dev Perplexity: 20.4234, Accuracy: 0.6321, Sequence Accuracy: 0.5289
+2018-02-21 09:41:48,918 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 2.6568, Dev Perplexity: 40.5141, Accuracy: 0.5512, Sequence Accuracy: 0.4423
+2018-02-21 09:41:49,957 seq2seq.trainer.supervised_trainer INFO     Progress: 70%, Train Perplexity: 13.4710
+2018-02-21 09:42:18,963 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 2.1917, Dev Perplexity: 68.6778, Accuracy: 0.4482, Sequence Accuracy: 0.3685
+
+
+13-15
+2018-02-21 09:42:46,301 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task2-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=3, hidden_size=500, load_checkpoint='acc_0.31_seq_acc_0.00_ppl_6.80_s0', log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-epochs/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task1-trn.txt')
+2018-02-21 09:42:46,596 root         INFO     loading checkpoint from model-epochs/acc_0.31_seq_acc_0.00_ppl_6.80_s0
+2018-02-21 09:42:49,992 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2b31bfd32ef0>, Scheduler: None
+2018-02-21 09:43:15,604 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 15.2100, Dev Perplexity: 62.7557, Accuracy: 0.4004, Sequence Accuracy: 0.3144
+2018-02-21 09:43:40,619 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 2.4616, Dev Perplexity: 51.2091, Accuracy: 0.5072, Sequence Accuracy: 0.4258
+2018-02-21 09:43:41,681 seq2seq.trainer.supervised_trainer INFO     Progress: 70%, Train Perplexity: 17.3423
+2018-02-21 09:44:10,862 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 2.8557, Dev Perplexity: 56.8662, Accuracy: 0.4523, Sequence Accuracy: 0.3718
+
+16-18
+2018-02-21 09:44:38,165 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task2-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=3, hidden_size=500, load_checkpoint='acc_0.31_seq_acc_0.00_ppl_6.80_s0', log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-epochs/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task1-trn.txt')
+2018-02-21 09:44:38,462 root         INFO     loading checkpoint from model-epochs/acc_0.31_seq_acc_0.00_ppl_6.80_s0
+2018-02-21 09:44:41,856 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2b13fcbf34e0>, Scheduler: None
+2018-02-21 09:45:07,381 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 12.9845, Dev Perplexity: 37.7597, Accuracy: 0.4546, Sequence Accuracy: 0.3726
+2018-02-21 09:45:32,919 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 3.4634, Dev Perplexity: 30.3751, Accuracy: 0.4782, Sequence Accuracy: 0.3718
+2018-02-21 09:45:33,998 seq2seq.trainer.supervised_trainer INFO     Progress: 70%, Train Perplexity: 15.7369
+2018-02-21 09:46:02,989 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 2.2749, Dev Perplexity: 70.6273, Accuracy: 0.4032, Sequence Accuracy: 0.3146
+
+18-21
+2018-02-21 09:46:30,102 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task2-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=3, hidden_size=500, load_checkpoint='acc_0.31_seq_acc_0.00_ppl_6.80_s0', log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-epochs/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task1-trn.txt')
+2018-02-21 09:46:30,400 root         INFO     loading checkpoint from model-epochs/acc_0.31_seq_acc_0.00_ppl_6.80_s0
+2018-02-21 09:46:33,795 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2abbf7b52f28>, Scheduler: None
+2018-02-21 09:46:59,413 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 7.9196, Dev Perplexity: 33.0343, Accuracy: 0.4442, Sequence Accuracy: 0.3729
+2018-02-21 09:47:24,266 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 2.2312, Dev Perplexity: 43.6583, Accuracy: 0.4548, Sequence Accuracy: 0.3718
+2018-02-21 09:47:25,440 seq2seq.trainer.supervised_trainer INFO     Progress: 70%, Train Perplexity: 9.7727
+2018-02-21 09:47:54,305 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 2.4278, Dev Perplexity: 45.0972, Accuracy: 0.4840, Sequence Accuracy: 0.3717
+
+

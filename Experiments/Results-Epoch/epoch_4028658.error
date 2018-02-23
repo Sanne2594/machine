@@ -1,0 +1,108 @@
+2018-02-21 12:13:48,095 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task2-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=3, hidden_size=500, load_checkpoint=None, log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-epochs/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task1-trn.txt')
+2018-02-21 12:13:51,947 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2b4d566e75c0>, Scheduler: None
+2018-02-21 12:14:17,856 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 14.6217, Dev Perplexity: 28.4983, Accuracy: 0.4139, Sequence Accuracy: 0.3146
+2018-02-21 12:14:44,286 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 5.7862, Dev Perplexity: 57.7400, Accuracy: 0.5668, Sequence Accuracy: 0.4680
+2018-02-21 12:14:45,377 seq2seq.trainer.supervised_trainer INFO     Progress: 70%, Train Perplexity: 19.4775
+2018-02-21 12:15:14,846 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 2.5165, Dev Perplexity: 61.7829, Accuracy: 0.6297, Sequence Accuracy: 0.5298
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b7975feae10>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b7975fea518>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2b7975fea5c0>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
+2018-02-21 12:15:42,028 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task2-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=3, hidden_size=500, load_checkpoint='acc_0.63_seq_acc_0.53_ppl_61.78_s567', log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-epochs/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task1-trn.txt')
+2018-02-21 12:15:42,323 root         INFO     loading checkpoint from model-epochs/acc_0.63_seq_acc_0.53_ppl_61.78_s567
+2018-02-21 12:15:45,737 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2ac566bd9f28>, Scheduler: None
+2018-02-21 12:16:11,640 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 2.9512, Dev Perplexity: 106.6888, Accuracy: 0.4582, Sequence Accuracy: 0.3751
+2018-02-21 12:16:36,910 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 1.6549, Dev Perplexity: 99.4542, Accuracy: 0.6162, Sequence Accuracy: 0.5038
+2018-02-21 12:16:38,042 seq2seq.trainer.supervised_trainer INFO     Progress: 70%, Train Perplexity: 4.5451
+2018-02-21 12:17:06,948 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 1.4252, Dev Perplexity: 109.8148, Accuracy: 0.6283, Sequence Accuracy: 0.5141
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b684f9bdac8>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b684f9bd9b0>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2b684f9bdf28>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
+2018-02-21 12:17:34,082 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task2-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=3, hidden_size=500, load_checkpoint='acc_0.63_seq_acc_0.53_ppl_61.78_s0', log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-epochs/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task1-trn.txt')
+2018-02-21 12:17:34,380 root         INFO     loading checkpoint from model-epochs/acc_0.63_seq_acc_0.53_ppl_61.78_s0
+2018-02-21 12:17:37,672 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2ab618bc5f28>, Scheduler: None
+2018-02-21 12:18:03,260 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 2.3139, Dev Perplexity: 108.5645, Accuracy: 0.5045, Sequence Accuracy: 0.3911
+2018-02-21 12:18:27,579 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 1.5564, Dev Perplexity: 84.8836, Accuracy: 0.6126, Sequence Accuracy: 0.4671
+2018-02-21 12:18:28,708 seq2seq.trainer.supervised_trainer INFO     Progress: 70%, Train Perplexity: 3.8193
+2018-02-21 12:18:57,716 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 1.5257, Dev Perplexity: 104.3674, Accuracy: 0.6239, Sequence Accuracy: 0.5195
+2018-02-21 12:19:24,812 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task2-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=3, hidden_size=500, load_checkpoint='acc_0.63_seq_acc_0.53_ppl_61.78_s0', log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-epochs/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task1-trn.txt')
+2018-02-21 12:19:25,112 root         INFO     loading checkpoint from model-epochs/acc_0.63_seq_acc_0.53_ppl_61.78_s0
+2018-02-21 12:19:28,488 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2aff05ef3eb8>, Scheduler: None
+2018-02-21 12:19:54,162 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 2.1020, Dev Perplexity: 118.3863, Accuracy: 0.5098, Sequence Accuracy: 0.4286
+2018-02-21 12:20:18,869 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 1.8194, Dev Perplexity: 97.9286, Accuracy: 0.6156, Sequence Accuracy: 0.5027
+2018-02-21 12:20:20,144 seq2seq.trainer.supervised_trainer INFO     Progress: 70%, Train Perplexity: 3.9063
+2018-02-21 12:20:49,258 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 1.4737, Dev Perplexity: 144.6171, Accuracy: 0.5809, Sequence Accuracy: 0.4680
+2018-02-21 12:21:16,479 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task2-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=3, hidden_size=500, load_checkpoint='acc_0.63_seq_acc_0.53_ppl_61.78_s0', log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-epochs/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task1-trn.txt')
+2018-02-21 12:21:16,781 root         INFO     loading checkpoint from model-epochs/acc_0.63_seq_acc_0.53_ppl_61.78_s0
+2018-02-21 12:21:20,033 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2b09378d0eb8>, Scheduler: None
+2018-02-21 12:21:45,488 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 2.1718, Dev Perplexity: 99.7705, Accuracy: 0.5868, Sequence Accuracy: 0.4909
+2018-02-21 12:22:09,940 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 1.6333, Dev Perplexity: 151.5424, Accuracy: 0.5364, Sequence Accuracy: 0.4485
+2018-02-21 12:22:11,039 seq2seq.trainer.supervised_trainer INFO     Progress: 70%, Train Perplexity: 3.8199
+2018-02-21 12:22:39,940 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 1.5183, Dev Perplexity: 141.6842, Accuracy: 0.5667, Sequence Accuracy: 0.4374
+2018-02-21 12:23:07,153 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task2-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=3, hidden_size=500, load_checkpoint='acc_0.63_seq_acc_0.53_ppl_61.78_s0', log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-epochs/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task1-trn.txt')
+2018-02-21 12:23:07,455 root         INFO     loading checkpoint from model-epochs/acc_0.63_seq_acc_0.53_ppl_61.78_s0
+2018-02-21 12:23:10,852 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2b4cebf23eb8>, Scheduler: None
+2018-02-21 12:23:36,382 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 2.1818, Dev Perplexity: 72.4385, Accuracy: 0.6276, Sequence Accuracy: 0.5270
+2018-02-21 12:24:01,434 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 1.9712, Dev Perplexity: 89.5819, Accuracy: 0.5709, Sequence Accuracy: 0.4642
+2018-02-21 12:24:02,630 seq2seq.trainer.supervised_trainer INFO     Progress: 70%, Train Perplexity: 4.7756
+2018-02-21 12:24:31,689 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 2.6608, Dev Perplexity: 124.9251, Accuracy: 0.5995, Sequence Accuracy: 0.4718
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b4cebf294a8>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b4cebf29240>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2b4cebf23fd0>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2abc1d6b3828>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2abc1d6b3438>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2abc1d6b3e80>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
+2018-02-21 12:24:58,918 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task2-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=3, hidden_size=500, load_checkpoint='acc_0.63_seq_acc_0.53_ppl_61.78_s0', log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-epochs/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task1-trn.txt')
+2018-02-21 12:24:59,217 root         INFO     loading checkpoint from model-epochs/acc_0.63_seq_acc_0.53_ppl_61.78_s0
+2018-02-21 12:25:02,631 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2b8ccc75df28>, Scheduler: None
+2018-02-21 12:25:28,030 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 2.5017, Dev Perplexity: 104.9711, Accuracy: 0.5337, Sequence Accuracy: 0.4471
+2018-02-21 12:25:53,222 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 1.8027, Dev Perplexity: 78.9382, Accuracy: 0.6313, Sequence Accuracy: 0.5138
+2018-02-21 12:25:54,302 seq2seq.trainer.supervised_trainer INFO     Progress: 70%, Train Perplexity: 4.2340
+2018-02-21 12:26:22,893 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 1.4165, Dev Perplexity: 121.3963, Accuracy: 0.6360, Sequence Accuracy: 0.5237
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b1fab703fd0>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b1fab703978>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2b1fab703390>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'

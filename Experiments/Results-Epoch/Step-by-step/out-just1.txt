@@ -1,0 +1,42 @@
+21/02/2018 14:01:16 \n
+Training on babi
+Cuda device set to 0
+ 
+Train-scores
+Cuda device set to 0
+Loading checkpoints from model-epochs-2/acc_0.26_seq_acc_0.11_ppl_49.46_s100
+Loss: 7.073850, Word accuracy: 0.361459, Sequence accuracy: 0.194555
+Test-scores
+Cuda device set to 0
+Loading checkpoints from model-epochs-2/acc_0.26_seq_acc_0.11_ppl_49.46_s100
+Loss: 57.475479, Word accuracy: 0.000000, Sequence accuracy: 0.000000
+Cuda device set to 0
+Loading checkpoints from model-epochs-2/acc_0.26_seq_acc_0.11_ppl_49.46_s100
+Loss: 7.084245, Word accuracy: 0.361862, Sequence accuracy: 0.194407
+
+Predicting for Babi Dialogs
+
+Output: hello what can i help you with today <eos> 
+Expected: hello what can i help you with today
+
+Output: any preference it be of cuisine for <eos> 
+Expected: i'm on it
+
+Output: any preference on a type of cuisine <eos> 
+Expected: any preference on a type of cuisine
+
+Output: any preference it be of cuisine for <eos> 
+Expected: where should it be
+
+Output: any preference on a type of cuisine <eos> 
+Expected: how many people would be in your party
+
+Output: any preference on a type of cuisine <eos> 
+Expected: which price range are looking for
+
+Output: any preference on a type of cuisine <eos> 
+Expected: ok let me look into some options for you
+
+Output: any preference on a type of cuisine <eos> 
+Expected: api_call italian paris two cheap
+

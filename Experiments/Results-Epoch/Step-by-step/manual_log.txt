@@ -1,0 +1,11 @@
+FOR ONE EPOCH
+
+2018-02-21 14:01:17,378 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task2-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=1, hidden_size=500, load_checkpoint=None, log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-epochs-2/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task1-trn.txt')
+2018-02-21 14:01:21,133 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2b8152617080>, Scheduler: None
+2018-02-21 14:01:52,532 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 13.9140, Dev Perplexity: 69.9316, Accuracy: 0.3625, Sequence Accuracy: 0.1569
+
+
+
+FOR FIVE EPOCHS
+
+

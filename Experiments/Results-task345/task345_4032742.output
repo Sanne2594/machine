@@ -1,0 +1,27 @@
+23/02/2018 14:28:56 \n
+ 
+ 
+Training on babi - task 4
+Cuda device set to 0
+ 
+Train-scores
+Cuda device set to 0
+Loading checkpoints from model-task4/acc_0.94_seq_acc_0.57_ppl_1.62_s2700
+Loss: 1.052537, Word accuracy: 0.974506, Sequence accuracy: 0.828914
+Test-scores
+Cuda device set to 0
+Loading checkpoints from model-task4/acc_0.94_seq_acc_0.57_ppl_1.62_s2700
+Loss: 1.605941, Word accuracy: 0.936228, Sequence accuracy: 0.571755
+ 
+ 
+Training on babi - task 5
+Cuda device set to 0
+ 
+Train-scores
+Cuda device set to 0
+Loading checkpoints from model-task5/acc_1.00_seq_acc_1.00_ppl_1.00_s6600
+Loss: 1.000346, Word accuracy: 0.999963, Sequence accuracy: 0.999723
+Test-scores
+Cuda device set to 0
+Loading checkpoints from model-task5/acc_1.00_seq_acc_1.00_ppl_1.00_s6600
+Loss: 1.000422, Word accuracy: 0.999981, Sequence accuracy: 0.999861
