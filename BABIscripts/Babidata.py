@@ -235,15 +235,15 @@ path = "/home/sanne/machine/data/BABIraw"
 # readBabiDialog(fpath,cpath)
 
 ### ### ### TASK 6: dstc 2
-trainfile = "dialog-babi-task2-API-refine-trn.txt"
-testfile = "dialog-babi-task2-API-refine-tst.txt"
+trainfile = "dialog-babi-task6-dstc2-trn.txt"
+testfile = "dialog-babi-task6-dstc2-tst.txt"
 #test_new_entities = "dialog-babi-task2-API-refine-tst-OOV.txt"
-devfile = "dialog-babi-task2-API-refine-dev.txt"
+devfile = "dialog-babi-task6-dstc2-dev.txt"
 
 dialog_path = "/home/sanne/machine/data/CLEANED-BABI/babi-dialog"
-train_clean = "task2-trn.txt"
-test_clean = "task2-tst.txt"
-dev_clean = "task2-dev.txt"
+train_clean = "task6-trn.txt"
+test_clean = "task6-tst.txt"
+dev_clean = "task6-dev.txt"
 
 ### Training files
 fpath = os.path.join(path,trainfile)

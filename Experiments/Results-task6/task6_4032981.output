@@ -1,0 +1,12 @@
+23/02/2018 16:23:31 \n
+Training on babi
+Cuda device set to 0
+ 
+Train-scores
+Cuda device set to 0
+Loading checkpoints from model-task6/acc_0.78_seq_acc_0.47_ppl_2.60_s2300
+Loss: 1.733444, Word accuracy: 0.860335, Sequence accuracy: 0.671790
+Test-scores
+Cuda device set to 0
+Loading checkpoints from model-task6/acc_0.78_seq_acc_0.47_ppl_2.60_s2300
+Loss: 20.902807, Word accuracy: 0.566805, Sequence accuracy: 0.335885
