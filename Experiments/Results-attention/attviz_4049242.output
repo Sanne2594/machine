@@ -1,0 +1,16 @@
+02/03/2018 11:12:08 \n
+start visualising
+Cuda device set to 0
+Loading checkpoints from model-final/acc_1.00_seq_acc_1.00_ppl_1.00_s4600
+Loss: 2.883575, Word accuracy: 0.914286, Sequence accuracy: 0.842105
+
+Predicting for Babi Dialogs
+
+start visualising plus
+Cuda device set to 0
+Loading checkpoints from model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000
+Loss: 1.000006, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+
+Predicting for Babi Dialogs
+
+Finished

@@ -3,18 +3,11 @@
 dt=$(date '+%d/%m/%Y %H:%M:%S');
 echo "$dt \n"
 
-NUM_EP=30 #Number of Epochs
-EMB_SIZE=128
-H_SIZE=500
+echo "start visualising"
+goal_direc="images-attention-plusplus-allapi/"
+PLS_LOC="model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000"
 
-echo "Training on babi"
-MDL_LOC="model-task3/"
-python3 train_model.py --train "data/CLEANED-BABI/babi-dialog/task3-trn.txt" --dev "data/CLEANED-BABI/babi-dialog/task3-dev.txt" --output_dir $MDL_LOC --print_every 200 --max_len 75 --embedding_size $EMB_SIZE --hidden_size $H_SIZE --epoch $NUM_EP --teacher_forcing .5 --attention
+python3 evaluate.py --checkpoint_path $PLS_LOC --test_data "data/CLEANED-BABI/babi+dialog/task1-tst.txt" --max_len 75 --attviz $goal_direc
 
-echo " "
-echo "Train-scores"
-python3 evaluate.py --checkpoint_path $MDL_LOC$(ls -t $MDL_LOC | head -1) --test_data "data/CLEANED-BABI/babi-dialog/task3-trn.txt" --max_len 75
 
-echo "Test-scores"
-python3 evaluate.py --checkpoint_path $MDL_LOC$(ls -t $MDL_LOC | head -1) --test_data "data/CLEANED-BABI/babi-dialog/task3-tst.txt" --max_len 75
-#python3 evaluate.py --checkpoint_path $MDL_LOC$(ls -t $MDL_LOC | head -1) --test_data "data/CLEANED-BABI/api-only/task2-tst-dialog.txt" --max_len 75
+echo "Finished"

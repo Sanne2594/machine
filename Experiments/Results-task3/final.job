@@ -2,8 +2,8 @@
 #SBATCH -n 1
 #SBATCH -t 00:55:00
 #SBATCH -p gpu_short
-#SBATCH -o output/attviz_%A.output
-#SBATCH -e output/attviz_%A.error
+#SBATCH -o output/task3_%A.output
+#SBATCH -e output/task3_%A.error
 
 module load python/3.5.2
 module load cuda/8.0.44
