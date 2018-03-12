@@ -1,0 +1,33 @@
+1 hello	hello what can i help you with today
+2 may i sorry yeah may i have a table in seoul	i'm on it
+3 <SILENCE>	any preference on a type of cuisine
+4 with vietnamese cuisine oh no with thai cuisine	how many people would be in your party
+5 for well four people please	which price range are looking for
+6 in a moderate price range no sorry in a expensive price range please	ok let me look into some options for you
+7 <SILENCE>	api_call thai seoul four expensive
+
+
+1 hello	hello what can i help you with today
+2 may i sorry yeah may i have a table	i'm on it
+3 <SILENCE>	any preference on a type of cuisine
+4 with uhm thai cuisine	where should it be
+5 bombay oh no tokyo please	how many people would be in your party
+6 for two people uhm yeah for two people please	which price range are looking for
+7 i am looking for a expensive restaurant uhm yeah i am looking for a expensive restaurant	ok let me look into some options for you
+8 <SILENCE>	api_call thai tokyo two expensive
+
+
+1 good morning uhm yeah good morning	hello what can i help you with today
+2 i'd like to book a table in paris no in seoul for eight	i'm on it
+3 <SILENCE>	any preference on a type of cuisine
+4 i love uhm yeah i love korean food	which price range are looking for
+5 in sorry yeah in a cheap price range please	ok let me look into some options for you
+6 <SILENCE>	api_call korean seoul eight cheap
+
+
+1 hi	hello what can i help you with today
+2 may i have a table with cantonese cuisine in a expensive price range no sorry in a cheap price range in seoul for two people sorry yeah may i have a table with cantonese cuisine in a cheap price range in seoul for two people	i'm on it
+3 <SILENCE>	ok let me look into some options for you
+4 <SILENCE>	api_call cantonese seoul two cheap
+
+

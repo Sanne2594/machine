@@ -1,0 +1,31 @@
+1 hello	hello what can i help you with today
+2 can you book sorry yeah can you book a table for six people with french food	i'm on it
+3 <SILENCE>	where should it be
+4 in rome sorry bombay	which price range are looking for
+5 i am looking sorry yeah i am looking for a cheap restaurant	ok let me look into some options for you
+6 <SILENCE>	api_call french bombay six cheap
+
+
+1 hi	hello what can i help you with today
+2 can you make a restaurant reservation with japanese cuisine sorry with italian cuisine for sorry yeah can you make a restaurant reservation with italian cuisine for six people in a expensive no sorry cheap price range	i'm on it
+3 <SILENCE>	where should it be
+4 london no sorry rome please	ok let me look into some options for you
+5 <SILENCE>	api_call italian rome six cheap
+
+
+1 good uhm yeah good morning	hello what can i help you with today
+2 may sorry yeah may i have a table with british cuisine in a moderate uhm sorry cheap price range in seoul sorry in london	i'm on it
+3 <SILENCE>	how many people would be in your party
+4 for four please	ok let me look into some options for you
+5 <SILENCE>	api_call british london four cheap
+
+
+1 good morning	hello what can i help you with today
+2 i'd like to book a uhm yeah i'd like to book a table in london	i'm on it
+3 <SILENCE>	any preference on a type of cuisine
+4 with uhm british cuisine	how many people would be in your party
+5 for eight sorry for four please	which price range are looking for
+6 i am looking sorry yeah i am looking for a cheap restaurant	ok let me look into some options for you
+7 <SILENCE>	api_call british london four cheap
+
+

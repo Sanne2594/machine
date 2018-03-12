@@ -3,6 +3,7 @@ import re
 from codecs import getreader
 from collections import deque, defaultdict
 from os import path
+import functools
 
 TASK_ID = 'task1-API-calls'
 DATASET_ORDERING = ['trn', 'dev', 'tst', 'tst-OOV']
@@ -10,13 +11,22 @@ DATASET_ORDERING = ['trn', 'dev', 'tst', 'tst-OOV']
 
 def read_task(in_file_name):
     result = []
-    with getreader('utf-8')(open(in_file_name)) as task_in:
+    #with getreader('utf-8')(open(in_file_name)) as task_in:
+    with open(in_file_name) as task_in:
         task_content = task_in.read()
-    dialogs = [
-        filter(lambda line: len(line.strip()), dialog.split('\n'))
-        for dialog in task_content.split('\n\n')
-    ]
-    dialogs = filter(len, dialogs)
+    dialogs = []
+    for dialog in task_content.split('\n\n'):
+        result = list(filter(lambda line: len(line.strip()), dialog.split('\n')))
+        #Result is een list met daarin strings van elke line incl. nummer en \t.
+        dialogs.append(result)
+    # dialogs = [
+    #     list(filter(lambda line: len(line.strip()), dialog.split('\n'))
+    #     for dialog in task_content.split('\n\n'))
+    #
+    #     # filter(lambda line: len(line.strip()), dialog.split('\n'))
+    #     # for dialog in task_content.split('\n\n')
+    # ]
+    dialogs = list(filter(len, dialogs))
 
     for dialog_index, dialog in enumerate(dialogs):
         result.append((
@@ -32,7 +42,7 @@ def read_task(in_file_name):
                user_turn, system_turn = turns
                result[-1][1].append({'agent': 'user', 'text': user_turn})
             result[-1][1].append({'agent': 'system', 'text': system_turn})
-    return filter(lambda x: len(x[1]), result)
+    return list(filter(lambda x: len(x[1]), result))
 
 
 def preprocess_for_seq2seq(in_task_dialogs, in_config):
@@ -73,7 +83,7 @@ def load_babble_dataset(in_root):
         )
         for suffix in DATASET_ORDERING
     ]
-    return reduce(lambda x, y: x + y, data_parts, [])
+    return functools.reduce(lambda x, y: x + y, data_parts, [])
 
 
 def extract_slot_values(in_dialogues):
@@ -86,4 +96,4 @@ def extract_slot_values(in_dialogues):
 
 def save_csv(in_dialogue, out_stream):
     for turn in in_dialogue:
-        print >>out_stream, '{}:\t{}'.format(turn['agent'], turn['text'])
+        print ('{}:\t{}'.format(turn['agent'], turn['text']), file=out_stream)

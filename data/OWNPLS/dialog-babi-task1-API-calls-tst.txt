@@ -1,0 +1,34 @@
+1 good morning	hello what can i help you with today
+2 can you book a table in a cheap price sorry yeah can you book a table in a cheap price range in london	i'm on it
+3 <SILENCE>	any preference on a type of cuisine
+4 with indian food sorry with french food	how many people would be in your party
+5 for sorry yeah for four please	ok let me look into some options for you
+6 <SILENCE>	api_call french london four cheap
+
+
+1 hello	hello what can i help you with today
+2 may i have a table	i'm on it
+3 <SILENCE>	any preference on a type of cuisine
+4 with indian cuisine no with spanish cuisine	where should it be
+5 in london	how many people would be in your party
+6 we uhm yeah we will be well four	which price range are looking for
+7 in sorry yeah in a moderate price range please	ok let me look into some options for you
+8 <SILENCE>	api_call spanish london four moderate
+
+
+1 good uhm yeah good morning	hello what can i help you with today
+2 can you make a restaurant reservation for eight people in a expensive price range oh no in a cheap price range with british cuisine	i'm on it
+3 <SILENCE>	where should it be
+4 in madrid	ok let me look into some options for you
+5 <SILENCE>	api_call british madrid eight cheap
+
+
+1 good uhm yeah good morning	hello what can i help you with today
+2 can uhm yeah can you book a table in a expensive price range oh no in a moderate price range	i'm on it
+3 <SILENCE>	any preference on a type of cuisine
+4 i love indian food	where should it be
+5 bombay please	how many people would be in your party
+6 we will be four	ok let me look into some options for you
+7 <SILENCE>	api_call indian bombay four moderate
+
+

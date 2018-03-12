@@ -1,6 +1,8 @@
 import os
 import argparse
 import logging
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import numpy as np
@@ -31,6 +33,17 @@ def showAttention(input_sentence, output_words, attentions):
     ax.xaxis.set_major_locator(ticker.MultipleLocator(1))
     ax.yaxis.set_major_locator(ticker.MultipleLocator(1))
     return fig
+
+def saveAttention(input_sentence, output_words, attentions, file):
+    # open file.
+    f = open(file, "w")
+    #Write input sentence, \n output words, \n, attentions (check of dat goed gaat), /n/n??
+    f.write(" ".join(input_sentence)+"\n")
+    f.write(" ".join(output_words)+"\n")
+    f.write(" ".join([str(np.ndim(attentions)), str(len(attentions)),str(len(attentions[0])) ])+"\n")
+    attentions.tofile(f," ")
+    f.close()
+
 
 try:
     raw_input          # Python 2
@@ -130,8 +143,8 @@ if(opt.predict):
 if(opt.attviz):
     if(not opt.predict):
         path = "data/CLEANED-BABI/sample-dialogs/dialog.txt"
-        if ("code_word_api" in opt.test_data):
-            path = "data/CLEANED-BABI/api-only/task1-trn-plus-dialog"
+        if ("shorter.txt" in opt.test_data):
+            path = "shorter.txt"
             print("hacked the system: Train plus dialog")
         elif ("+dialog" in opt.test_data):
             path = "data/CLEANED-BABI/sample-dialogs/dialog-plus.txt"
@@ -176,7 +189,9 @@ if(opt.attviz):
         tgt_id_seq = [other['sequence'][di][0].data[0] for di in range(length)]
         tgt_seq = [output_vocab.itos[tok] for tok in tgt_id_seq]
 
-        fig = showAttention(input.split(),tgt_seq,attentions)
-        fig_loc = opt.attviz + "attn" + str(count) + ".png"
+        # fig = showAttention(input.split(),tgt_seq,attentions)
+        # fig_loc = opt.attviz + "attn" + str(count) + ".png"
+        out_loc = opt.attviz + "attn" + str(count) + ".txt"
         count += 1
-        fig.savefig(fig_loc)
+        # fig.savefig(fig_loc)
+        saveAttention(input.split(),tgt_seq,attentions,out_loc)

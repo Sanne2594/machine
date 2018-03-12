@@ -5,6 +5,7 @@ from itertools import cycle
 from os import path, makedirs
 import random
 from collections import defaultdict
+import functools
 
 import numpy as np
 
@@ -13,7 +14,7 @@ from lib.babi import extract_slot_values, get_files_list, read_task
 random.seed(273)
 np.random.seed(273)
 
-CONFIG_FILE = 'babi_plus.json'
+CONFIG_FILE = '../data/babi_tools-master/babi_plus.json'
 CONFIG = None
 
 ACTION_LIST = None
@@ -22,7 +23,7 @@ STATS = defaultdict(lambda: 0)
 
 def apply_replacements(in_template, in_slots_map):
     result = in_template
-    for slot_name, slot_value in in_slots_map.iteritems():
+    for slot_name, slot_value in in_slots_map.items():
         result = result.replace(slot_name, slot_value)
     return result
 
@@ -151,9 +152,9 @@ def calculate_action_probabilities(
     action_weights_masked = defaultdict(lambda: {})
     # action weight masks differ
     # for the cases of background words and slot values
-    for case, mask_map in in_action_weight_mask.iteritems():
+    for case, mask_map in in_action_weight_mask.items():
         sum_masked_weight = 0.0
-        for action, mask_value in mask_map.iteritems():
+        for action, mask_value in mask_map.items():
             masked_weight = in_action_weights[action] * mask_value * limits[action]
             if action != 'NULL':
                 masked_weight *= limits['GLOBAL']
@@ -164,7 +165,7 @@ def calculate_action_probabilities(
         assert abs(sum(action_weights_masked[case].values()) - 1.0) < 1e-7
     return {
         case: [weight_map[action] for action in ACTION_LIST]
-        for case, weight_map in action_weights_masked.iteritems()
+        for case, weight_map in action_weights_masked.items()
     }
 
 
@@ -197,13 +198,14 @@ def sample_transformations(in_utterance, in_slot_values):
     count_map = defaultdict(lambda: 0)
     for action in per_token_actions:
         count_map[action] += 1
-    for action, count in count_map.iteritems():
+    for action, count in count_map.items():
         assert count <= CONFIG['action_limits'][action]
     return per_token_actions
 
 
 def augment_dialogue(in_dialogue, in_slot_values):
-    slot_values_flat = reduce(lambda x, y: x + list(y), in_slot_values, [])
+    slot_values_flat = functools.reduce(lambda x, y: x + list(y), in_slot_values, [])
+    # slot_values_flat is list of possible slot values: indian, thai, london, etc.
     dialogue_name, dialogue = in_dialogue
     tokenized_dialogue = []
     for utterance in dialogue:
@@ -214,10 +216,11 @@ def augment_dialogue(in_dialogue, in_slot_values):
     dialogue_modified = False
     utterances_modified = 0
     action_stats = defaultdict(lambda: 0)
-    for utterance_index in xrange(len(tokenized_dialogue) - 1, -1, -1):
+    for utterance_index in range(len(tokenized_dialogue) - 1, -1, -1):
         utterance = tokenized_dialogue[utterance_index]
         if utterance_index % 2 == 1 or utterance['text'] == [u'<SILENCE>']:
             continue
+        #TODO: maybe introduce mask generating here!!
         transformations = sample_transformations(
             utterance['text'],
             slot_values_flat
@@ -236,7 +239,7 @@ def augment_dialogue(in_dialogue, in_slot_values):
                 tokenized_dialogue,
                 [utterance_index, token_index],
                 set(
-                    reduce(
+                    functools.reduce(
                         lambda x, y: x + list(y),
                         [
                             values_set
@@ -252,16 +255,24 @@ def augment_dialogue(in_dialogue, in_slot_values):
     global STATS
     STATS['dialogues_modified'] += int(dialogue_modified)
     STATS['utterances_modified'] += utterances_modified
-    for action, count in action_stats.iteritems():
+    for action, count in action_stats.items():
         STATS[action] += count
 
     return tokenized_dialogue
 
-
 def plus_dataset(in_src_root, in_result_size):
     dataset_files = get_files_list(in_src_root, 'task1-API-calls')
-    babi_files = [(filename, read_task(filename)) for filename in dataset_files]
-    full_babi = reduce(
+    babi_files = []
+    for filename in dataset_files:
+        babi_files.appeplus_datasetnd((filename, read_task(filename)))
+#    babi_files = [(filename, read_task(filename)) for filename in dataset_files]
+
+    # for something in babi_files:
+    #     print(something)
+    #     full_babi = something + y[1]
+    #
+    # full_babi = functools.reduce(function1(babi_files),[])
+    full_babi = functools.reduce(
         lambda x, y: x + y[1],
         babi_files,
         []
@@ -270,7 +281,7 @@ def plus_dataset(in_src_root, in_result_size):
     babi_plus = defaultdict(lambda: [])
     result_size = in_result_size if in_result_size else len(babi_files)
     for task_name, task in babi_files:
-        for dialogue_index, dialogue in zip(xrange(result_size), cycle(task)):
+        for dialogue_index, dialogue in zip(range(result_size), cycle(task)):
             babi_plus[task_name].append(
                 augment_dialogue(dialogue, slots_map.values())
             )
@@ -302,27 +313,27 @@ def save_babble(in_dialogues, in_dst_root):
 
     for dialogue_index, dialogue in enumerate(in_dialogues):
         with open(path.join(in_dst_root, 'babi_plus_{}.txt'.format(dialogue_index)), 'w') as dialogue_out:
-            print >>dialogue_out, '\n'.join([
+            print ('\n'.join([
                 '{}:\t{}'.format(utterance['agent'], utterance['text'])
                 for utterance in dialogue
-            ])
+            ]), file=dialogue_out)
 
 
 def print_stats():
-    print 'Data modification statistics:'
-    for key, value in STATS.iteritems():
-        print '{}\t{}'.format(key, value)
+    print ('Data modification statistics:')
+    for key, value in STATS.items():
+        print ('{}\t{}'.format(key, value))
 
 
 def save_babi(in_dialogues, in_dst_root):
     if not path.exists(in_dst_root):
         makedirs(in_dst_root)
 
-    for task_name, task_dialogues in in_dialogues.iteritems():
+    for task_name, task_dialogues in in_dialogues.items():
         filename = path.join(in_dst_root, path.basename(task_name))
         with open(filename, 'w') as task_out:
             for dialogue in task_dialogues:
-                print >>task_out, make_dialogue_tsv(dialogue) + '\n\n'
+                print (make_dialogue_tsv(dialogue) + '\n\n',file=task_out)
 
 
 def configure_argument_parser():
