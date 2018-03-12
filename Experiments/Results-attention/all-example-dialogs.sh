@@ -25,3 +25,6 @@ python3 evaluate.py --checkpoint_path $PLS_LOC --test_data "data/CLEANED-BABI/ba
 
 
 echo "Finished"
+
+
+python3 evaluate.py --checkpoint_path $MDL_LOC --test_data "shorter.txt" --max_len 75 --attviz $goal_direc
