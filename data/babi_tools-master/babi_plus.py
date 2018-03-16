@@ -264,7 +264,7 @@ def plus_dataset(in_src_root, in_result_size):
     dataset_files = get_files_list(in_src_root, 'task1-API-calls')
     babi_files = []
     for filename in dataset_files:
-        babi_files.appeplus_datasetnd((filename, read_task(filename)))
+        babi_files.append((filename, read_task(filename)))
 #    babi_files = [(filename, read_task(filename)) for filename in dataset_files]
 
     # for something in babi_files:

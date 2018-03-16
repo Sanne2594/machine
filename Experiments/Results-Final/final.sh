@@ -1,7 +1,20 @@
-#!/bin/sh
+#PBS -S /bin/bash (which shell to use)
+#PBS -lnodes=1 (number of nodes)
+#PBS -qgpu (we need gpu)
+#PBS -lwalltime=03:00:00 (reservation time)
+
 
 dt=$(date '+%d/%m/%Y %H:%M:%S');
-echo "$dt \n"
+echo "$dt "
+
+cd $HOME/machine/sanne/machine
+
+module load python/3.5.0
+module load eb
+module load cuda/9.0.176
+
+pip3 install --user -r requirements.txt
+
 
 NUM_EP=30 #Number of Epochs
 EMB_SIZE=128

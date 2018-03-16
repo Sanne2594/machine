@@ -95,38 +95,38 @@ def readBabiLines(fpath,line_path,num_path):
 
 
 ### ### ### General Data
-path = "/home/sanne/machine/data/BABIraw"
+path = "/home/sanne/machine/data/OWNPLS"
 #candidates = "dialog-babi-candidates.txt"
 #KB = "dialog-babi-kb-all.txt"
 
 
 # ### ### ### TASK 1: API calls
-# trainfile = "dialog-babi-task1-API-calls-trn.txt"
-# testfile = "dialog-babi-task1-API-calls-tst.txt"
-# #test_new_entities = "dialog-babi-task1-API-calls-tst-OOV.txt"
-# devfile = "dialog-babi-task1-API-calls-dev.txt"
+trainfile = "dialog-babi-task1-API-calls-trn.txt"
+testfile = "dialog-babi-task1-API-calls-tst.txt"
+#test_new_entities = "dialog-babi-task1-API-calls-tst-OOV.txt"
+devfile = "dialog-babi-task1-API-calls-dev.txt"
 #
 # #line_path = "/home/sanne/machine/data/CLEANED-BABI/babi-line"
-# dialog_path = "/home/sanne/machine/data/CLEANED-BABI/babi-dialog"
+dialog_path = "/home/sanne/machine/data/OWNPLS/cleaned"
 # #num_path = "/home/sanne/machine/data/CLEANED-BABI/babi-num"
-# train_clean = "task1-trn.txt"
-# test_clean = "task1-tst.txt"
-# dev_clean = "task1-dev.txt"
+train_clean = "task1-trn.txt"
+test_clean = "task1-tst.txt"
+dev_clean = "task1-dev.txt"
 #
 # ### Training files
-# fpath = os.path.join(path,trainfile)
-# cpath = os.path.join(dialog_path,train_clean)
-# readBabiDialog(fpath,cpath)
+fpath = os.path.join(path,trainfile)
+cpath = os.path.join(dialog_path,train_clean)
+readBabiDialog(fpath,cpath)
 #
 # ### Testing files
-# fpath = os.path.join(path,testfile)
-# cpath = os.path.join(dialog_path,test_clean)
-# readBabiDialog(fpath,cpath)
+fpath = os.path.join(path,testfile)
+cpath = os.path.join(dialog_path,test_clean)
+readBabiDialog(fpath,cpath)
 #
 # ### development files
-# fpath = os.path.join(path,devfile)
-# cpath = os.path.join(dialog_path,dev_clean)
-# readBabiDialog(fpath,cpath)
+fpath = os.path.join(path,devfile)
+cpath = os.path.join(dialog_path,dev_clean)
+readBabiDialog(fpath,cpath)
 
 
 
@@ -234,32 +234,32 @@ path = "/home/sanne/machine/data/BABIraw"
 # cpath = os.path.join(dialog_path,dev_clean)
 # readBabiDialog(fpath,cpath)
 
-### ### ### TASK 6: dstc 2
-trainfile = "dialog-babi-task6-dstc2-trn.txt"
-testfile = "dialog-babi-task6-dstc2-tst.txt"
-#test_new_entities = "dialog-babi-task2-API-refine-tst-OOV.txt"
-devfile = "dialog-babi-task6-dstc2-dev.txt"
+# ### ### ### TASK 6: dstc 2
+# trainfile = "dialog-babi-task6-dstc2-trn.txt"
+# testfile = "dialog-babi-task6-dstc2-tst.txt"
+# #test_new_entities = "dialog-babi-task2-API-refine-tst-OOV.txt"
+# devfile = "dialog-babi-task6-dstc2-dev.txt"
+#
+# dialog_path = "/home/sanne/machine/data/CLEANED-BABI/babi-dialog"
+# train_clean = "task6-trn.txt"
+# test_clean = "task6-tst.txt"
+# dev_clean = "task6-dev.txt"
 
-dialog_path = "/home/sanne/machine/data/CLEANED-BABI/babi-dialog"
-train_clean = "task6-trn.txt"
-test_clean = "task6-tst.txt"
-dev_clean = "task6-dev.txt"
-
-### Training files
-fpath = os.path.join(path,trainfile)
-cpath = os.path.join(dialog_path,train_clean)
-readBabiDialog(fpath,cpath)
-
-### Testing files
-fpath = os.path.join(path,testfile)
-cpath = os.path.join(dialog_path,test_clean)
-readBabiDialog(fpath,cpath)
-
-### development files
-fpath = os.path.join(path,devfile)
-cpath = os.path.join(dialog_path,dev_clean)
-readBabiDialog(fpath,cpath)
-
+# ### Training files
+# fpath = os.path.join(path,trainfile)
+# cpath = os.path.join(dialog_path,train_clean)
+# readBabiDialog(fpath,cpath)
+#
+# ### Testing files
+# fpath = os.path.join(path,testfile)
+# cpath = os.path.join(dialog_path,test_clean)
+# readBabiDialog(fpath,cpath)
+#
+# ### development files
+# fpath = os.path.join(path,devfile)
+# cpath = os.path.join(dialog_path,dev_clean)
+# readBabiDialog(fpath,cpath)
+#
 
 
 #

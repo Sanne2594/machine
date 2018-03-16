@@ -1,4 +1,11 @@
-#!/bin/sh
+#PBS -S /bin/bash (which shell to use)
+#PBS -lnodes=1 (number of nodes)
+#PBS -qgpu (we need gpu)
+#PBS -lwalltime=01:00:00 (reservation time)
+
+module load python/3.5.0
+module load eb
+
 
 dt=$(date '+%d/%m/%Y %H:%M:%S');
 echo "$dt \n"
@@ -8,8 +15,6 @@ goal_direc="images-attentions-minplus/"
 PLS_LOC="model-final/acc_1.00_seq_acc_1.00_ppl_1.00_s4600"
 
 python3 evaluate.py --checkpoint_path $PLS_LOC --test_data "shorter.txt" --max_len 75 --attviz $goal_direc
-
-
 
 echo "start visualising plusplus"
 goal_direc="images-attentions-plusplus/"
