@@ -95,7 +95,7 @@ def readBabiLines(fpath,line_path,num_path):
 
 
 ### ### ### General Data
-path = "/home/sanne/machine/data/OWNPLS"
+path = "/home/sanne/machine/data/BABI_shortmid"
 #candidates = "dialog-babi-candidates.txt"
 #KB = "dialog-babi-kb-all.txt"
 
@@ -107,7 +107,7 @@ testfile = "dialog-babi-task1-API-calls-tst.txt"
 devfile = "dialog-babi-task1-API-calls-dev.txt"
 #
 # #line_path = "/home/sanne/machine/data/CLEANED-BABI/babi-line"
-dialog_path = "/home/sanne/machine/data/OWNPLS/cleaned"
+dialog_path = "/home/sanne/machine/data/BABI_shortmid/cleaned"
 # #num_path = "/home/sanne/machine/data/CLEANED-BABI/babi-num"
 train_clean = "task1-trn.txt"
 test_clean = "task1-tst.txt"
