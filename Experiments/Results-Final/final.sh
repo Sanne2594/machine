@@ -9,12 +9,6 @@ echo "$dt "
 
 cd $HOME/machine/sanne/machine
 
-module load python/3.5.0
-module load eb
-module load cuda/9.0.176
-
-pip3 install --user -r requirements.txt
-
 
 NUM_EP=30 #Number of Epochs
 EMB_SIZE=128

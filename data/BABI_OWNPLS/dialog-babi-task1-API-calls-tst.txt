@@ -1,0 +1,18 @@
+1 good morning	hello what can i help you with today
+2 can you book sorry yeah can you book a table in a cheap price range in tokyo no sorry london	i'm on it
+3 <SILENCE>	any preference on a type of cuisine
+4 with uhm french food sorry yeah with french food	how many people would be in your party
+5 for uhm yeah for well four please	ok let me look into some options for you
+6 <SILENCE>	api_call french london four cheap
+
+
+1 hello uhm yeah hello	hello what can i help you with today
+2 may i have a table	i'm on it
+3 <SILENCE>	any preference on a type of cuisine
+4 with spanish cuisine	where should it be
+5 in uhm yeah in rome no sorry london	how many people would be in your party
+6 we will be uhm yeah we will be four	which price range are looking for
+7 in a moderate price range please	ok let me look into some options for you
+8 <SILENCE>	api_call spanish london four moderate
+
+

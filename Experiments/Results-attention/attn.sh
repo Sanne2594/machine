@@ -3,12 +3,11 @@
 #PBS -qgpu (we need gpu)
 #PBS -lwalltime=01:00:00 (reservation time)
 
-module load python/3.5.0
-module load eb
-
-
 dt=$(date '+%d/%m/%Y %H:%M:%S');
 echo "$dt \n"
+
+cd $HOME/machine/sanne/machine
+
 
 echo "start visualising minplus"
 goal_direc="images-attentions-minplus/"

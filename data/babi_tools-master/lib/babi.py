@@ -4,6 +4,7 @@ from codecs import getreader
 from collections import deque, defaultdict
 from os import path
 import functools
+import numpy as np
 
 TASK_ID = 'task1-API-calls'
 DATASET_ORDERING = ['trn', 'dev', 'tst', 'tst-OOV']
@@ -40,7 +41,9 @@ def read_task(in_file_name):
                system_turn = turns[0]
             if len(turns) == 2:
                user_turn, system_turn = turns
-               result[-1][1].append({'agent': 'user', 'text': user_turn})
+               #Inserted mask
+               mask = np.zeros(len(user_turn.split()))
+               result[-1][1].append({'agent': 'user', 'text': user_turn, 'mask':mask})
             result[-1][1].append({'agent': 'system', 'text': system_turn})
     return list(filter(lambda x: len(x[1]), result))
 

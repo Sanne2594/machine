@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "evaluate.py", line 73, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/home/sanne/machine/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 265, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'model-short/acc_1.00_seq_acc_1.00_ppl_1.00_s4100/trainer_states.pt'
+Traceback (most recent call last):
+  File "evaluate.py", line 73, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/home/sanne/machine/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 265, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'model-short/acc_1.00_seq_acc_1.00_ppl_1.00_s4100/trainer_states.pt'
+Traceback (most recent call last):
+  File "evaluate.py", line 73, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/home/sanne/machine/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 265, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'model-short/acc_1.00_seq_acc_1.00_ppl_1.00_s4100/trainer_states.pt'

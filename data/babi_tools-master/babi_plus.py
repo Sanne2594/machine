@@ -25,7 +25,7 @@ def apply_replacements(in_template, in_slots_map):
     result = in_template
     for slot_name, slot_value in in_slots_map.items():
         result = result.replace(slot_name, slot_value)
-    return result
+    return result.split(),len(result.split())
 
 
 def get_enclosing_phrase(in_tokens, in_token_index):
@@ -64,10 +64,11 @@ def perform_action(in_action, in_dialog, in_token_coordinates, in_slot_values):
                 ]),
                 '$correct_value': word
             }
-            in_dialog[utterance_index]['text'][token_index:token_index + 1] = apply_replacements(
+            in_dialog[utterance_index]['text'][token_index:token_index + 1], len_replacement = apply_replacements(
                 action_outcome,
                 replacement_map
-            ).split()
+            )
+            in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement))
     if in_action == 'correct_long_distance':
         phrase_begin, phrase_end = get_enclosing_phrase(
             in_dialog[utterance_index]['text'],
@@ -88,10 +89,11 @@ def perform_action(in_action, in_dialog, in_token_coordinates, in_slot_values):
                 '$incorrect_phrase': incorrect_phrase,
                 '$correct_phrase': correct_phrase
             }
-            in_dialog[utterance_index]['text'][phrase_begin:phrase_end + 1] = apply_replacements(
+            in_dialog[utterance_index]['text'][phrase_begin:phrase_end + 1],len_replacement = apply_replacements(
                 action_outcome,
                 replacement_map
-            ).split()
+            )
+            in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement))
     if in_action == 'multiturn_correct':
         if word in in_slot_values:
             replacement_map = {
@@ -103,33 +105,37 @@ def perform_action(in_action, in_dialog, in_token_coordinates, in_slot_values):
                 '$correct_value': word
             }
             in_dialog[utterance_index]['text'][token_index] = replacement_map['$incorrect_value']
+            replacement_text, len_replacement = apply_replacements(action_outcome, replacement_map)
             correction_turn = {
                 'agent': 'usr',
-                'text': apply_replacements(action_outcome, replacement_map).split()
+                'text': replacement_text
             }
             in_dialog[utterance_index + 1: utterance_index + 2] = \
                 [dict(in_dialog[utterance_index + 1]), correction_turn, dict(in_dialog[utterance_index + 1])]
     if in_action == 'selfcheck' and word in in_slot_values:
-            replacement_map = {'$token' : word}
-            in_dialog[utterance_index]['text'][token_index:token_index + 1] = apply_replacements(
-                action_outcome,
-                replacement_map
-            ).split()
-    if in_action == 'hesitate':
-        replacement_map = {'$token': word}
-        in_dialog[utterance_index]['text'][token_index:token_index + 1] = apply_replacements(
+        replacement_map = {'$token' : word}
+        in_dialog[utterance_index]['text'][token_index:token_index + 1], len_replacement = apply_replacements(
             action_outcome,
             replacement_map
-        ).split()
+        )
+        in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement))
+    if in_action == 'hesitate':
+        replacement_map = {'$token': word}
+        in_dialog[utterance_index]['text'][token_index:token_index + 1], len_replacement = apply_replacements(
+            action_outcome,
+            replacement_map
+        )
+        in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement))
     if in_action == 'restart':
         replacement_map = {
             '$token': word,
             '$utterance_from_beginning': ' '.join(in_dialog[utterance_index]['text'][:token_index + 1])
         }
-        in_dialog[utterance_index]['text'][token_index:token_index + 1] = apply_replacements(
+        in_dialog[utterance_index]['text'][token_index:token_index + 1], len_replacement = apply_replacements(
             action_outcome,
             replacement_map
-        ).split()
+        )
+        in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement))
 
 
 def fix_data(in_utterance):
@@ -220,20 +226,23 @@ def augment_dialogue(in_dialogue, in_slot_values):
         utterance = tokenized_dialogue[utterance_index]
         if utterance_index % 2 == 1 or utterance['text'] == [u'<SILENCE>']:
             continue
-        #TODO: maybe introduce mask generating here!!
         transformations = sample_transformations(
             utterance['text'],
             slot_values_flat
         )
+        # Utterances are untouched.
         if set(transformations) != {'NULL'}:
             utterances_modified += 1
         for transformation in transformations:
             action_stats[transformation] += 1
-
+        #print("Before:", utterance['text'])
         for reverse_token_index, action in enumerate(transformations[::-1]):
             if action != 'NULL':
                 dialogue_modified = True
+                print("Action", action)
+            #Looped een voor een door de transformation heen
             token_index = len(transformations) - reverse_token_index - 1
+            #TODO: Mask generation here
             perform_action(
                 action,
                 tokenized_dialogue,
@@ -249,6 +258,9 @@ def augment_dialogue(in_dialogue, in_slot_values):
                     )
                 )
             )
+        print("After:", utterance['text'])
+        print("Mask:", utterance['mask'])
+    #Change the set of words into strings
     for utterance in tokenized_dialogue:
         utterance['text'] = ' '.join(utterance['text'])
 
@@ -261,17 +273,10 @@ def augment_dialogue(in_dialogue, in_slot_values):
     return tokenized_dialogue
 
 def plus_dataset(in_src_root, in_result_size):
-    dataset_files = get_files_list(in_src_root, 'task1-API-calls')
+    dataset_files = get_files_list(in_src_root, 'task1-API-calls') #'task6-dstc2' TODO
     babi_files = []
     for filename in dataset_files:
         babi_files.append((filename, read_task(filename)))
-#    babi_files = [(filename, read_task(filename)) for filename in dataset_files]
-
-    # for something in babi_files:
-    #     print(something)
-    #     full_babi = something + y[1]
-    #
-    # full_babi = functools.reduce(function1(babi_files),[])
     full_babi = functools.reduce(
         lambda x, y: x + y[1],
         babi_files,
@@ -283,6 +288,7 @@ def plus_dataset(in_src_root, in_result_size):
     for task_name, task in babi_files:
         for dialogue_index, dialogue in zip(range(result_size), cycle(task)):
             babi_plus[task_name].append(
+                #TODO: deze dialogue moet "mask" ding krijgen
                 augment_dialogue(dialogue, slots_map.values())
             )
     return babi_plus

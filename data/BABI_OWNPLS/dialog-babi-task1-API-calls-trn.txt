@@ -1,0 +1,20 @@
+1 hi	hello what can i help you with today
+2 can uhm yeah can you book a table	i'm on it
+3 <SILENCE>	any preference on a type of cuisine
+4 i love italian food	where should it be
+5 in paris	how many people would be in your party
+6 we will be sorry yeah we will be two	which price range are looking for
+7 in a cheap price range please sorry yeah in a cheap price range please	ok let me look into some options for you
+8 <SILENCE>	api_call italian paris two cheap
+
+
+1 hello sorry yeah hello	hello what can i help you with today
+2 can you uhm yeah can you book a table	i'm on it
+3 <SILENCE>	any preference on a type of cuisine
+4 i sorry yeah i love vietnamese uhm sorry italian food	where should it be
+5 in uhm yeah in london	how many people would be in your party
+6 we will be eight	which price range are looking for
+7 i am sorry yeah i am looking for a expensive uhm sorry for a cheap restaurant	ok let me look into some options for you
+8 <SILENCE>	api_call italian london eight cheap
+
+
