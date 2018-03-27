@@ -59,6 +59,7 @@ parser.add_argument('--max_len', type=int, help='Maximum sequence length', defau
 parser.add_argument('--batch_size', type=int, help='Batch size', default=32)
 parser.add_argument('--predict', action='store_true')
 parser.add_argument('--attviz', help='Give path to image folder')
+parser.add_argument('--print_wrong', type=float, help='Threshold sequence accuracy')
 
 opt = parser.parse_args()
 
@@ -101,13 +102,21 @@ loss = Perplexity(weight, pad)
 if torch.cuda.is_available():
     loss.cuda()
 
+#Check if print_wrong is true
+if (opt.print_wrong):
+    if (not opt.batch_size is 1):
+        print("Warning: Expected batch size 1, got", opt.batch_size)
+        opt.batch_size=1
 #################################################################################
 # Evaluate model on test set
 
 evaluator = Evaluator(loss=loss, batch_size=opt.batch_size)
-loss, accuracy, seq_accuracy = evaluator.evaluate(seq2seq, test)
+if (opt.print_wrong):
+    loss, accuracy, seq_accuracy = evaluator.evaluate(seq2seq, test, threshold=opt.print_wrong, tgt_vocab=output_vocab)
+else:
+    loss, accuracy, seq_accuracy = evaluator.evaluate(seq2seq, test)
 
-print("Loss: %f, Word accuracy: %f, Sequence accuracy: %f" % (loss, accuracy, seq_accuracy))
+print("\nLoss: %f, Word accuracy: %f, Sequence accuracy: %f" % (loss, accuracy, seq_accuracy))
 
 
 #########################################

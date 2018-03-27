@@ -10,6 +10,6 @@ MDL_LOC="model-cpu/acc_0.87_seq_acc_0.77_ppl_1.41_s1890"
 
 echo "Test printing the wrong outputs."
 #python3 evaluate.py --checkpoint_path $MDL_LOC$(ls -t $MDL_LOC | head -1) --test_data "data/CLEANED-BABI/api-only/task1-tst-dialog.txt" --max_len 75
-python3 evaluate.py --checkpoint_path $MDL_LOC --test_data "data/CLEANED-BABI/sample-dialogs/dialog-plus.txt" --max_len 75 --print_wrong
+python3 evaluate.py --checkpoint_path $MDL_LOC --test_data "data/CLEANED-BABI/sample-dialogs/dialog-plus.txt" --max_len 75 --batch_size 1 --print_wrong 1.0
 
 echo "Made it"

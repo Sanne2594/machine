@@ -68,7 +68,7 @@ def perform_action(in_action, in_dialog, in_token_coordinates, in_slot_values):
                 action_outcome,
                 replacement_map
             )
-            in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement))
+            in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement-1))
     if in_action == 'correct_long_distance':
         phrase_begin, phrase_end = get_enclosing_phrase(
             in_dialog[utterance_index]['text'],
@@ -93,7 +93,7 @@ def perform_action(in_action, in_dialog, in_token_coordinates, in_slot_values):
                 action_outcome,
                 replacement_map
             )
-            in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement))
+            in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement-1))
     if in_action == 'multiturn_correct':
         if word in in_slot_values:
             replacement_map = {
@@ -118,14 +118,14 @@ def perform_action(in_action, in_dialog, in_token_coordinates, in_slot_values):
             action_outcome,
             replacement_map
         )
-        in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement))
+        in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement-1))
     if in_action == 'hesitate':
         replacement_map = {'$token': word}
         in_dialog[utterance_index]['text'][token_index:token_index + 1], len_replacement = apply_replacements(
             action_outcome,
             replacement_map
         )
-        in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement))
+        in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement-1))
     if in_action == 'restart':
         replacement_map = {
             '$token': word,
@@ -135,7 +135,7 @@ def perform_action(in_action, in_dialog, in_token_coordinates, in_slot_values):
             action_outcome,
             replacement_map
         )
-        in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement))
+        in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement-1))
 
 
 def fix_data(in_utterance):

@@ -18,12 +18,13 @@ class Evaluator(object):
         self.loss = loss
         self.batch_size = batch_size
 
-    def evaluate(self, model, data):
+    def evaluate(self, model, data, threshold=0., tgt_vocab=None):
         """ Evaluate a model on given dataset and return performance.
 
         Args:
             model (seq2seq.models): model to evaluate
             data (seq2seq.dataset.dataset.Dataset): dataset to evaluate against
+            threshold (float): optional threshold of accuracy under which to print output
 
         Returns:
             loss (float): loss of the given model on the given dataset
@@ -75,6 +76,18 @@ class Evaluator(object):
 
             seq_match += match_per_seq.eq(total_per_seq).sum()
             seq_total += total_per_seq.shape[0]
+
+            #Compute accuracy per sequence
+            if not seq_match ==0:
+                curr_seq_acc = (match_per_seq.eq(total_per_seq).sum())/(total_per_seq.shape[0])
+                if curr_seq_acc < threshold:
+                    length = other['length'][0]
+                    out_id_seq = [other['sequence'][di][0].data[0] for di in range(length)]
+                    out_seq = [tgt_vocab.itos[tok] for tok in out_id_seq]
+                    print("\nModel output:", out_seq)
+                    tgt_seq = [tgt_vocab.itos[tok] for tok in target_variables.data.numpy()[0]]
+                    print("Target output:", tgt_seq)
+                    print("Word accuracy:", match_per_seq.sum() / total_per_seq.sum())
 
         if word_total == 0:
             accuracy = float('nan')
