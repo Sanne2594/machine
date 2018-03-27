@@ -1,12 +1,12 @@
 import os
 import argparse
 import logging
+import torch
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import numpy as np
-import torch
 import torchtext
 from torch.autograd import Variable
 
@@ -59,7 +59,7 @@ parser.add_argument('--max_len', type=int, help='Maximum sequence length', defau
 parser.add_argument('--batch_size', type=int, help='Batch size', default=32)
 parser.add_argument('--predict', action='store_true')
 parser.add_argument('--attviz', help='Give path to image folder')
-parser.add_argument('--print_wrong', type=float, help='Threshold sequence accuracy')
+parser.add_argument('--print_wrong', type=float, help='Threshold accuracy per sequence')
 
 opt = parser.parse_args()
 
@@ -112,7 +112,7 @@ if (opt.print_wrong):
 
 evaluator = Evaluator(loss=loss, batch_size=opt.batch_size)
 if (opt.print_wrong):
-    loss, accuracy, seq_accuracy = evaluator.evaluate(seq2seq, test, threshold=opt.print_wrong, tgt_vocab=output_vocab)
+    loss, accuracy, seq_accuracy = evaluator.evaluate(seq2seq, test, threshold=opt.print_wrong)
 else:
     loss, accuracy, seq_accuracy = evaluator.evaluate(seq2seq, test)
 

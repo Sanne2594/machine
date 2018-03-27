@@ -18,7 +18,7 @@ class Evaluator(object):
         self.loss = loss
         self.batch_size = batch_size
 
-    def evaluate(self, model, data, threshold=0., tgt_vocab=None):
+    def evaluate(self, model, data, threshold=0.):
         """ Evaluate a model on given dataset and return performance.
 
         Args:
@@ -47,6 +47,7 @@ class Evaluator(object):
             sort=True, sort_key=lambda x: len(x.src),
             device=device, train=False)
         tgt_vocab = data.fields[seq2seq.tgt_field_name].vocab
+        src_vocab = data.fields[seq2seq.src_field_name].vocab
         pad = tgt_vocab.stoi[data.fields[seq2seq.tgt_field_name].pad_token]
 
         for batch in batch_iterator:
@@ -79,13 +80,19 @@ class Evaluator(object):
 
             #Compute accuracy per sequence
             if not seq_match ==0:
-                curr_seq_acc = (match_per_seq.eq(total_per_seq).sum())/(total_per_seq.shape[0])
-                if curr_seq_acc < threshold:
+                curr_acc = (match_per_seq.sum() / total_per_seq.sum())
+                if curr_acc < threshold:
+                    if torch.cuda.is_available():
+                        tgt_seq = [tgt_vocab.itos[tok] for tok in target_variables.data.cpu().numpy()[0]]
+                        in_seq = [src_vocab.itos[tok] for tok in input_variables.data.cpu().numpy()[0]]
+                    else:
+                        tgt_seq = [tgt_vocab.itos[tok] for tok in target_variables.data.numpy()[0]]
+                        in_seq = [src_vocab.itos[tok] for tok in input_variables.data.numpy()[0]]
+                    print("\nModel input:", in_seq)
                     length = other['length'][0]
                     out_id_seq = [other['sequence'][di][0].data[0] for di in range(length)]
                     out_seq = [tgt_vocab.itos[tok] for tok in out_id_seq]
-                    print("\nModel output:", out_seq)
-                    tgt_seq = [tgt_vocab.itos[tok] for tok in target_variables.data.numpy()[0]]
+                    print("Model output:", out_seq)
                     print("Target output:", tgt_seq)
                     print("Word accuracy:", match_per_seq.sum() / total_per_seq.sum())
 
