@@ -235,11 +235,9 @@ def augment_dialogue(in_dialogue, in_slot_values):
             utterances_modified += 1
         for transformation in transformations:
             action_stats[transformation] += 1
-        #print("Before:", utterance['text'])
         for reverse_token_index, action in enumerate(transformations[::-1]):
             if action != 'NULL':
                 dialogue_modified = True
-                print("Action", action)
             #Looped een voor een door de transformation heen
             token_index = len(transformations) - reverse_token_index - 1
             #TODO: Mask generation here
@@ -258,8 +256,6 @@ def augment_dialogue(in_dialogue, in_slot_values):
                     )
                 )
             )
-        print("After:", utterance['text'])
-        print("Mask:", utterance['mask'])
     #Change the set of words into strings
     for utterance in tokenized_dialogue:
         utterance['text'] = ' '.join(utterance['text'])
@@ -306,14 +302,17 @@ def plus_single_task(in_task, slot_values):
 
 
 def make_dialogue_tsv(in_dialogue):
+    # Is used for each dialog so result size * 4 times.
     assert len(in_dialogue) % 2 == 0
+
     return '\n'.join([
-        '{} {}\t{}'.format(index + 1, usr['text'], sys['text'])
+        '{} {}\t{}\t{}'.format(index + 1, usr['text'], sys['text'], usr['mask'])
         for index, (usr, sys) in enumerate(zip(in_dialogue[::2], in_dialogue[1::2]))
     ])
 
 
 def save_babble(in_dialogues, in_dst_root):
+    #Is not used!
     if not path.exists(in_dst_root):
         makedirs(in_dst_root)
 
@@ -332,6 +331,7 @@ def print_stats():
 
 
 def save_babi(in_dialogues, in_dst_root):
+    #Is used once
     if not path.exists(in_dst_root):
         makedirs(in_dst_root)
 

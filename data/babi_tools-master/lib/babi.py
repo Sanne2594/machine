@@ -98,5 +98,6 @@ def extract_slot_values(in_dialogues):
 
 
 def save_csv(in_dialogue, out_stream):
+    print("reach save_csv in lib/babi.py")
     for turn in in_dialogue:
         print ('{}:\t{}'.format(turn['agent'], turn['text']), file=out_stream)

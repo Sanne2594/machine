@@ -1,0 +1,9 @@
+Data modification statistics:
+restart	9579
+NULL	66481
+dialogues_modified	3998
+correct_long_distance	3648
+utterances_modified	11336
+correct	2378
+hesitate	1194
+
