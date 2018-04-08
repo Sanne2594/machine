@@ -11,6 +11,7 @@ from seq2seq.loss import Perplexity
 from seq2seq.dataset import SourceField, TargetField
 from seq2seq.evaluator import Evaluator, Predictor
 from seq2seq.util.checkpoint import Checkpoint
+from seq2seq.models import DiagnosticClassifier, DecoderRNN
 
 
 try:
@@ -41,9 +42,30 @@ seq2seq = checkpoint.model
 input_vocab = checkpoint.input_vocab
 output_vocab = checkpoint.output_vocab
 
+##################################################################################
+# create diagnostic classifier
+
+#TODO: Create not a sequence but a binary classifier
+decoder = DecoderRNN(len(tgt.vocab), max_len, decoder_hidden_size,
+                         dropout_p=opt.dropout_p_decoder,
+                         n_layers=opt.n_layers,
+                         use_attention=opt.attention,
+                         bidirectional=opt.bidirectional,
+                         rnn_cell=opt.rnn_cell,
+                         eos_id=tgt.eos_id, sos_id=tgt.sos_id)
+DC = DiagnosticClassifier(seq2seq, decoder, type="binary")
+if torch.cuda.is_available():
+    seq2seq.cuda()
+
+for param in seq2seq.parameters():
+    param.data.uniform_(-0.08, 0.08)
+
+
+
 ############################################################################
 # Prepare dataset and vocabularies
 src = SourceField()
+#TODO: create datatype MaskField??
 msk = TargetField()
 src.vocab = input_vocab
 max_len = opt.max_len
@@ -59,37 +81,46 @@ data = torchtext.data.TabularDataset(
     filter_pred=len_filter
 )
 
-src_vocab = data.fields['src'].vocab #Somehow get this
 
 
-#Read in words line by line, word by word
-loc = opt.mask_data
-f = open(loc, 'r')
-lines = f.readlines()
-f.close()
-# TODO: create an array size lines to save results in?
-statistic = []
 
-for line in lines:
-    src_sentence,mask = line.split("\t")
-    src_seq = src_sentence.split()
 
-#    i = 0
-#    for item in src_seq:
-    src_id_seq = Variable(torch.LongTensor(src_vocab.stoi[src_seq]), volatile=True).view(1, -1)
-    if torch.cuda.is_available():
-        src_id_seq = src_id_seq.cuda()
-    output,hidden = seq2seq.encoder(src_id_seq)
-    mask_one = mask[i]
-    #i += 1
-    #TODO: Save the statistic, matched with the mask instance {0,1} of that word to a file.
-    hidden_temp = [str(hid) for hid in hidden]
-    hidden_string = " ".join(hidden_temp)
-    statistic.append("\t".join([hidden_string,mask_one]))
 
-# This will be a big dataset.                          1000*6*20 = 120 000
-#  formulae: num dialogs*average dialog length * average word per sentence
-result_file = "hidden_and_mask.txt"
-m = open(result_file)
-m.writelines(statistic)
-m.close()
+
+
+
+
+# src_vocab = data.fields['src'].vocab #Somehow get this
+#
+#
+# #Read in words line by line, word by word
+# loc = opt.mask_data
+# f = open(loc, 'r')
+# lines = f.readlines()
+# f.close()
+# # TODO: create an array size lines to save results in?
+# statistic = []
+#
+# for line in lines:
+#     src_sentence,mask = line.split("\t")
+#     src_seq = src_sentence.split()
+#
+# #    i = 0
+# #    for item in src_seq:
+#     src_id_seq = Variable(torch.LongTensor(src_vocab.stoi[src_seq]), volatile=True).view(1, -1)
+#     if torch.cuda.is_available():
+#         src_id_seq = src_id_seq.cuda()
+#     output,hidden = seq2seq.encoder(src_id_seq)
+#     mask_one = mask[i]
+#     #i += 1
+#     #TODO: Save the statistic, matched with the mask instance {0,1} of that word to a file.
+#     hidden_temp = [str(hid) for hid in hidden]
+#     hidden_string = " ".join(hidden_temp)
+#     statistic.append("\t".join([hidden_string,mask_one]))
+#
+# # This will be a big dataset.                          1000*6*20 = 120 000
+# #  formulae: num dialogs*average dialog length * average word per sentence
+# result_file = "hidden_and_mask.txt"
+# m = open(result_file)
+# m.writelines(statistic)
+# m.close()

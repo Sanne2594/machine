@@ -12,9 +12,9 @@ NUM_EP=30 #Number of Epochs
 EMB_SIZE=128
 H_SIZE=500
 
-train_path="/home/sanne/machine/Experiments/DiagnosticClassifier/DataGeneration/cleaned_data/task1-trn.txt"
-dev_path="/home/sanne/machine/Experiments/DiagnosticClassifier/DataGeneration/cleaned_data/task1-dev.txt"
-test_path="/home/sanne/machine/Experiments/DiagnosticClassifier/DataGeneration/cleaned_data/task1-tst.txt"
+train_path="cleaned_data/task1-trn.txt"
+dev_path="cleaned_data/task1-dev.txt"
+test_path="cleaned_data/task1-tst.txt"
 
 echo "Training on babi+"
 MDL_LOC_PLS="model-diag-plus/"
