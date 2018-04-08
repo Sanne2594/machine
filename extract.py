@@ -2,6 +2,7 @@ import os
 import argparse
 import logging
 import torch
+import torch.nn as nn
 import numpy as np
 import torchtext
 from torch.autograd import Variable
@@ -11,7 +12,8 @@ from seq2seq.loss import Perplexity
 from seq2seq.dataset import SourceField, TargetField
 from seq2seq.evaluator import Evaluator, Predictor
 from seq2seq.util.checkpoint import Checkpoint
-from seq2seq.models import DiagnosticClassifier, DecoderRNN
+from seq2seq.models import DiagnosticClassifier
+from seq2seq.trainer import SupervisedTrainer
 
 
 try:
@@ -22,6 +24,7 @@ except NameError:
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--checkpoint_path', help='Give the checkpoint path from which to load the model')
+parser.add_argument('--output_dir', default='../models', help='Path to model directory. If load_checkpoint is True, then path to checkpoint directory has to be provided')
 parser.add_argument('--mask_data', help='Path to test data')
 parser.add_argument('--cuda_device', default=0, type=int, help='set cuda device to use')
 parser.add_argument('--max_len', type=int, help='Maximum sequence length', default=50)
@@ -45,25 +48,20 @@ output_vocab = checkpoint.output_vocab
 ##################################################################################
 # create diagnostic classifier
 
-#TODO: Create not a sequence but a binary classifier
-decoder = DecoderRNN(len(tgt.vocab), max_len, decoder_hidden_size,
-                         dropout_p=opt.dropout_p_decoder,
-                         n_layers=opt.n_layers,
-                         use_attention=opt.attention,
-                         bidirectional=opt.bidirectional,
-                         rnn_cell=opt.rnn_cell,
-                         eos_id=tgt.eos_id, sos_id=tgt.sos_id)
-DC = DiagnosticClassifier(seq2seq, decoder, type="binary")
+#TODO: figure out how to extract hidden layer size from model
+encoder_hidden_dim = 128
+DC = DiagnosticClassifier(seq2seq, encoder_hidden_dim, type="binary")
 if torch.cuda.is_available():
-    seq2seq.cuda()
+    DC.cuda()
 
-for param in seq2seq.parameters():
-    param.data.uniform_(-0.08, 0.08)
+#TODO: should we do this for parameters in classifier?
+# for param in DC.parameters():
+#     param.data.uniform_(-0.08, 0.08)
 
 
 
 ############################################################################
-# Prepare dataset and vocabularies
+# Prepare dataset and masks
 src = SourceField()
 #TODO: create datatype MaskField??
 msk = TargetField()
@@ -73,54 +71,42 @@ max_len = opt.max_len
 def len_filter(example):
     return len(example.src) <= max_len
 
-#TODO: nadenken over het format waarin mask wordt uitgelezen
-# generate test set
 data = torchtext.data.TabularDataset(
     path=opt.mask_data, format='tsv',
     fields=[('src', src), ('msk', msk)],
     filter_pred=len_filter
 )
 
+#TODO: split in train and test?
+
+###########################################################################
+# Train Classifier
+#TODO: check which hard-coded things should be arguments (see trainer)
+
+# Prepare loss
+loss = nn.CrossEntropyLoss()
+if torch.cuda.is_available():
+    loss.cuda()
+
+# create trainer
+t = SupervisedTrainer(loss=loss, batch_size=32,
+                      checkpoint_every=100,
+                      print_every=100, expt_dir=opt.output_dir)
+
+#TODO: check is this routine is apropriate. It isn't
+DC = t.train(DC, data,
+                  num_epochs=6, #dev_data=dev,
+                  optimizer='adam',
+                  teacher_forcing_ratio=.2,
+                  learning_rate=0.001,
+                  resume=False,
+                  checkpoint_path=None)
 
 
+#################################################################################
+# Evaluate model on train set
 
+evaluator = Evaluator(loss=loss, batch_size=32)
+loss, accuracy, seq_accuracy = evaluator.evaluate(DC, data)
 
-
-
-
-
-
-# src_vocab = data.fields['src'].vocab #Somehow get this
-#
-#
-# #Read in words line by line, word by word
-# loc = opt.mask_data
-# f = open(loc, 'r')
-# lines = f.readlines()
-# f.close()
-# # TODO: create an array size lines to save results in?
-# statistic = []
-#
-# for line in lines:
-#     src_sentence,mask = line.split("\t")
-#     src_seq = src_sentence.split()
-#
-# #    i = 0
-# #    for item in src_seq:
-#     src_id_seq = Variable(torch.LongTensor(src_vocab.stoi[src_seq]), volatile=True).view(1, -1)
-#     if torch.cuda.is_available():
-#         src_id_seq = src_id_seq.cuda()
-#     output,hidden = seq2seq.encoder(src_id_seq)
-#     mask_one = mask[i]
-#     #i += 1
-#     #TODO: Save the statistic, matched with the mask instance {0,1} of that word to a file.
-#     hidden_temp = [str(hid) for hid in hidden]
-#     hidden_string = " ".join(hidden_temp)
-#     statistic.append("\t".join([hidden_string,mask_one]))
-#
-# # This will be a big dataset.                          1000*6*20 = 120 000
-# #  formulae: num dialogs*average dialog length * average word per sentence
-# result_file = "hidden_and_mask.txt"
-# m = open(result_file)
-# m.writelines(statistic)
-# m.close()
+print("\nLoss: %f, Word accuracy: %f, Sequence accuracy: %f" % (loss, accuracy, seq_accuracy))
