@@ -9,12 +9,11 @@ from torch.autograd import Variable
 
 import seq2seq
 from seq2seq.loss import Perplexity
-from seq2seq.dataset import SourceField, TargetField
+from seq2seq.dataset import SourceField, MaskField
 from seq2seq.evaluator import Evaluator, Predictor
 from seq2seq.util.checkpoint import Checkpoint
 from seq2seq.models import DiagnosticClassifier
 from seq2seq.trainer import SupervisedTrainer
-
 
 try:
     raw_input          # Python 2
@@ -63,8 +62,7 @@ if torch.cuda.is_available():
 ############################################################################
 # Prepare dataset and masks
 src = SourceField()
-#TODO: create datatype MaskField??
-msk = TargetField()
+msk = MaskField()
 src.vocab = input_vocab
 max_len = opt.max_len
 
@@ -82,9 +80,11 @@ data = torchtext.data.TabularDataset(
 ###########################################################################
 # Train Classifier
 #TODO: check which hard-coded things should be arguments (see trainer)
+#TODO: pick the right loss function, currently binary cross entropy loss
 
 # Prepare loss
-loss = nn.CrossEntropyLoss()
+loss = torch.nn.BCELoss()
+#forward(self, input, target)
 if torch.cuda.is_available():
     loss.cuda()
 

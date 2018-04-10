@@ -1,6 +1,8 @@
 import logging
-
+import torch
 import torchtext
+
+from torch.autograd import Variable
 
 class SourceField(torchtext.data.Field):
     """ Wrapper class of torchtext.data.Field that forces batch_first and include_lengths to be True. """
@@ -48,3 +50,44 @@ class TargetField(torchtext.data.Field):
         super(TargetField, self).build_vocab(*args, **kwargs)
         self.sos_id = self.vocab.stoi[self.SYM_SOS]
         self.eos_id = self.vocab.stoi[self.SYM_EOS]
+
+
+class MaskField(torchtext.data.RawField):
+    """ Wrapper class of torchtext.data.Field that forces batch_first to be True. """
+    #TODO: extend with required changes to adept to 1 and 0 data
+
+    def __init__(self, sequential=True, #use_vocab=True, init_token=None,eos_token=None, fix_length=None,
+                 tensor_type=torch.LongTensor, preprocessing=None, postprocessing=None, #lower=False,
+                 #tokenize=(lambda s: s.split()), include_lengths=False,
+                 batch_first=False, #pad_token="<pad>", unk_token="<unk>",pad_first=False, truncate_first=False
+                 ):
+#        self.sequential = sequential
+#        self.use_vocab = use_vocab
+#        self.init_token = init_token
+#        self.eos_token = eos_token
+#        self.unk_token = unk_token
+#        self.fix_length = fix_length
+        self.tensor_type = tensor_type
+        self.preprocessing = preprocessing
+        self.postprocessing = postprocessing
+#        self.lower = lower
+#        self.tokenize = get_tokenizer(tokenize)
+#        self.include_lengths = include_lengths
+        self.batch_first = batch_first
+#        self.pad_token = pad_token if self.sequential else None
+#        self.pad_first = pad_first
+#        self.truncate_first = truncate_first
+
+
+    def process(self, batch, *args, **kargs):
+        if self.postprocessing is not None:
+            batch = self.postprocessing(batch)
+
+        if self.tensor_type not in self.tensor_types:
+            raise ValueError(
+                "Specified Field tensor_type {} can not be used with ".format(self.tensor_type))
+        batch = self.tensor_type(batch)
+        batch = batch.cuda() # Potentially requires .cuda(device)
+        batch = Variable(batch)
+
+        return batch
