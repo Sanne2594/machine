@@ -34,7 +34,7 @@ def readBabiDialog(fpath,cleanpath):
             if not "\t" in line:
                 long = (long + " "+ " ".join(line.split()[1:]))
             else:
-                src,tgt = line.split("\t")
+                src,tgt,msk = line.split("\t")
                 #src = src.split()[1:].join()
                 dialog[t] = {'src': (long + " "+ " ".join(src.split()[1:])), 'tgt':tgt.split('\n')[0]}
                 long = ""
@@ -92,10 +92,8 @@ def readBabiLines(fpath,line_path,num_path):
     return
 
 
-
-
 ### ### ### General Data
-path = "/home/sanne/machine/data/BABI_saiyanlong"
+path = "/home/sanne/machine/data/noET"
 #candidates = "dialog-babi-candidates.txt"
 #KB = "dialog-babi-kb-all.txt"
 
@@ -107,7 +105,7 @@ testfile = "dialog-babi-task1-API-calls-tst.txt"
 devfile = "dialog-babi-task1-API-calls-dev.txt"
 #
 # #line_path = "/home/sanne/machine/data/CLEANED-BABI/babi-line"
-dialog_path = "/home/sanne/machine/data/BABI_saiyanlong/cleaned"
+dialog_path = "/home/sanne/machine/data/noET/cleaned"
 # #num_path = "/home/sanne/machine/data/CLEANED-BABI/babi-num"
 train_clean = "task1-trn.txt"
 test_clean = "task1-tst.txt"
