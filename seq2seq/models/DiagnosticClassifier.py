@@ -3,22 +3,21 @@ import torch.nn.functional as F
 
 class DiagnosticClassifier(nn.Module):
 
-    def __init__(self, original_model, hidden_encoder_dim, type=None):
+    def __init__(self, original_model, hidden_encoder_dim, numclass=2):
         super(DiagnosticClassifier, self).__init__()
         self.encoder = original_model.encoder
-        #TODO: freeze weigths
+        # Freeze weights
+        for param in self.encoder.parameters():
+            param.requires_grad = False
 
-        if type=="binary":
-            self.classifier = nn.Sequential(
-                nn.Linear(hidden_encoder_dim, 64), # Asumes hidden_encoder_dim to be (bigger than) 128
-                nn.ReLU(),
-                nn.Linear(64, 32),
-                nn.ReLU(),
-                nn.Linear(32, 1),
-                nn.Sigmoid() #Forces the model to stay close to either 0 or 1.
+        self.classifier = nn.Sequential(
+            nn.Linear(hidden_encoder_dim, numclass)
+            # # Use this code when results appear to not regress information properly
+            # inner = (hidden_encoder_dim+numclass/2)
+            # nn.Linear(hidden_encoder_dim, inner),
+            # nn.ReLU(),
+            # nn.Linear(inner, numclass),
             )
-        else:
-            print("No Classifier type provided, expected binary or ...")
 
     def forward(self, input_variable, input_lengths=None, target_variable=None,
                 teacher_forcing_ratio=0):

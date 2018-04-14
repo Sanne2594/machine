@@ -3,6 +3,7 @@ import torch
 import torchtext
 
 from torch.autograd import Variable
+import ast
 
 class SourceField(torchtext.data.Field):
     """ Wrapper class of torchtext.data.Field that forces batch_first and include_lengths to be True. """
@@ -54,14 +55,33 @@ class TargetField(torchtext.data.Field):
 
 class MaskField(torchtext.data.RawField):
     """ Wrapper class of torchtext.data.Field that forces batch_first to be True. """
-    #TODO: extend with required changes to adept to 1 and 0 data
+    #TODO: extend this class with required changes to adept to 1 and 0 data
+    tensor_types = {
+        torch.FloatTensor: float,
+        torch.cuda.FloatTensor: float,
+        torch.DoubleTensor: float,
+        torch.cuda.DoubleTensor: float,
+        torch.HalfTensor: float,
+        torch.cuda.HalfTensor: float,
+
+        torch.ByteTensor: int,
+        torch.cuda.ByteTensor: int,
+        torch.CharTensor: int,
+        torch.cuda.CharTensor: int,
+        torch.ShortTensor: int,
+        torch.cuda.ShortTensor: int,
+        torch.IntTensor: int,
+        torch.cuda.IntTensor: int,
+        torch.LongTensor: int,
+        torch.cuda.LongTensor: int
+    }
 
     def __init__(self, sequential=True, #use_vocab=True, init_token=None,eos_token=None, fix_length=None,
-                 tensor_type=torch.LongTensor, preprocessing=None, postprocessing=None, #lower=False,
+                 tensor_type=torch.FloatTensor, preprocessing=None, postprocessing=None, #lower=False,
                  #tokenize=(lambda s: s.split()), include_lengths=False,
                  batch_first=False, #pad_token="<pad>", unk_token="<unk>",pad_first=False, truncate_first=False
                  ):
-#        self.sequential = sequential
+        self.sequential = sequential
 #        self.use_vocab = use_vocab
 #        self.init_token = init_token
 #        self.eos_token = eos_token
@@ -80,14 +100,21 @@ class MaskField(torchtext.data.RawField):
 
 
     def process(self, batch, *args, **kargs):
+        if self.sequential:
+            for item in batch:
+                mask = ast.literal_eval(item)
+        else:
+            mask = ast.literal_eval(batch)
         if self.postprocessing is not None:
             batch = self.postprocessing(batch)
 
         if self.tensor_type not in self.tensor_types:
             raise ValueError(
                 "Specified Field tensor_type {} can not be used with ".format(self.tensor_type))
+        #TODO: fix error based on sequential data :(
         batch = self.tensor_type(batch)
         batch = batch.cuda() # Potentially requires .cuda(device)
         batch = Variable(batch)
+        print(batch)
 
         return batch

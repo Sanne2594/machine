@@ -1,3 +1,0 @@
-ERROR: Unable to locate a modulefile for 'cuda/8.0.44'
-ERROR: Unable to locate a modulefile for 'cudnn/8.0-v6.0'
-/var/spool/torque/mom_priv/jobs/1226859.batch1.lisa.surfsara.nl.SC: line 10: ./final.sh: No such file or directory

@@ -14,6 +14,61 @@ from seq2seq.evaluator import Evaluator, Predictor
 from seq2seq.util.checkpoint import Checkpoint
 from seq2seq.models import DiagnosticClassifier
 from seq2seq.trainer import SupervisedTrainer
+import torch.optim as optim
+
+
+def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
+    epoch_loss_total = 0  # Reset every epoch
+
+    device = None if torch.cuda.is_available() else -1
+    batch_iterator = torchtext.data.BucketIterator(
+        dataset=data, batch_size=batch_size,
+        sort=False, sort_within_batch=True,
+        sort_key=lambda x: len(x.src),
+        device=device, repeat=False)
+
+    steps_per_epoch = len(batch_iterator)
+    total_steps = steps_per_epoch * num_epoch
+    step = 0 #This is changed if you want to include opt.resume
+    #step_elapsed = 0
+
+    for epoch in range(0, num_epoch + 1):
+        batch_generator = batch_iterator.__iter__()
+
+        # consuming seen batches from previous training
+        for _ in range((epoch - 1) * steps_per_epoch, step):
+            next(batch_generator)
+
+        model.train(True)
+        for batch in batch_generator:
+            step += 1
+            #step_elapsed += 1
+
+            input_variables, input_lengths = getattr(batch, seq2seq.src_field_name)
+            target_variables = getattr(batch, seq2seq.tgt_field_name)
+
+            # Forward propagation
+            decoder_outputs, decoder_hidden, other = model(input_variables, input_lengths.tolist(), target_variables)
+            # Possibly add teacher forcing ratio here
+
+            # Get loss
+            criterion.reset()
+            for step, step_output in enumerate(decoder_outputs):
+                batch_size = target_variables.size(0)
+                criterion.eval_batch(step_output.contiguous().view(batch_size, -1), target_variables[:, step + 1])
+            # Backward propagation
+            model.zero_grad()
+            criterion.backward()
+            optimizer.step()
+
+            # Record average loss
+            epoch_loss_total += loss.get_loss()
+        epoch_loss_avg = epoch_loss_total / min(steps_per_epoch, step)
+        print("Total loss:", epoch_loss_total, ", Average Loss:",epoch_loss_avg, ", epoch:", epoch)
+        epoch_loss_total = 0
+
+    return model
+
 
 try:
     raw_input          # Python 2
@@ -38,7 +93,7 @@ if torch.cuda.is_available():
 #################################################################################
 # load model
 
-logging.info("loading checkpoint from {}".format(os.path.join(opt.checkpoint_path)))
+#logging.info("loading checkpoint from {}".format(os.path.join(opt.checkpoint_path)))
 checkpoint = Checkpoint.load(opt.checkpoint_path)
 seq2seq = checkpoint.model
 input_vocab = checkpoint.input_vocab
@@ -49,7 +104,7 @@ output_vocab = checkpoint.output_vocab
 
 #TODO: figure out how to extract hidden layer size from model
 encoder_hidden_dim = 128
-DC = DiagnosticClassifier(seq2seq, encoder_hidden_dim, type="binary")
+DC = DiagnosticClassifier(seq2seq, encoder_hidden_dim, numclass=2)
 if torch.cuda.is_available():
     DC.cuda()
 
@@ -83,24 +138,32 @@ data = torchtext.data.TabularDataset(
 #TODO: pick the right loss function, currently binary cross entropy loss
 
 # Prepare loss
-loss = torch.nn.BCELoss()
+#TODO: toch cross enrtopy met 2 units
+loss = torch.nn.CrossEntropyLoss()
 #forward(self, input, target)
+optimizer = optim.Adam(DC.classifier.parameters(),lr=0.001)
+
 if torch.cuda.is_available():
     loss.cuda()
+    optimizer.cuda()
 
-# create trainer
-t = SupervisedTrainer(loss=loss, batch_size=32,
-                      checkpoint_every=100,
-                      print_every=100, expt_dir=opt.output_dir)
+num_epoch = 6
+# Train the classifier
+train(data=data, model=DC, criterion=loss, optimizer=optimizer, batch_size=32,num_epoch=6)
 
-#TODO: check is this routine is apropriate. It isn't
-DC = t.train(DC, data,
-                  num_epochs=6, #dev_data=dev,
-                  optimizer='adam',
-                  teacher_forcing_ratio=.2,
-                  learning_rate=0.001,
-                  resume=False,
-                  checkpoint_path=None)
+# # create trainer
+# t = SupervisedTrainer(loss=loss, batch_size=32,
+#                       checkpoint_every=100,
+#                       print_every=100, expt_dir=opt.output_dir)
+#
+# #TODO: check is this routine is apropriate. It isn't
+# DC = t.train(DC, data,
+#                   num_epochs=6, #dev_data=dev,
+#                   optimizer='adam',
+#                   teacher_forcing_ratio=.2,
+#                   learning_rate=0.001,
+#                   resume=False,
+#                   checkpoint_path=None)
 
 
 #################################################################################
