@@ -135,10 +135,8 @@ data = torchtext.data.TabularDataset(
 ###########################################################################
 # Train Classifier
 #TODO: check which hard-coded things should be arguments (see trainer)
-#TODO: pick the right loss function, currently binary cross entropy loss
 
 # Prepare loss
-#TODO: toch cross enrtopy met 2 units
 loss = torch.nn.CrossEntropyLoss()
 #forward(self, input, target)
 optimizer = optim.Adam(DC.classifier.parameters(),lr=0.001)
@@ -151,24 +149,14 @@ num_epoch = 6
 # Train the classifier
 train(data=data, model=DC, criterion=loss, optimizer=optimizer, batch_size=32,num_epoch=6)
 
-# # create trainer
-# t = SupervisedTrainer(loss=loss, batch_size=32,
-#                       checkpoint_every=100,
-#                       print_every=100, expt_dir=opt.output_dir)
-#
-# #TODO: check is this routine is apropriate. It isn't
-# DC = t.train(DC, data,
-#                   num_epochs=6, #dev_data=dev,
-#                   optimizer='adam',
-#                   teacher_forcing_ratio=.2,
-#                   learning_rate=0.001,
-#                   resume=False,
-#                   checkpoint_path=None)
+# # arguments to potentially add
+# , expt_dir=opt.output_dir, dev_data=dev, teacher_forcing_ratio=.2, resume=False, checkpoint_path=None)
 
 
 #################################################################################
 # Evaluate model on train set
 
+#TODO: make this compatable with cross entropy loss
 evaluator = Evaluator(loss=loss, batch_size=32)
 loss, accuracy, seq_accuracy = evaluator.evaluate(DC, data)
 

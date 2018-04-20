@@ -100,9 +100,12 @@ class MaskField(torchtext.data.RawField):
 
 
     def process(self, batch, *args, **kargs):
+        device = None if torch.cuda.is_available() else -1
         if self.sequential:
+            batch2 = []
             for item in batch:
-                mask = ast.literal_eval(item)
+                batch2.append(ast.literal_eval(item))
+            batch = batch2
         else:
             mask = ast.literal_eval(batch)
         if self.postprocessing is not None:
@@ -111,9 +114,11 @@ class MaskField(torchtext.data.RawField):
         if self.tensor_type not in self.tensor_types:
             raise ValueError(
                 "Specified Field tensor_type {} can not be used with ".format(self.tensor_type))
-        #TODO: fix error based on sequential data :(
+
+        #TODO: Introduce padding - intuitively this breaks, what to padd with?? -1?
         batch = self.tensor_type(batch)
-        batch = batch.cuda() # Potentially requires .cuda(device)
+        if not device:
+            batch = batch.cuda() # Potentially requires .cuda(device)
         batch = Variable(batch)
         print(batch)
 
