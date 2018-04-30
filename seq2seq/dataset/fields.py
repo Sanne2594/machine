@@ -79,7 +79,7 @@ class MaskField(torchtext.data.RawField):
     def __init__(self, sequential=True, #use_vocab=True, init_token=None,eos_token=None, fix_length=None,
                  tensor_type=torch.FloatTensor, preprocessing=None, postprocessing=None, #lower=False,
                  #tokenize=(lambda s: s.split()), include_lengths=False,
-                 batch_first=False, #pad_token="<pad>", unk_token="<unk>",pad_first=False, truncate_first=False
+                 batch_first=False, pad_token=-1, unk_token="<unk>",pad_first=False, truncate_first=False
                  ):
         self.sequential = sequential
 #        self.use_vocab = use_vocab
@@ -94,7 +94,7 @@ class MaskField(torchtext.data.RawField):
 #        self.tokenize = get_tokenizer(tokenize)
 #        self.include_lengths = include_lengths
         self.batch_first = batch_first
-#        self.pad_token = pad_token if self.sequential else None
+        self.pad_token = pad_token if self.sequential else None
 #        self.pad_first = pad_first
 #        self.truncate_first = truncate_first
 
@@ -104,10 +104,11 @@ class MaskField(torchtext.data.RawField):
         if self.sequential:
             batch2 = []
             for item in batch:
+                #print(item)
                 batch2.append(ast.literal_eval(item))
             batch = batch2
         else:
-            mask = ast.literal_eval(batch)
+            batch = ast.literal_eval(batch)
         if self.postprocessing is not None:
             batch = self.postprocessing(batch)
 
@@ -116,10 +117,30 @@ class MaskField(torchtext.data.RawField):
                 "Specified Field tensor_type {} can not be used with ".format(self.tensor_type))
 
         #TODO: Introduce padding - intuitively this breaks, what to padd with?? -1?
-        batch = self.tensor_type(batch)
+        padded = self.pad(batch)
+        batch = self.tensor_type(padded)
         if not device:
             batch = batch.cuda() # Potentially requires .cuda(device)
         batch = Variable(batch)
-        print(batch)
+        #print(batch)
 
         return batch
+
+    def pad(self, batch):
+        batch = list(batch)
+        #print("test1",batch)
+        if not self.sequential:
+            return batch
+        #TODO: figure out if you need fix_length since lengths will differ across batches
+        max_len = max(len(x) for x in batch)
+        padded, lengths = [], []
+        for x in batch:
+            padded.append(
+                #list(x[-max_len:] if self.truncate_first else x[:max_len]) +
+                x[:max_len] +
+                [self.pad_token] * max(0, max_len - len(x))
+            )
+        #     lengths.append(len(padded[-1]) - max(0, max_len - len(x)))
+        # if self.include_lengths:
+        #     return (padded, lengths)
+        return padded

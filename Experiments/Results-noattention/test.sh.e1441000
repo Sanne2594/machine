@@ -1,0 +1,151 @@
+2018-04-25 14:23:51,636 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi-dialog/task1-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=30, hidden_size=500, load_checkpoint=None, log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-noatt/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi-dialog/task1-trn.txt')
+2018-04-25 14:23:58,871 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2ba6ed2b1a58>, Scheduler: None
+2018-04-25 14:24:29,955 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 47.2453, Dev Perplexity: 10.1058, Accuracy: 0.3637, Sequence Accuracy: 0.1277
+2018-04-25 14:24:59,884 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 4.5509, Dev Perplexity: 3.9266, Accuracy: 0.6629, Sequence Accuracy: 0.5057
+2018-04-25 14:25:00,784 seq2seq.trainer.supervised_trainer INFO     Progress: 7%, Train Perplexity: 49.1719
+2018-04-25 14:25:30,445 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 3.4937, Dev Perplexity: 1.8378, Accuracy: 0.8297, Sequence Accuracy: 0.6745
+2018-04-25 14:25:32,028 seq2seq.trainer.supervised_trainer INFO     Progress: 10%, Train Perplexity: 3.4924
+2018-04-25 14:26:00,906 seq2seq.trainer.supervised_trainer INFO     Finished epoch 4: Train Perplexity: 2.1277, Dev Perplexity: 1.5766, Accuracy: 0.8490, Sequence Accuracy: 0.7500
+2018-04-25 14:26:03,010 seq2seq.trainer.supervised_trainer INFO     Progress: 14%, Train Perplexity: 1.9680
+2018-04-25 14:26:31,558 seq2seq.trainer.supervised_trainer INFO     Finished epoch 5: Train Perplexity: 1.5820, Dev Perplexity: 1.7163, Accuracy: 0.8496, Sequence Accuracy: 0.7471
+2018-04-25 14:26:34,359 seq2seq.trainer.supervised_trainer INFO     Progress: 17%, Train Perplexity: 1.5496
+2018-04-25 14:27:02,324 seq2seq.trainer.supervised_trainer INFO     Finished epoch 6: Train Perplexity: 1.5280, Dev Perplexity: 1.3381, Accuracy: 0.8826, Sequence Accuracy: 0.7809
+2018-04-25 14:27:05,521 seq2seq.trainer.supervised_trainer INFO     Progress: 21%, Train Perplexity: 1.4837
+2018-04-25 14:27:32,699 seq2seq.trainer.supervised_trainer INFO     Finished epoch 7: Train Perplexity: 1.4066, Dev Perplexity: 1.2731, Accuracy: 0.9048, Sequence Accuracy: 0.7889
+2018-04-25 14:27:36,739 seq2seq.trainer.supervised_trainer INFO     Progress: 24%, Train Perplexity: 1.5834
+2018-04-25 14:28:03,527 seq2seq.trainer.supervised_trainer INFO     Finished epoch 8: Train Perplexity: 1.5227, Dev Perplexity: 1.3678, Accuracy: 0.8978, Sequence Accuracy: 0.7925
+2018-04-25 14:28:07,570 seq2seq.trainer.supervised_trainer INFO     Progress: 28%, Train Perplexity: 1.3169
+2018-04-25 14:28:33,646 seq2seq.trainer.supervised_trainer INFO     Finished epoch 9: Train Perplexity: 1.3063, Dev Perplexity: 1.2648, Accuracy: 0.9164, Sequence Accuracy: 0.8204
+2018-04-25 14:28:38,486 seq2seq.trainer.supervised_trainer INFO     Progress: 31%, Train Perplexity: 1.2396
+2018-04-25 14:28:56,815 seq2seq.trainer.supervised_trainer INFO     Finished epoch 10: Train Perplexity: 1.2170, Dev Perplexity: 1.1485, Accuracy: 0.9309, Sequence Accuracy: 0.8342
+2018-04-25 14:29:09,000 seq2seq.trainer.supervised_trainer INFO     Progress: 35%, Train Perplexity: 1.2131
+2018-04-25 14:29:26,618 seq2seq.trainer.supervised_trainer INFO     Finished epoch 11: Train Perplexity: 1.1959, Dev Perplexity: 1.1655, Accuracy: 0.9303, Sequence Accuracy: 0.8309
+2018-04-25 14:29:39,669 seq2seq.trainer.supervised_trainer INFO     Progress: 38%, Train Perplexity: 1.2298
+2018-04-25 14:29:57,123 seq2seq.trainer.supervised_trainer INFO     Finished epoch 12: Train Perplexity: 1.3955, Dev Perplexity: 1.1387, Accuracy: 0.9414, Sequence Accuracy: 0.8342
+2018-04-25 14:30:10,622 seq2seq.trainer.supervised_trainer INFO     Progress: 42%, Train Perplexity: 1.3018
+2018-04-25 14:30:27,159 seq2seq.trainer.supervised_trainer INFO     Finished epoch 13: Train Perplexity: 1.1220, Dev Perplexity: 1.0932, Accuracy: 0.9607, Sequence Accuracy: 0.8407
+2018-04-25 14:30:41,127 seq2seq.trainer.supervised_trainer INFO     Progress: 45%, Train Perplexity: 1.0820
+2018-04-25 14:30:57,221 seq2seq.trainer.supervised_trainer INFO     Finished epoch 14: Train Perplexity: 1.0782, Dev Perplexity: 1.0690, Accuracy: 0.9665, Sequence Accuracy: 0.8461
+2018-04-25 14:31:11,226 seq2seq.trainer.supervised_trainer INFO     Progress: 49%, Train Perplexity: 1.0671
+2018-04-25 14:31:26,436 seq2seq.trainer.supervised_trainer INFO     Finished epoch 15: Train Perplexity: 1.0653, Dev Perplexity: 1.0453, Accuracy: 0.9778, Sequence Accuracy: 0.8738
+2018-04-25 14:31:41,241 seq2seq.trainer.supervised_trainer INFO     Progress: 52%, Train Perplexity: 1.0392
+2018-04-25 14:31:56,591 seq2seq.trainer.supervised_trainer INFO     Finished epoch 16: Train Perplexity: 1.0361, Dev Perplexity: 1.0614, Accuracy: 0.9813, Sequence Accuracy: 0.8836
+2018-04-25 14:32:12,154 seq2seq.trainer.supervised_trainer INFO     Progress: 56%, Train Perplexity: 1.0242
+2018-04-25 14:32:26,775 seq2seq.trainer.supervised_trainer INFO     Finished epoch 17: Train Perplexity: 1.0187, Dev Perplexity: 1.0038, Accuracy: 0.9996, Sequence Accuracy: 0.9997
+2018-04-25 14:32:42,576 seq2seq.trainer.supervised_trainer INFO     Progress: 59%, Train Perplexity: 1.0000
+2018-04-25 14:32:56,872 seq2seq.trainer.supervised_trainer INFO     Finished epoch 18: Train Perplexity: 1.0000, Dev Perplexity: 1.0041, Accuracy: 0.9996, Sequence Accuracy: 0.9997
+2018-04-25 14:33:20,398 seq2seq.trainer.supervised_trainer INFO     Finished epoch 19: Train Perplexity: 1.0000, Dev Perplexity: 1.0042, Accuracy: 0.9996, Sequence Accuracy: 0.9997
+2018-04-25 14:33:20,806 seq2seq.trainer.supervised_trainer INFO     Progress: 63%, Train Perplexity: 1.0000
+2018-04-25 14:33:50,309 seq2seq.trainer.supervised_trainer INFO     Finished epoch 20: Train Perplexity: 1.0000, Dev Perplexity: 1.0042, Accuracy: 0.9996, Sequence Accuracy: 0.9997
+2018-04-25 14:33:51,394 seq2seq.trainer.supervised_trainer INFO     Progress: 67%, Train Perplexity: 1.0000
+2018-04-25 14:34:20,655 seq2seq.trainer.supervised_trainer INFO     Finished epoch 21: Train Perplexity: 1.0000, Dev Perplexity: 1.0043, Accuracy: 0.9996, Sequence Accuracy: 0.9997
+2018-04-25 14:34:22,112 seq2seq.trainer.supervised_trainer INFO     Progress: 70%, Train Perplexity: 1.0000
+2018-04-25 14:34:50,778 seq2seq.trainer.supervised_trainer INFO     Finished epoch 22: Train Perplexity: 1.0000, Dev Perplexity: 1.0043, Accuracy: 0.9996, Sequence Accuracy: 0.9997
+2018-04-25 14:34:52,844 seq2seq.trainer.supervised_trainer INFO     Progress: 74%, Train Perplexity: 1.0000
+2018-04-25 14:35:20,623 seq2seq.trainer.supervised_trainer INFO     Finished epoch 23: Train Perplexity: 1.0000, Dev Perplexity: 1.0044, Accuracy: 0.9996, Sequence Accuracy: 0.9997
+2018-04-25 14:35:23,353 seq2seq.trainer.supervised_trainer INFO     Progress: 77%, Train Perplexity: 1.0000
+2018-04-25 14:35:49,852 seq2seq.trainer.supervised_trainer INFO     Finished epoch 24: Train Perplexity: 1.0000, Dev Perplexity: 1.0044, Accuracy: 0.9996, Sequence Accuracy: 0.9997
+2018-04-25 14:35:52,854 seq2seq.trainer.supervised_trainer INFO     Progress: 81%, Train Perplexity: 1.0000
+2018-04-25 14:36:18,917 seq2seq.trainer.supervised_trainer INFO     Finished epoch 25: Train Perplexity: 1.0000, Dev Perplexity: 1.0045, Accuracy: 0.9996, Sequence Accuracy: 0.9997
+2018-04-25 14:36:22,494 seq2seq.trainer.supervised_trainer INFO     Progress: 84%, Train Perplexity: 1.0000
+2018-04-25 14:36:48,055 seq2seq.trainer.supervised_trainer INFO     Finished epoch 26: Train Perplexity: 1.0000, Dev Perplexity: 1.0045, Accuracy: 0.9996, Sequence Accuracy: 0.9997
+2018-04-25 14:36:52,027 seq2seq.trainer.supervised_trainer INFO     Progress: 88%, Train Perplexity: 1.0000
+2018-04-25 14:37:18,196 seq2seq.trainer.supervised_trainer INFO     Finished epoch 27: Train Perplexity: 1.0000, Dev Perplexity: 1.0045, Accuracy: 0.9996, Sequence Accuracy: 0.9997
+2018-04-25 14:37:22,937 seq2seq.trainer.supervised_trainer INFO     Progress: 91%, Train Perplexity: 1.0000
+2018-04-25 14:37:40,826 seq2seq.trainer.supervised_trainer INFO     Finished epoch 28: Train Perplexity: 1.0000, Dev Perplexity: 1.0045, Accuracy: 0.9996, Sequence Accuracy: 0.9997
+2018-04-25 14:37:52,685 seq2seq.trainer.supervised_trainer INFO     Progress: 95%, Train Perplexity: 1.0000
+2018-04-25 14:38:10,667 seq2seq.trainer.supervised_trainer INFO     Finished epoch 29: Train Perplexity: 1.0000, Dev Perplexity: 1.0046, Accuracy: 0.9996, Sequence Accuracy: 0.9997
+2018-04-25 14:38:23,608 seq2seq.trainer.supervised_trainer INFO     Progress: 98%, Train Perplexity: 1.0000
+2018-04-25 14:38:47,470 seq2seq.trainer.supervised_trainer INFO     Finished epoch 30: Train Perplexity: 1.0000, Dev Perplexity: 1.0046, Accuracy: 0.9996, Sequence Accuracy: 0.9997
+2018-04-25 14:39:05,130 root         INFO     Namespace(attention=True, batch_size=32, bidirectional=False, cuda_device=0, dev='data/CLEANED-BABI/babi+dialog/task1-dev.txt', dropout_p_decoder=0.2, dropout_p_encoder=0.2, embedding_size=128, epochs=30, hidden_size=500, load_checkpoint=None, log_level='info', lr=0.001, max_len=75, n_layers=1, optim=None, output_dir='model-noatt-plus/', print_every=200, resume=False, rnn_cell='lstm', save_every=100, src_vocab=50000, teacher_forcing_ratio=0.5, tgt_vocab=50000, train='data/CLEANED-BABI/babi+dialog/task1-trn.txt')
+2018-04-25 14:39:09,896 seq2seq.trainer.supervised_trainer INFO     Optimizer: <torch.optim.adam.Adam object at 0x2b9b3e2cbe10>, Scheduler: None
+2018-04-25 14:39:38,531 seq2seq.trainer.supervised_trainer INFO     Finished epoch 1: Train Perplexity: 15.8713, Dev Perplexity: 4.4652, Accuracy: 0.5700, Sequence Accuracy: 0.4908
+2018-04-25 14:40:07,814 seq2seq.trainer.supervised_trainer INFO     Finished epoch 2: Train Perplexity: 3.5971, Dev Perplexity: 1.9151, Accuracy: 0.7812, Sequence Accuracy: 0.7232
+2018-04-25 14:40:10,993 seq2seq.trainer.supervised_trainer INFO     Progress: 7%, Train Perplexity: 16.8674
+2018-04-25 14:40:36,632 seq2seq.trainer.supervised_trainer INFO     Finished epoch 3: Train Perplexity: 1.6456, Dev Perplexity: 1.5556, Accuracy: 0.8401, Sequence Accuracy: 0.7539
+2018-04-25 14:40:41,490 seq2seq.trainer.supervised_trainer INFO     Progress: 11%, Train Perplexity: 1.5699
+2018-04-25 14:40:58,477 seq2seq.trainer.supervised_trainer INFO     Finished epoch 4: Train Perplexity: 1.3863, Dev Perplexity: 1.2378, Accuracy: 0.9318, Sequence Accuracy: 0.8674
+2018-04-25 14:41:11,929 seq2seq.trainer.supervised_trainer INFO     Progress: 15%, Train Perplexity: 1.2165
+2018-04-25 14:41:27,525 seq2seq.trainer.supervised_trainer INFO     Finished epoch 5: Train Perplexity: 1.1673, Dev Perplexity: 1.1486, Accuracy: 0.9496, Sequence Accuracy: 0.8848
+2018-04-25 14:41:42,163 seq2seq.trainer.supervised_trainer INFO     Progress: 19%, Train Perplexity: 1.1182
+2018-04-25 14:41:55,780 seq2seq.trainer.supervised_trainer INFO     Finished epoch 6: Train Perplexity: 1.1123, Dev Perplexity: 1.0975, Accuracy: 0.9548, Sequence Accuracy: 0.8932
+2018-04-25 14:42:17,542 seq2seq.trainer.supervised_trainer INFO     Finished epoch 7: Train Perplexity: 1.0976, Dev Perplexity: 1.0937, Accuracy: 0.9558, Sequence Accuracy: 0.8928
+2018-04-25 14:42:18,505 seq2seq.trainer.supervised_trainer INFO     Progress: 23%, Train Perplexity: 1.0955
+2018-04-25 14:42:45,313 seq2seq.trainer.supervised_trainer INFO     Finished epoch 8: Train Perplexity: 1.0902, Dev Perplexity: 1.0931, Accuracy: 0.9562, Sequence Accuracy: 0.8926
+2018-04-25 14:42:48,004 seq2seq.trainer.supervised_trainer INFO     Progress: 27%, Train Perplexity: 1.0925
+2018-04-25 14:43:12,636 seq2seq.trainer.supervised_trainer INFO     Finished epoch 9: Train Perplexity: 1.0993, Dev Perplexity: 1.1127, Accuracy: 0.9537, Sequence Accuracy: 0.8911
+2018-04-25 14:43:16,800 seq2seq.trainer.supervised_trainer INFO     Progress: 31%, Train Perplexity: 1.0952
+2018-04-25 14:43:33,269 seq2seq.trainer.supervised_trainer INFO     Finished epoch 10: Train Perplexity: 1.1269, Dev Perplexity: 1.1015, Accuracy: 0.9658, Sequence Accuracy: 0.8936
+2018-04-25 14:43:45,770 seq2seq.trainer.supervised_trainer INFO     Progress: 35%, Train Perplexity: 1.1347
+2018-04-25 14:44:01,016 seq2seq.trainer.supervised_trainer INFO     Finished epoch 11: Train Perplexity: 1.1018, Dev Perplexity: 1.0580, Accuracy: 0.9775, Sequence Accuracy: 0.9032
+2018-04-25 14:44:14,823 seq2seq.trainer.supervised_trainer INFO     Progress: 39%, Train Perplexity: 1.0474
+2018-04-25 14:44:28,540 seq2seq.trainer.supervised_trainer INFO     Finished epoch 12: Train Perplexity: 1.0403, Dev Perplexity: 1.0513, Accuracy: 0.9826, Sequence Accuracy: 0.9132
+2018-04-25 14:44:49,861 seq2seq.trainer.supervised_trainer INFO     Finished epoch 13: Train Perplexity: 1.0288, Dev Perplexity: 1.0546, Accuracy: 0.9871, Sequence Accuracy: 0.9368
+2018-04-25 14:44:50,633 seq2seq.trainer.supervised_trainer INFO     Progress: 43%, Train Perplexity: 1.0312
+2018-04-25 14:45:17,633 seq2seq.trainer.supervised_trainer INFO     Finished epoch 14: Train Perplexity: 1.0169, Dev Perplexity: 1.0188, Accuracy: 0.9935, Sequence Accuracy: 0.9554
+2018-04-25 14:45:19,730 seq2seq.trainer.supervised_trainer INFO     Progress: 47%, Train Perplexity: 1.0178
+2018-04-25 14:46:26,883 seq2seq.trainer.supervised_trainer INFO     Finished epoch 15: Train Perplexity: 1.0223, Dev Perplexity: 1.0113, Accuracy: 0.9975, Sequence Accuracy: 0.9831
+2018-04-25 14:46:30,918 seq2seq.trainer.supervised_trainer INFO     Progress: 51%, Train Perplexity: 1.0145
+2018-04-25 14:46:48,348 seq2seq.trainer.supervised_trainer INFO     Finished epoch 16: Train Perplexity: 1.0050, Dev Perplexity: 1.0049, Accuracy: 0.9991, Sequence Accuracy: 0.9935
+2018-04-25 14:48:26,767 seq2seq.trainer.supervised_trainer INFO     Progress: 55%, Train Perplexity: 1.0031
+2018-04-25 14:48:43,114 seq2seq.trainer.supervised_trainer INFO     Finished epoch 17: Train Perplexity: 1.0004, Dev Perplexity: 1.0010, Accuracy: 0.9998, Sequence Accuracy: 0.9987
+2018-04-25 14:48:56,977 seq2seq.trainer.supervised_trainer INFO     Progress: 59%, Train Perplexity: 1.0002
+2018-04-25 14:49:11,335 seq2seq.trainer.supervised_trainer INFO     Finished epoch 18: Train Perplexity: 1.0002, Dev Perplexity: 1.0016, Accuracy: 0.9997, Sequence Accuracy: 0.9981
+2018-04-25 14:49:33,076 seq2seq.trainer.supervised_trainer INFO     Finished epoch 19: Train Perplexity: 1.0000, Dev Perplexity: 1.0016, Accuracy: 0.9998, Sequence Accuracy: 0.9983
+2018-04-25 14:49:33,437 seq2seq.trainer.supervised_trainer INFO     Progress: 63%, Train Perplexity: 1.0000
+2018-04-25 14:50:01,344 seq2seq.trainer.supervised_trainer INFO     Finished epoch 20: Train Perplexity: 1.0000, Dev Perplexity: 1.0016, Accuracy: 0.9998, Sequence Accuracy: 0.9983
+2018-04-25 14:50:03,088 seq2seq.trainer.supervised_trainer INFO     Progress: 67%, Train Perplexity: 1.0000
+2018-04-25 14:50:28,621 seq2seq.trainer.supervised_trainer INFO     Finished epoch 21: Train Perplexity: 1.0000, Dev Perplexity: 1.0017, Accuracy: 0.9998, Sequence Accuracy: 0.9983
+2018-04-25 14:50:31,923 seq2seq.trainer.supervised_trainer INFO     Progress: 71%, Train Perplexity: 1.0000
+2018-04-25 14:50:49,389 seq2seq.trainer.supervised_trainer INFO     Finished epoch 22: Train Perplexity: 1.0000, Dev Perplexity: 1.0017, Accuracy: 0.9998, Sequence Accuracy: 0.9983
+2018-04-25 14:51:00,891 seq2seq.trainer.supervised_trainer INFO     Progress: 75%, Train Perplexity: 1.0000
+2018-04-25 14:51:16,650 seq2seq.trainer.supervised_trainer INFO     Finished epoch 23: Train Perplexity: 1.0000, Dev Perplexity: 1.0017, Accuracy: 0.9998, Sequence Accuracy: 0.9983
+2018-04-25 14:51:29,466 seq2seq.trainer.supervised_trainer INFO     Progress: 79%, Train Perplexity: 1.0000
+2018-04-25 14:51:43,445 seq2seq.trainer.supervised_trainer INFO     Finished epoch 24: Train Perplexity: 1.0000, Dev Perplexity: 1.0017, Accuracy: 0.9998, Sequence Accuracy: 0.9983
+2018-04-25 14:51:58,157 seq2seq.trainer.supervised_trainer INFO     Progress: 83%, Train Perplexity: 1.0000
+2018-04-25 14:52:10,986 seq2seq.trainer.supervised_trainer INFO     Finished epoch 25: Train Perplexity: 1.0000, Dev Perplexity: 1.0017, Accuracy: 0.9998, Sequence Accuracy: 0.9983
+2018-04-25 14:52:32,019 seq2seq.trainer.supervised_trainer INFO     Finished epoch 26: Train Perplexity: 1.0000, Dev Perplexity: 1.0017, Accuracy: 0.9998, Sequence Accuracy: 0.9983
+2018-04-25 14:52:33,482 seq2seq.trainer.supervised_trainer INFO     Progress: 87%, Train Perplexity: 1.0000
+2018-04-25 14:52:58,821 seq2seq.trainer.supervised_trainer INFO     Finished epoch 27: Train Perplexity: 1.0000, Dev Perplexity: 1.0017, Accuracy: 0.9998, Sequence Accuracy: 0.9983
+2018-04-25 14:53:01,986 seq2seq.trainer.supervised_trainer INFO     Progress: 91%, Train Perplexity: 1.0000
+2018-04-25 14:53:25,648 seq2seq.trainer.supervised_trainer INFO     Finished epoch 28: Train Perplexity: 1.0000, Dev Perplexity: 1.0017, Accuracy: 0.9998, Sequence Accuracy: 0.9983
+2018-04-25 14:53:30,430 seq2seq.trainer.supervised_trainer INFO     Progress: 95%, Train Perplexity: 1.0000
+2018-04-25 14:53:46,224 seq2seq.trainer.supervised_trainer INFO     Finished epoch 29: Train Perplexity: 1.0000, Dev Perplexity: 1.0017, Accuracy: 0.9998, Sequence Accuracy: 0.9985
+2018-04-25 14:53:58,933 seq2seq.trainer.supervised_trainer INFO     Progress: 99%, Train Perplexity: 1.0000
+2018-04-25 14:54:19,676 seq2seq.trainer.supervised_trainer INFO     Finished epoch 30: Train Perplexity: 1.0000, Dev Perplexity: 1.0017, Accuracy: 0.9998, Sequence Accuracy: 0.9985
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2ae10b9c63c8>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2ae10b9c6208>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2ae10b9c6940>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b3758878588>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b3758878748>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2b37588789e8>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b553b4980b8>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b553b4984a8>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2b553b498940>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'

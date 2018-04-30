@@ -17,3 +17,6 @@ python3 evaluate.py --checkpoint_path $MDL_LOC --test_data "data/CLEANED-BABI/ba
 
 echo "model on noET - test set"
 python3 evaluate.py --checkpoint_path $MDL_LOC --test_data "data/noET/cleaned/task1-tst.txt" --max_len 75
+
+echo "model on realET - test set"
+python3 evaluate.py --checkpoint_path $MDL_LOC --test_data "data/realET/cleaned/task1-tst.txt" --max_len 75

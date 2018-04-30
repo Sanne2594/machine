@@ -27,21 +27,24 @@ def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
         sort_key=lambda x: len(x.src),
         device=device, repeat=False)
 
-    steps_per_epoch = len(batch_iterator)
+    steps_per_epoch = len(batch_iterator) #was 10, when printed
     total_steps = steps_per_epoch * num_epoch
     step = 0 #This is changed if you want to include opt.resume
     #step_elapsed = 0
 
     for epoch in range(0, num_epoch + 1):
         batch_generator = batch_iterator.__iter__()
-
+        #torchtext.data.iterator.BucketIterator
         # consuming seen batches from previous training
         for _ in range((epoch - 1) * steps_per_epoch, step):
             next(batch_generator)
 
         model.train(True)
+        print(batch_generator)
+        #<generator object Iterator.__iter__ at 0x7fbc17680e60>
         for batch in batch_generator:
-            step += 1
+            #TODO: does not reach this place
+            step = step+1
             #step_elapsed += 1
 
             input_variables, input_lengths = getattr(batch, seq2seq.src_field_name)
@@ -63,6 +66,7 @@ def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
 
             # Record average loss
             epoch_loss_total += loss.get_loss()
+            print(step)
         epoch_loss_avg = epoch_loss_total / min(steps_per_epoch, step)
         print("Total loss:", epoch_loss_total, ", Average Loss:",epoch_loss_avg, ", epoch:", epoch)
         epoch_loss_total = 0
