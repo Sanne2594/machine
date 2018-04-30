@@ -1,6 +1,6 @@
 30/04/2018 22:39:52 
+
 Mistakes bAbI plus on bAbI plus- all
-Cuda device set to 0
 Loading checkpoints from model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000
 
 Model input: ['good', 'morning', 'sorry', 'yeah', 'good', 'morning', 'hello', 'what', 'can', 'i', 'help', 'you', 'with', 'today', 'can', 'you', 'book', 'a', 'sorry', 'yeah', 'can', 'you', 'book', 'a', 'table', 'for', 'four', 'in', 'a', 'well', 'moderate', 'price', 'range', "i'm", 'on', 'it', '<SILENCE>', 'any', 'preference', 'on', 'a', 'type', 'of', 'cuisine', 'with', 'french', 'sorry', 'yeah', 'with', 'french', 'food', 'where', 'should', 'it', 'be', 'in', 'madrid', 'no', 'sorry', 'in', 'rome', 'ok', 'let', 'me', 'look', 'into', 'some', 'options', 'for', 'you', '<SILENCE>']
@@ -9,8 +9,11 @@ Target output: ['<sos>', 'api_call', 'french', 'rome', 'four', 'moderate', '<eos
 Word accuracy: 0.8333333333333334
 
 Loss: 1.000130, Word accuracy: 0.999974, Sequence accuracy: 0.999814
+
+
+#####################################################################################################################################
+
 Mistakes bAbI on bAbI plus- all
-Cuda device set to 0
 Loading checkpoints from model-final/acc_1.00_seq_acc_1.00_ppl_1.00_s4600
 
 Model input: ['hi', '<unk>', '<unk>', 'hi']
