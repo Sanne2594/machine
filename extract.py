@@ -21,6 +21,7 @@ def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
     epoch_loss_total = 0  # Reset every epoch
 
     device = None if torch.cuda.is_available() else -1
+    #TODO: hier gaat het fout
     batch_iterator = torchtext.data.BucketIterator(
         dataset=data, batch_size=batch_size,
         sort=False, sort_within_batch=True,
@@ -133,6 +134,7 @@ data = torchtext.data.TabularDataset(
     fields=[('src', src), ('msk', msk)],
     filter_pred=len_filter
 )
+
 
 #TODO: split in train and test?
 

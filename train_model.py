@@ -96,7 +96,7 @@ if opt.load_checkpoint is not None:
     seq2seq = checkpoint.model
     input_vocab = checkpoint.input_vocab
     output_vocab = checkpoint.output_vocab
-    src.vocab = input_vocab
+    src.vocab = inpcab = input_vocab
     tgt.vocab = output_vocab
 else:
     # build vocabulary
