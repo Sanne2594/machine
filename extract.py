@@ -8,12 +8,12 @@ import torchtext
 from torch.autograd import Variable
 
 import seq2seq
-from seq2seq.loss import Perplexity
 from seq2seq.dataset import SourceField, MaskField
 from seq2seq.evaluator import Evaluator, Predictor
 from seq2seq.util.checkpoint import Checkpoint
 from seq2seq.models import DiagnosticClassifier
 from seq2seq.trainer import SupervisedTrainer
+from torch.nn import CrossEntropyLoss
 import torch.optim as optim
 
 
@@ -31,8 +31,8 @@ def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
     total_steps = steps_per_epoch * num_epoch
     step = 0 #This is changed if you want to include opt.resume
     #step_elapsed = 0
-
-    for epoch in range(0, num_epoch + 1):
+    
+    for epoch in range(1, num_epoch + 1):
         batch_generator = batch_iterator.__iter__()
         #torchtext.data.iterator.BucketIterator
         # consuming seen batches from previous training
@@ -40,32 +40,42 @@ def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
             next(batch_generator)
 
         model.train(True)
-        print(batch_generator)
         #<generator object Iterator.__iter__ at 0x7fbc17680e60>
         for batch in batch_generator:
             #TODO: does not reach this place
             step = step+1
             #step_elapsed += 1
 
-            input_variables, input_lengths = getattr(batch, seq2seq.src_field_name)
-            target_variables = getattr(batch, seq2seq.tgt_field_name)
+            input_variables, input_lengths = getattr(batch, 'src')
+            target_variables = getattr(batch, 'msk')
 
             # Forward propagation
-            decoder_outputs, decoder_hidden, other = model(input_variables, input_lengths.tolist(), target_variables)
+            output = model(input_variables, input_lengths.tolist(), target_variables)
             # Possibly add teacher forcing ratio here
 
+            # recasted_targets = target_variables[:,:output.size(1)]
+
+            # put targets all in one array
+            targets_flattened = target_variables.contiguous().view(-1).long()
+            outputs_flattened = output.view(targets_flattened.size(0), -1)
+
             # Get loss
-            criterion.reset()
-            for step, step_output in enumerate(decoder_outputs):
-                batch_size = target_variables.size(0)
-                criterion.eval_batch(step_output.contiguous().view(batch_size, -1), target_variables[:, step + 1])
-            # Backward propagation
+            loss = criterion(outputs_flattened, targets_flattened)
+            loss.backward()
+
+
+            # for step, step_output in enumerate(output):
+            #     batch_size = target_variables.size(0)
+            #     print(batch_size)
+            #     print(step_output.contiguous().size())
+            #     input()
+            #     criterion.eval_batch(step_output.contiguous().view(batch_size, -1), target_variables[:, step + 1])
+            # # Backward propagation
             model.zero_grad()
-            criterion.backward()
             optimizer.step()
 
             # Record average loss
-            epoch_loss_total += loss.get_loss()
+            epoch_loss_total += loss.data[0]
             print(step)
         epoch_loss_avg = epoch_loss_total / min(steps_per_epoch, step)
         print("Total loss:", epoch_loss_total, ", Average Loss:",epoch_loss_avg, ", epoch:", epoch)
@@ -108,7 +118,8 @@ output_vocab = checkpoint.output_vocab
 
 #TODO: figure out how to extract hidden layer size from model
 encoder_hidden_dim = 128
-DC = DiagnosticClassifier(seq2seq, encoder_hidden_dim, numclass=2)
+num_class=2
+DC = DiagnosticClassifier(seq2seq, encoder_hidden_dim, numclass=num_class)
 if torch.cuda.is_available():
     DC.cuda()
 
@@ -141,7 +152,7 @@ data = torchtext.data.TabularDataset(
 #TODO: check which hard-coded things should be arguments (see trainer)
 
 # Prepare loss
-loss = torch.nn.CrossEntropyLoss()
+loss = CrossEntropyLoss(ignore_index=-1)
 #forward(self, input, target)
 optimizer = optim.Adam(DC.classifier.parameters(),lr=0.001)
 
