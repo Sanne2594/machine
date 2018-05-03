@@ -9,9 +9,12 @@ class DiagnosticClassifier(nn.Module):
         # Freeze weights
         for param in self.encoder.parameters():
             param.requires_grad = False
+            
+        hidden_encoder_dim = self.encoder.hidden_size
 
         self.classifier = nn.Sequential(
-            nn.Linear(hidden_encoder_dim, numclass)
+            nn.Linear(hidden_encoder_dim, numclass),
+            # nn.LogSoftmax()
             # # Use this code when results appear to not regress information properly
             # inner = (hidden_encoder_dim+numclass/2)
             # nn.Linear(hidden_encoder_dim, inner),
@@ -23,5 +26,5 @@ class DiagnosticClassifier(nn.Module):
                 teacher_forcing_ratio=0):
         encoder_outputs, encoder_hidden = self.encoder(input_variable, input_lengths)
 
-        result = self.classifier(encoder_hidden)
+        result = self.classifier(encoder_outputs)
         return result
