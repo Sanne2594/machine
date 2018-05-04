@@ -8,7 +8,7 @@ import torchtext
 from torch.autograd import Variable
 
 import seq2seq
-from seq2seq.loss import Perplexity
+from seq2seq.loss import Perplexity, NLLLoss
 from seq2seq.dataset import SourceField, MaskField
 from seq2seq.evaluator import Evaluator, Predictor
 from seq2seq.util.checkpoint import Checkpoint
@@ -21,6 +21,7 @@ def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
     epoch_loss_total = 0  # Reset every epoch
 
     device = None if torch.cuda.is_available() else -1
+
     #TODO: hier gaat het fout
     batch_iterator = torchtext.data.BucketIterator(
         dataset=data, batch_size=batch_size,
@@ -30,12 +31,12 @@ def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
 
     steps_per_epoch = len(batch_iterator) #was 10, when printed
     total_steps = steps_per_epoch * num_epoch
-    step = 0 #This is changed if you want to include opt.resume
-    #step_elapsed = 0
+    step = 0
 
-    for epoch in range(0, num_epoch + 1):
+    for epoch in range(1, num_epoch + 1):
         batch_generator = batch_iterator.__iter__()
         #torchtext.data.iterator.BucketIterator
+
         # consuming seen batches from previous training
         for _ in range((epoch - 1) * steps_per_epoch, step):
             next(batch_generator)
@@ -48,21 +49,21 @@ def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
             step = step+1
             #step_elapsed += 1
 
-            input_variables, input_lengths = getattr(batch, seq2seq.src_field_name)
-            target_variables = getattr(batch, seq2seq.tgt_field_name)
+            input_variables, input_lengths = getattr(batch, 'src')
+            target_variables = getattr(batch, 'msk')
 
-            # Forward propagation
-            decoder_outputs, decoder_hidden, other = model(input_variables, input_lengths.tolist(), target_variables)
+            # Forward propagation through classifiers
+            output = model(input_variables, input_lengths.tolist(), target_variables)
             # Possibly add teacher forcing ratio here
+            #         32 x     <75     x 2
+            # batch size * max lengths * num_class
 
             # Get loss
-            criterion.reset()
-            for step, step_output in enumerate(decoder_outputs):
-                batch_size = target_variables.size(0)
-                criterion.eval_batch(step_output.contiguous().view(batch_size, -1), target_variables[:, step + 1])
+            loss = criterion(output,target_variables)
+
             # Backward propagation
             model.zero_grad()
-            criterion.backward()
+            loss.backward()
             optimizer.step()
 
             # Record average loss
@@ -109,7 +110,8 @@ output_vocab = checkpoint.output_vocab
 
 #TODO: figure out how to extract hidden layer size from model
 encoder_hidden_dim = 128
-DC = DiagnosticClassifier(seq2seq, encoder_hidden_dim, numclass=2)
+num_class=2
+DC = DiagnosticClassifier(seq2seq, numclass=num_class)
 if torch.cuda.is_available():
     DC.cuda()
 
@@ -143,7 +145,7 @@ data = torchtext.data.TabularDataset(
 #TODO: check which hard-coded things should be arguments (see trainer)
 
 # Prepare loss
-loss = torch.nn.CrossEntropyLoss()
+loss = torch.nn.CrossEntropyLoss(ignore_index=-1)
 #forward(self, input, target)
 optimizer = optim.Adam(DC.classifier.parameters(),lr=0.001)
 

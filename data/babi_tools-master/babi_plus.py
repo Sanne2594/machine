@@ -69,7 +69,10 @@ def perform_action(in_action, in_dialog, in_token_coordinates, in_slot_values):
                 action_outcome,
                 replacement_map
             )
-            in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement-1))
+            #TODO: dit zou nu zo goed moeten zijn.
+            mask = np.fromstring(in_dialog[utterance_index]['mask'], dtype=float,sep=' ')
+            mask = np.insert(mask, token_index+1, np.ones(len_replacement-1))
+            in_dialog[utterance_index]['mask'] = ' '.join([str(i) for i in mask])
     if in_action == 'correct_long_distance':
         phrase_begin, phrase_end = get_enclosing_phrase(
             in_dialog[utterance_index]['text'],
@@ -94,7 +97,9 @@ def perform_action(in_action, in_dialog, in_token_coordinates, in_slot_values):
                 action_outcome,
                 replacement_map
             )
-            in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement-1))
+            mask = np.fromstring(in_dialog[utterance_index]['mask'], dtype=float, sep=' ')
+            mask = np.insert(mask, token_index+1, np.ones(len_replacement-1))
+            in_dialog[utterance_index]['mask'] = ' '.join([str(i) for i in mask])
     if in_action == 'multiturn_correct':
         if word in in_slot_values:
             replacement_map = {
@@ -111,22 +116,26 @@ def perform_action(in_action, in_dialog, in_token_coordinates, in_slot_values):
                 'agent': 'usr',
                 'text': replacement_text
             }
-            in_dialog[utterance_index + 1: utterance_index + 2] = \
-                [dict(in_dialog[utterance_index + 1]), correction_turn, dict(in_dialog[utterance_index + 1])]
+            in_dialog[utterance_index + 1: utterance_index + 2] = [dict(in_dialog[utterance_index + 1]), correction_turn, dict(in_dialog[utterance_index + 1])]
     if in_action == 'selfcheck' and word in in_slot_values:
         replacement_map = {'$token' : word}
         in_dialog[utterance_index]['text'][token_index:token_index ], len_replacement = apply_replacements(
             action_outcome,
             replacement_map
         )
-        in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index, np.ones(len_replacement-1))
+        mask = np.fromstring(in_dialog[utterance_index]['mask'], dtype=float, sep=' ')
+        mask = np.insert(mask, token_index, np.ones(len_replacement-1))
+        in_dialog[utterance_index]['mask'] = ' '.join([str(i) for i in mask])
     if in_action == 'hesitate':
         replacement_map = {'$token': word}
         in_dialog[utterance_index]['text'][token_index:token_index + 1], len_replacement = apply_replacements(
             action_outcome,
             replacement_map
         )
-        in_dialog[utterance_index]['mask'] = np.insert(in_dialog[utterance_index]['mask'], token_index, np.ones(len_replacement-1))
+        mask = np.fromstring(in_dialog[utterance_index]['mask'], dtype=float, sep=' ')
+        mask = np.insert(mask, token_index, np.ones(len_replacement-1))
+        in_dialog[utterance_index]['mask'] = ' '.join([str(i) for i in mask])
+
     if in_action == 'restart':
         replacement_map = {
             '$token': word,
@@ -136,8 +145,9 @@ def perform_action(in_action, in_dialog, in_token_coordinates, in_slot_values):
             action_outcome,
             replacement_map
         )
-        mask = str(np.insert(in_dialog[utterance_index]['mask'], token_index+1, np.ones(len_replacement-1)))
-        in_dialog[utterance_index]['mask'] = ast.literal_eval(" ".join(mask.split('\n')))
+        mask = np.fromstring(in_dialog[utterance_index]['mask'], dtype=float, sep=' ')
+        mask = np.insert(mask, token_index+1, np.ones(len_replacement-1))
+        in_dialog[utterance_index]['mask'] = ' '.join([str(i) for i in mask])
 
 def fix_data(in_utterance):
     REPLACEMENTS = [
@@ -368,6 +378,5 @@ if __name__ == '__main__':
     init()
     babi_plus_dialogues = plus_dataset(args.babi_root, args.result_size)
     save_function = locals()['save_' + args.output_format]
-    print(babi_plus_dialogues)
     save_function(babi_plus_dialogues, args.babi_plus_root)
     print_stats()

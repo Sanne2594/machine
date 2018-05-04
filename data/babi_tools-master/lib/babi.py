@@ -43,6 +43,7 @@ def read_task(in_file_name):
                user_turn, system_turn = turns
                #Inserted mask
                mask = np.zeros(len(user_turn.split()))
+               mask = ' '.join([str(i) for i in mask])
                result[-1][1].append({'agent': 'user', 'text': user_turn, 'mask':mask})
             result[-1][1].append({'agent': 'system', 'text': system_turn})
     return list(filter(lambda x: len(x[1]), result))

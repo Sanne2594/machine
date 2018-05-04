@@ -123,7 +123,6 @@ class MaskField(torchtext.data.RawField):
             batch = batch.cuda() # Potentially requires .cuda(device)
         batch = Variable(batch)
         #print(batch)
-
         return batch
 
     def pad(self, batch):
