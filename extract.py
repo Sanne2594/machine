@@ -105,12 +105,17 @@ def test(data, model, criterion, batch_size=32):
         outputs_flattened = output.view(targets_flattened.size(0), -1)
         loss = criterion(outputs_flattened, targets_flattened)
 
+        # Compute softmax
         _,predicted = torch.max(outputs_flattened.data, 1)
-        print("Predicted: ",len(predicted),  " Targets: ", len(targets_flattened))
-        #TODO: check if target i -1 and remove pair from predicted,target_flattened
-        # dit werkt in theory omdat 1-1 = 0 and 0-1 = -1 0-0 = 0
-        outcome = [abs(predicted[i] - targets_flattened[i]) for i in range(len(targets_flattened))]
-        accuracy_total += sum(outcome)
+
+        # Remove padded targets
+        indices = targets_flattened.ne(-1)
+        targets_flattened = targets_flattened[indices]
+        predicted = Variable(predicted)
+        predicted = predicted[indices]
+
+        # Compute Statistics
+        accuracy_total += (predicted==targets_flattened).sum().data.numpy()
         loss_total += loss.data[0]
         evals += len(targets_flattened)
 
@@ -205,10 +210,6 @@ train(data=data, model=DC, criterion=loss, optimizer=optimizer, batch_size=32,nu
 
 #################################################################################
 # Evaluate model on train set
-
-#TODO: make this compatable with cross entropy loss
-#evaluator = Evaluator(loss=loss, batch_size=32)
-#loss, accuracy, seq_accuracy = evaluator.evaluate(DC, data)
 
 #TODO: read in the testset
 # for now use data which is filled with train-data
