@@ -3,7 +3,7 @@ import torch
 import torchtext
 
 from torch.autograd import Variable
-import ast
+import numpy as np
 
 class SourceField(torchtext.data.Field):
     """ Wrapper class of torchtext.data.Field that forces batch_first and include_lengths to be True. """
@@ -105,10 +105,10 @@ class MaskField(torchtext.data.RawField):
             batch2 = []
             for item in batch:
                 #print(item)
-                batch2.append(ast.literal_eval(item))
+                batch2.append(np.fromstring(item, dtype=float, sep=' '))
             batch = batch2
         else:
-            batch = ast.literal_eval(batch)
+            batch = np.fromstring(batch, dtype=float, sep=' ')
         if self.postprocessing is not None:
             batch = self.postprocessing(batch)
 
@@ -134,11 +134,12 @@ class MaskField(torchtext.data.RawField):
         max_len = max(len(x) for x in batch)
         padded, lengths = [], []
         for x in batch:
+            print(x[:max_len])
             padded.append(
                 #list(x[-max_len:] if self.truncate_first else x[:max_len]) +
-                x[:max_len] +
+                np.append(x[:max_len],
                 [self.pad_token] * max(0, max_len - len(x))
-            )
+            ))
         #     lengths.append(len(padded[-1]) - max(0, max_len - len(x)))
         # if self.include_lengths:
         #     return (padded, lengths)

@@ -75,6 +75,21 @@ def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
 
     return model
 
+def test(data, model, loss, batch_size=32):
+    accuracy = 0
+    evals = 0
+
+    device = None if torch.cuda.is_available() else -1
+    batch_iterator = torchtext.data.BucketIterator(
+        dataset=data, batch_size=batch_size,
+        sort=False, sort_within_batch=True,
+        sort_key=lambda x: len(x.src),
+        device=device, repeat=False)
+
+
+
+    return accuracy
+
 
 try:
     raw_input          # Python 2
@@ -165,7 +180,15 @@ train(data=data, model=DC, criterion=loss, optimizer=optimizer, batch_size=32,nu
 # Evaluate model on train set
 
 #TODO: make this compatable with cross entropy loss
-evaluator = Evaluator(loss=loss, batch_size=32)
-loss, accuracy, seq_accuracy = evaluator.evaluate(DC, data)
+#evaluator = Evaluator(loss=loss, batch_size=32)
+#loss, accuracy, seq_accuracy = evaluator.evaluate(DC, data)
+
+#TODO: read in the testset
+# for now use data which is filled with train-data
+
+accuracy = test(data, DC, loss,batch_size=32)
+#TODO: get outputs and for each check whether matches truth
+
+#TODO: compute some statistics over this.
 
 print("\nLoss: %f, Word accuracy: %f, Sequence accuracy: %f" % (loss, accuracy, seq_accuracy))

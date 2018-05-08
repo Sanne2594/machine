@@ -41,10 +41,18 @@
   "action_templates": {
     "hesitate": ["uhm $token", "well $token"],
     "correct": [
-      "$incorrect_value"
+      "$incorrect_value sorry $correct_value",
+      "$incorrect_value uhm sorry $correct_value",
+      "$incorrect_value oh no $correct_value",
+      "$incorrect_value no sorry $correct_value",
+      "$incorrect_value no $correct_value"
     ],
     "correct_long_distance": [
-      "$incorrect_phrase"
+      "$incorrect_phrase sorry $correct_phrase",
+      "$incorrect_phrase uhm sorry $correct_phrase",
+      "$incorrect_phrase oh no $correct_phrase",
+      "$incorrect_phrase no sorry $correct_phrase",
+      "$incorrect_phrase no $correct_phrase"
     ],
     "multiturn_correct": [
       "oh I am really sorry $correct_value",
