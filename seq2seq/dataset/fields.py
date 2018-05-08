@@ -130,11 +130,10 @@ class MaskField(torchtext.data.RawField):
         #print("test1",batch)
         if not self.sequential:
             return batch
-        #TODO: figure out if you need fix_length since lengths will differ across batches
         max_len = max(len(x) for x in batch)
+        #TODO: figure out if the enters introduced below are a problem
         padded, lengths = [], []
         for x in batch:
-            print(x[:max_len])
             padded.append(
                 #list(x[-max_len:] if self.truncate_first else x[:max_len]) +
                 np.append(x[:max_len],

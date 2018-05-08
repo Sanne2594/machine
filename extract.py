@@ -8,14 +8,13 @@ import torchtext
 from torch.autograd import Variable
 
 import seq2seq
-from seq2seq.loss import Perplexity, NLLLoss
 from seq2seq.dataset import SourceField, MaskField
 from seq2seq.evaluator import Evaluator, Predictor
 from seq2seq.util.checkpoint import Checkpoint
 from seq2seq.models import DiagnosticClassifier
 from seq2seq.trainer import SupervisedTrainer
 import torch.optim as optim
-
+from torch.nn import CrossEntropyLoss
 
 def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
     epoch_loss_total = 0  # Reset every epoch
@@ -42,7 +41,6 @@ def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
             next(batch_generator)
 
         model.train(True)
-        print(batch_generator)
         #<generator object Iterator.__iter__ at 0x7fbc17680e60>
         for batch in batch_generator:
             #TODO: does not reach this place
@@ -58,25 +56,28 @@ def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
             #         32 x     <75     x 2
             # batch size * max lengths * num_class
 
-            # Get loss
-            loss = criterion(output,target_variables)
+            # Get Loss
+            targets_flattened = target_variables.contiguous().view(-1).long()
+            outputs_flattened = output.view(targets_flattened.size(0), -1)
+            loss = criterion(outputs_flattened, targets_flattened)
 
-            # Backward propagation
+            #
+            # # Backward propagation
             model.zero_grad()
             loss.backward()
             optimizer.step()
 
             # Record average loss
-            epoch_loss_total += loss.get_loss()
-            print(step)
+            epoch_loss_total += loss.data[0]
         epoch_loss_avg = epoch_loss_total / min(steps_per_epoch, step)
         print("Total loss:", epoch_loss_total, ", Average Loss:",epoch_loss_avg, ", epoch:", epoch)
         epoch_loss_total = 0
 
     return model
 
-def test(data, model, loss, batch_size=32):
-    accuracy = 0
+def test(data, model, criterion, batch_size=32):
+    accuracy_total = 0
+    loss_total = 0
     evals = 0
 
     device = None if torch.cuda.is_available() else -1
@@ -86,9 +87,36 @@ def test(data, model, loss, batch_size=32):
         sort_key=lambda x: len(x.src),
         device=device, repeat=False)
 
+    batch_generator = batch_iterator.__iter__()
+    step = 0
 
+    for batch in batch_generator:
+        step = step + 1
+        # step_elapsed += 1
 
-    return accuracy
+        input_variables, input_lengths = getattr(batch, 'src')
+        target_variables = getattr(batch, 'msk')
+
+        # Forward propagation through classifiers
+        output = model(input_variables, input_lengths.tolist(), target_variables)
+
+        # Get Loss
+        targets_flattened = target_variables.contiguous().view(-1).long()
+        outputs_flattened = output.view(targets_flattened.size(0), -1)
+        loss = criterion(outputs_flattened, targets_flattened)
+
+        _,predicted = torch.max(outputs_flattened.data, 1)
+        print("Predicted: ",len(predicted),  " Targets: ", len(targets_flattened))
+        #TODO: check if target i -1 and remove pair from predicted,target_flattened
+        # dit werkt in theory omdat 1-1 = 0 and 0-1 = -1 0-0 = 0
+        outcome = [abs(predicted[i] - targets_flattened[i]) for i in range(len(targets_flattened))]
+        accuracy_total += sum(outcome)
+        loss_total += loss.data[0]
+        evals += len(targets_flattened)
+
+    accuracy = accuracy_total/evals
+    loss = loss_total/step
+    return loss, accuracy
 
 
 try:
@@ -152,7 +180,6 @@ data = torchtext.data.TabularDataset(
     filter_pred=len_filter
 )
 
-
 #TODO: split in train and test?
 
 ###########################################################################
@@ -160,7 +187,7 @@ data = torchtext.data.TabularDataset(
 #TODO: check which hard-coded things should be arguments (see trainer)
 
 # Prepare loss
-loss = torch.nn.CrossEntropyLoss(ignore_index=-1)
+loss = CrossEntropyLoss(ignore_index=-1)
 #forward(self, input, target)
 optimizer = optim.Adam(DC.classifier.parameters(),lr=0.001)
 
@@ -186,9 +213,6 @@ train(data=data, model=DC, criterion=loss, optimizer=optimizer, batch_size=32,nu
 #TODO: read in the testset
 # for now use data which is filled with train-data
 
-accuracy = test(data, DC, loss,batch_size=32)
-#TODO: get outputs and for each check whether matches truth
+loss, accuracy = test(data=data, model=DC, criterion=loss,batch_size=32)
 
-#TODO: compute some statistics over this.
-
-print("\nLoss: %f, Word accuracy: %f, Sequence accuracy: %f" % (loss, accuracy, seq_accuracy))
+print("\nLoss: %f, Accuracy: %f" % (loss, accuracy))
