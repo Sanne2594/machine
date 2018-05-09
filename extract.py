@@ -115,7 +115,7 @@ def test(data, model, criterion, batch_size=32):
         predicted = predicted[indices]
 
         # Compute Statistics
-        accuracy_total += (predicted==targets_flattened).sum().data.numpy()
+        accuracy_total += (predicted==targets_flattened).sum().data[0]
         loss_total += loss.data[0]
         evals += len(targets_flattened)
 
@@ -137,6 +137,7 @@ parser.add_argument('--mask_data', help='Path to test data')
 parser.add_argument('--cuda_device', default=0, type=int, help='set cuda device to use')
 parser.add_argument('--max_len', type=int, help='Maximum sequence length', default=50)
 parser.add_argument('--batch_size', type=int, help='Batch size', default=32)
+parser.add_argument('--epochs', type=int, help='Number of epochs', default=6)
 
 opt = parser.parse_args()
 
@@ -198,11 +199,11 @@ optimizer = optim.Adam(DC.classifier.parameters(),lr=0.001)
 
 if torch.cuda.is_available():
     loss.cuda()
-    optimizer.cuda()
+    #optimizer.cuda()
 
 num_epoch = 6
 # Train the classifier
-train(data=data, model=DC, criterion=loss, optimizer=optimizer, batch_size=32,num_epoch=6)
+train(data=data, model=DC, criterion=loss, optimizer=optimizer, batch_size=32,num_epoch=opt.epochs)
 
 # # arguments to potentially add
 # , expt_dir=opt.output_dir, dev_data=dev, teacher_forcing_ratio=.2, resume=False, checkpoint_path=None)

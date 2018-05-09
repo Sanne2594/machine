@@ -11,14 +11,14 @@ class DiagnosticClassifier(nn.Module):
             param.requires_grad = False
 
         hidden_encoder_dim = self.encoder.hidden_size
+        # inner = (hidden_encoder_dim+numclass/2)
         self.classifier = nn.Sequential(
             nn.Linear(hidden_encoder_dim, numclass),
-            nn.LogSoftmax()
             # # Use this code when results appear to not regress information properly
-            # inner = (hidden_encoder_dim+numclass/2)
             # nn.Linear(hidden_encoder_dim, inner),
             # nn.ReLU(),
             # nn.Linear(inner, numclass),
+            nn.LogSoftmax()
             )
 
     def forward(self, input_variable, input_lengths=None, target_variable=None,
