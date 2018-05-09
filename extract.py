@@ -34,7 +34,8 @@ def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
 
     for epoch in range(1, num_epoch + 1):
         batch_generator = batch_iterator.__iter__()
-        #torchtext.data.iterator.BucketIterator
+        accuracy_total = 0
+        evals = 0
 
         # consuming seen batches from previous training
         for _ in range((epoch - 1) * steps_per_epoch, step):
@@ -69,8 +70,24 @@ def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
 
             # Record average loss
             epoch_loss_total += loss.data[0]
+
+            # Compute softmax
+            _, predicted = torch.max(outputs_flattened.data, 1)
+
+            # Remove padded targets
+            indices = targets_flattened.ne(-1)
+            targets_flattened = targets_flattened[indices]
+            predicted = Variable(predicted)
+            predicted = predicted[indices]
+
+            # Compute Statistics
+            accuracy_total += (predicted == targets_flattened).long().sum().data[0]
+            evals += len(targets_flattened)
+
+        accuracy = accuracy_total / evals
+
         epoch_loss_avg = epoch_loss_total / min(steps_per_epoch, step)
-        print("Total loss:", epoch_loss_total, ", Average Loss:",epoch_loss_avg, ", epoch:", epoch)
+        print("Total loss:", epoch_loss_total, ", Average Loss:",epoch_loss_avg, ", epoch:", epoch, "accuracy", accuracy)
         epoch_loss_total = 0
 
     return model
@@ -115,7 +132,7 @@ def test(data, model, criterion, batch_size=32):
         predicted = predicted[indices]
 
         # Compute Statistics
-        accuracy_total += (predicted==targets_flattened).sum().data[0]
+        accuracy_total += (predicted==targets_flattened).long().sum().data[0]
         loss_total += loss.data[0]
         evals += len(targets_flattened)
 
@@ -192,8 +209,9 @@ data = torchtext.data.TabularDataset(
 # Train Classifier
 #TODO: check which hard-coded things should be arguments (see trainer)
 
+#TODO: weight percentages niet hardcoden.
 # Prepare loss
-loss = CrossEntropyLoss(ignore_index=-1)
+loss = CrossEntropyLoss(ignore_index=-1, weight=torch.FloatTensor([0.2,0.8]))
 #forward(self, input, target)
 optimizer = optim.Adam(DC.classifier.parameters(),lr=0.001)
 
