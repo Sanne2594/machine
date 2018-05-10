@@ -8,7 +8,7 @@ echo "$dt "
 
 cd $HOME/machine/sanne/machine
 
-NUM_EP=50 #Number of Epochs
+NUM_EP=6 #Number of Epochs
 EMB_SIZE=128
 H_SIZE=128
 #MDL_LOC="model-cpu"
