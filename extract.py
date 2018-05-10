@@ -155,6 +155,7 @@ parser.add_argument('--cuda_device', default=0, type=int, help='set cuda device 
 parser.add_argument('--max_len', type=int, help='Maximum sequence length', default=50)
 parser.add_argument('--batch_size', type=int, help='Batch size', default=32)
 parser.add_argument('--epochs', type=int, help='Number of epochs', default=6)
+parser.add_argument('--num_class', type=int, help='Number of classes', default=2)
 
 opt = parser.parse_args()
 
@@ -176,8 +177,7 @@ output_vocab = checkpoint.output_vocab
 
 #TODO: figure out how to extract hidden layer size from model
 encoder_hidden_dim = 128
-num_class=2
-DC = DiagnosticClassifier(seq2seq, numclass=num_class)
+DC = DiagnosticClassifier(seq2seq, numclass=opt.num_class)
 if torch.cuda.is_available():
     DC.cuda()
 
@@ -212,14 +212,12 @@ data = torchtext.data.TabularDataset(
 #TODO: weight percentages niet hardcoden.
 # Prepare loss
 loss = CrossEntropyLoss(ignore_index=-1, weight=torch.FloatTensor([0.2,0.8]))
-#forward(self, input, target)
 optimizer = optim.Adam(DC.classifier.parameters(),lr=0.001)
 
 if torch.cuda.is_available():
     loss.cuda()
     #optimizer.cuda()
 
-num_epoch = 6
 # Train the classifier
 train(data=data, model=DC, criterion=loss, optimizer=optimizer, batch_size=32,num_epoch=opt.epochs)
 

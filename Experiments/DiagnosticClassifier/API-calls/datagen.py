@@ -22,7 +22,7 @@ def strip_API(fpath):
 fpath = os.path.join(data_in,in_file)
 api_only = strip_API(fpath)
 cuis_slots = {'italian': 1, 'spanish':2,'indian':3, 'french':4, 'british':5, 'korean': 6, 'thai': 7, 'cantonese': 8, 'vietnamese': 9, 'japanese': 10}
-loc_slots = {'paris':1, 'bombay':2, 'rome':3, 'london':4, 'madrid':5}
+loc_slots = {'paris':1, 'bombay':2, 'rome':3, 'london':4, 'madrid':5, 'seoul': 6, 'tokyo' :7, 'beijing': 8, 'bangkok':9, 'hanoi':10}
 size_slots = {'four':1, 'six':2, 'eight':3, 'two':4}
 price_slots = {'moderate':1, 'cheap':2, 'expensive':3}
 
