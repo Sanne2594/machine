@@ -15,34 +15,6 @@ from seq2seq.dataset import SourceField, TargetField
 from seq2seq.evaluator import Evaluator, Predictor
 from seq2seq.util.checkpoint import Checkpoint
 
-def showAttention(input_sentence, output_words, attentions):
-    # Set up figure with colorbar
-    fig = plt.figure()
-    ax = fig.add_subplot(111)
-    cax = ax.matshow(attentions, cmap='bone')
-    fig.colorbar(cax)
-
-    # Set up axes
-    ax.set_xticklabels([''] + input_sentence +
-                       ['<EOS>'], rotation=90)
-    ax.set_yticklabels([''] + output_words)
-
-    # Show label at every tick
-    ax.xaxis.set_major_locator(ticker.MultipleLocator(1))
-    ax.yaxis.set_major_locator(ticker.MultipleLocator(1))
-    return fig
-
-def saveAttention(input_sentence, output_words, attentions, file):
-    # open file.
-    f = open(file, "w")
-    #Write input sentence, \n output words, \n, attentions (check of dat goed gaat), /n/n??
-    f.write(" ".join(input_sentence)+"\n")
-    f.write(" ".join(output_words)+"\n")
-    f.write(" ".join([str(np.ndim(attentions)), str(len(attentions)),str(len(attentions[0])) ])+"\n")
-    attentions.tofile(f," ")
-    f.close()
-
-
 try:
     raw_input          # Python 2
 except NameError:
@@ -52,6 +24,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--checkpoint_path', help='Give the checkpoint path from which to load the model')
 parser.add_argument('--test_data', help='Path to test data')
+parser.add_argument('--output_dir', help='Give the path where output should be generated')
 parser.add_argument('--cuda_device', default=0, type=int, help='set cuda device to use')
 parser.add_argument('--max_len', type=int, help='Maximum sequence length', default=50)
 parser.add_argument('--batch_size', type=int, help='Batch size', default=32)
@@ -118,5 +91,6 @@ ax.set_yticklabels([' '] + output_words)
 ax.xaxis.set_major_locator(ticker.MultipleLocator(1))
 ax.yaxis.set_major_locator(ticker.MultipleLocator(1))
 plt.show()
-
+out_loc = opt.output_dir + "coocur.txt"
+fig.savefig(out_loc)
 
