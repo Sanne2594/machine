@@ -156,6 +156,8 @@ parser.add_argument('--max_len', type=int, help='Maximum sequence length', defau
 parser.add_argument('--batch_size', type=int, help='Batch size', default=32)
 parser.add_argument('--epochs', type=int, help='Number of epochs', default=6)
 parser.add_argument('--num_class', type=int, help='Number of classes', default=2)
+#parser.add_argument('--weight_vec', type=int, help='Weight vector', default=[.5,.5])
+#TODO: figure out how to do this argument thing
 
 opt = parser.parse_args()
 
@@ -211,7 +213,8 @@ data = torchtext.data.TabularDataset(
 
 #TODO: weight percentages niet hardcoden.
 # Prepare loss
-loss = CrossEntropyLoss(ignore_index=-1, weight=torch.FloatTensor([0.2,0.8]))
+weight_vec = [.8,.8,.8,.8,.8,.8,.8,.8,.8,.8]
+loss = CrossEntropyLoss(ignore_index=-1, weight=torch.FloatTensor(weight_vec))
 optimizer = optim.Adam(DC.classifier.parameters(),lr=0.001)
 
 if torch.cuda.is_available():

@@ -4,7 +4,7 @@ import numpy as np
 data_in = "../../../data/CLEANED-BABI/babi+dialog/"
 in_file = "task1-trn.txt"
 
-path = "Data/"
+path = "Data-1/"
 cuis_file = "cuisine_masks.txt"
 loc_file = "location_mask.txt"
 size_file = "party_size_masks.txt"
@@ -21,10 +21,10 @@ def strip_API(fpath):
 
 fpath = os.path.join(data_in,in_file)
 api_only = strip_API(fpath)
-cuis_slots = {'italian': 1, 'spanish':2,'indian':3, 'french':4, 'british':5, 'korean': 6, 'thai': 7, 'cantonese': 8, 'vietnamese': 9, 'japanese': 10}
-loc_slots = {'paris':1, 'bombay':2, 'rome':3, 'london':4, 'madrid':5, 'seoul': 6, 'tokyo' :7, 'beijing': 8, 'bangkok':9, 'hanoi':10}
-size_slots = {'four':1, 'six':2, 'eight':3, 'two':4}
-price_slots = {'moderate':1, 'cheap':2, 'expensive':3}
+cuis_slots = {'italian': 1, 'spanish':2,'indian':3, 'french':4, 'british':5, 'korean': 6, 'thai': 7, 'cantonese': 8, 'vietnamese': 9, 'japanese': 0}
+loc_slots = {'paris':1, 'bombay':2, 'rome':3, 'london':4, 'madrid':5, 'seoul': 6, 'tokyo' :7, 'beijing': 8, 'bangkok':9, 'hanoi':0}
+size_slots = {'four':1, 'six':2, 'eight':3, 'two':0}
+price_slots = {'moderate':1, 'cheap':2, 'expensive':0}
 
 cuis_list = []
 loc_list = []
@@ -33,10 +33,10 @@ price_list = []
 for line in api_only:
     sent = line.split('\t')[0].split()
 
-    cuis_mask = np.zeros(len(sent))
-    loc_mask = np.zeros(len(sent))
-    size_mask = np.zeros(len(sent))
-    price_mask = np.zeros(len(sent))
+    cuis_mask = np.ones(len(sent))*-1
+    loc_mask = np.ones(len(sent))*-1
+    size_mask = np.ones(len(sent))*-1
+    price_mask = np.ones(len(sent))*-1
 
     for i,word in enumerate(sent):
         if word in cuis_slots:
