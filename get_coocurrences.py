@@ -3,6 +3,7 @@ import argparse
 import logging
 import torch
 import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import numpy as np
@@ -90,7 +91,11 @@ ax.set_yticklabels([' '] + output_words)
 # Show label at every tick
 ax.xaxis.set_major_locator(ticker.MultipleLocator(1))
 ax.yaxis.set_major_locator(ticker.MultipleLocator(1))
-plt.show()
-out_loc = opt.output_dir + "coocur.txt"
+#plt.show()
+
+DefaultSize = fig.get_size_inches()
+fig.set_size_inches(DefaultSize[0] * 2, DefaultSize[1] * 2)
+
+out_loc = opt.output_dir + "coocur.png"
 fig.savefig(out_loc)
 

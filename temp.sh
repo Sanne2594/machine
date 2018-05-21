@@ -18,6 +18,6 @@ OUT_DIR="output/"
 
 #python3 get_coocurrences.py --checkpoint_path $MDL_LOC --test_data "data/CLEANED-BABI/api-only/task1-tst-dialog.txt" --max_len 75
 
-python3 get_coocurrences.py --checkpoint_path $MDL_LOC_PLS --test_data $DAT_DIT --output_dir $OUT_DIR --max_len 75
+python3 get_coocurrences.py --checkpoint_path $MDL_LOC_PLS --test_data $DAT_DIR --output_dir $OUT_DIR --max_len 75
 
 echo "Made it"
