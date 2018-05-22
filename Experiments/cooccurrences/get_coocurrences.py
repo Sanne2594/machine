@@ -16,6 +16,8 @@ from seq2seq.dataset import SourceField, TargetField
 from seq2seq.evaluator import Evaluator, Predictor
 from seq2seq.util.checkpoint import Checkpoint
 
+import pickle
+
 try:
     raw_input          # Python 2
 except NameError:
@@ -82,20 +84,29 @@ for i, output_index in enumerate(output_indices):
     for j, input_index in enumerate(input_indices):
         vis_mat[i,j] = cooccurrences[output_index].get(input_index, 0)/sum_vals
 
-fig = plt.figure()
-ax = fig.add_subplot(111)
-cax = ax.matshow(vis_mat, cmap='Greys')
-ax.set_xticklabels([' '] + input_words, rotation=90)
-ax.set_yticklabels([' '] + output_words)
+#print maken van vis_mat, input_words, output_words Met pickle
 
-# Show label at every tick
-ax.xaxis.set_major_locator(ticker.MultipleLocator(1))
-ax.yaxis.set_major_locator(ticker.MultipleLocator(1))
-#plt.show()
+pickle.dump(vis_mat,  open( "vismat.p", "wb" ) )
+pickle.dump(input_words,  open( "input.p", "wb" ) )
+pickle.dump(output_words,  open( "output.p", "wb" ) )
 
-DefaultSize = fig.get_size_inches()
-fig.set_size_inches(DefaultSize[0] * 2, DefaultSize[1] * 2)
+# vis_mat = pickle.load(open("vismat.p", "rb"))
+# input_words = pickle.load(open("input.p", "rb"))
+# output_words = pickle.load(open("output.p", "rb"))
 
-out_loc = opt.output_dir + "coocur.png"
-fig.savefig(out_loc)
-
+# fig = plt.figure()
+# ax = fig.add_subplot(111)
+# cax = ax.matshow(vis_mat, cmap='Greys')
+# ax.set_xticklabels([' '] + input_words, rotation=90)
+# ax.set_yticklabels([' '] + output_words)
+#
+# # Show label at every tick
+# ax.xaxis.set_major_locator(ticker.MultipleLocator(1))
+# ax.yaxis.set_major_locator(ticker.MultipleLocator(1))
+# #plt.show()
+#
+# DefaultSize = fig.get_size_inches()
+# fig.set_size_inches(DefaultSize[0] * 2, DefaultSize[1] * 2)
+#
+# out_loc = opt.output_dir + "coocur.png"
+# fig.savefig(out_loc)
