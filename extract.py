@@ -16,7 +16,7 @@ from seq2seq.trainer import SupervisedTrainer
 import torch.optim as optim
 from torch.nn import CrossEntropyLoss
 
-def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
+def train(model, data, criterion,optimizer, out_dir,batch_size=32,num_epoch=6):
     epoch_loss_total = 0  # Reset every epoch
 
     device = None if torch.cuda.is_available() else -1
@@ -89,6 +89,18 @@ def train(model, data, criterion,optimizer, batch_size=32,num_epoch=6):
         epoch_loss_avg = epoch_loss_total / min(steps_per_epoch, step)
         print("Total loss:", epoch_loss_total, ", Average Loss:",epoch_loss_avg, ", epoch:", epoch, "accuracy", accuracy)
         epoch_loss_total = 0
+
+    # store initial model to be sure at least one model is stored
+    eval_data = data
+    loss, accuracy, seq_accuracy = test(model, eval_data)
+    model_name = 'acc_%.2f_seq_acc_%.2f_ppl_%.2f_s%d' % (accuracy, seq_accuracy, loss, epoch)
+    #best_checkpoints[0] = model_name
+
+    Checkpoint(model=model,
+               optimizer=optimizer,
+               epoch=epoch, step=step,
+               input_vocab=data.fields["src"].vocab,
+               output_vocab={}).save(out_dir, name=model_name)
 
     return model
 
@@ -222,7 +234,7 @@ if torch.cuda.is_available():
     #optimizer.cuda()
 
 # Train the classifier
-train(data=data, model=DC, criterion=loss, optimizer=optimizer, batch_size=32,num_epoch=opt.epochs)
+train(data=data, model=DC, criterion=loss, optimizer=optimizer, out_dir=opt.output_dir,batch_size=32,num_epoch=opt.epochs)
 
 # # arguments to potentially add
 # , expt_dir=opt.output_dir, dev_data=dev, teacher_forcing_ratio=.2, resume=False, checkpoint_path=None)
