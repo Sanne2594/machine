@@ -27,3 +27,6 @@ class DiagnosticClassifier(nn.Module):
 
         result = self.classifier(encoder_outputs)
         return result
+
+    def flatten_parameters(self):
+        print("Does nothing")

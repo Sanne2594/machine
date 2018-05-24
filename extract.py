@@ -92,8 +92,8 @@ def train(model, data, criterion,optimizer, out_dir,batch_size=32,num_epoch=6):
 
     # store initial model to be sure at least one model is stored
     eval_data = data
-    loss, accuracy, seq_accuracy = test(model, eval_data)
-    model_name = 'acc_%.2f_seq_acc_%.2f_ppl_%.2f_s%d' % (accuracy, seq_accuracy, loss, epoch)
+    loss, accuracy = test(data=eval_data,model=model, criterion=criterion)
+    model_name = 'acc_%.2f_ppl_%.2f_s%d' % (accuracy, loss, epoch)
     #best_checkpoints[0] = model_name
 
     Checkpoint(model=model,
