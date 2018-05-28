@@ -1,10 +1,10 @@
 import os
 import numpy as np
 
-data_in = "../../../data/CLEANED-BABI/babi+dialog/"
+data_in = "../../../data/CLEANED-BABI/babi-dialog/"
 in_file = "task1-trn.txt"
 
-path = "Data-1/"
+path = "Data-normal/"
 cuis_file = "cuisine_masks.txt"
 loc_file = "location_mask.txt"
 size_file = "party_size_masks.txt"

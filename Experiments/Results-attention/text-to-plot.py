@@ -10,7 +10,7 @@ def showAttention(input_sentence, output_words, attentions):
     # Set up figure with colorbar
     fig = plt.figure()
     ax = fig.add_subplot(111)
-    cax = ax.matshow(attentions, cmap='bone')
+    cax = ax.matshow(attentions, cmap='binary')
     fig.colorbar(cax)
 
     # Set up axes
@@ -23,8 +23,8 @@ def showAttention(input_sentence, output_words, attentions):
     ax.yaxis.set_major_locator(ticker.MultipleLocator(1))
     return fig
 
-goal_folder = "RESIZED/plusplus/"
-folder = "text-plusplus"
+goal_folder = "RESIZED/minplus/"
+folder = "text-minplus"
 onlyfiles = [join(folder, f) for f in listdir(folder) if isfile(join(folder, f))]
 count = 0
 
