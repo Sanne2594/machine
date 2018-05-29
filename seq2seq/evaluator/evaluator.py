@@ -19,7 +19,7 @@ class Evaluator(object):
         self.loss = loss
         self.batch_size = batch_size
 
-    def evaluate(self, model, data, threshold=0.):
+    def evaluate(self, model, data, threshold=0., select_eval=False):
         """ Evaluate a model on given dataset and return performance.
 
         Args:
@@ -50,6 +50,9 @@ class Evaluator(object):
         tgt_vocab = data.fields[seq2seq.tgt_field_name].vocab
         src_vocab = data.fields[seq2seq.src_field_name].vocab
         pad = tgt_vocab.stoi[data.fields[seq2seq.tgt_field_name].pad_token]
+        unk = tgt_vocab.stoi['<unk>']
+        api = tgt_vocab.stoi['api_call']
+        eos = tgt_vocab.stoi[data.fields[seq2seq.tgt_field_name].SYM_EOS]
 
         for batch in batch_iterator:
             input_variables, input_lengths  = getattr(batch, seq2seq.src_field_name)
@@ -68,13 +71,29 @@ class Evaluator(object):
                 loss.eval_batch(step_output.view(target_variables.size(0), -1), target)
 
                 non_padding = target.ne(pad)
+                non_api = target.ne(api)
+                non_eos = target.ne(eos)
+                non_unk = target.ne(unk)
 
-                correct_per_seq = (seqlist[step].view(-1).eq(target).data + non_padding.data).eq(2)
+                if select_eval:
+                    consider = non_padding*non_api*non_eos*non_unk
+                else:
+                    consider = non_padding
+
+                correct_per_seq = seqlist[step].view(-1).eq(target).data * consider.data
+
+                # print("correct per seq: ", correct_per_seq)
+                # raw_input()
+
                 match_per_seq += correct_per_seq.type(torch.FloatTensor)
-                total_per_seq += non_padding.type(torch.FloatTensor).data
+                total_per_seq += consider.data.type(torch.FloatTensor)
 
             word_match += match_per_seq.sum()
             word_total += total_per_seq.sum()
+
+            # print('match per seq', match_per_seq)
+            # print('total per seq', total_per_seq)
+            # raw_input()
 
             seq_match += match_per_seq.eq(total_per_seq).sum()
             seq_total += total_per_seq.shape[0]

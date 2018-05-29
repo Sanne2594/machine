@@ -68,6 +68,9 @@ test = torchtext.data.TabularDataset(
 #################################################################################
 # Evaluate model on test set
 
+def filter_matrix(matrix, input_words, output_words):
+    return matrix, input_words, output_words
+
 evaluator = Evaluator(batch_size=opt.batch_size)
 
 cooccurrences = evaluator.get_cooccurence_matrix(seq2seq, test)

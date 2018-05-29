@@ -60,6 +60,7 @@ parser.add_argument('--batch_size', type=int, help='Batch size', default=32)
 parser.add_argument('--predict', action='store_true')
 parser.add_argument('--attviz', help='Give path to image folder')
 parser.add_argument('--print_wrong', type=float, help='Threshold accuracy per sequence')
+parser.add_argument('--select_eval', action='store_true', help='Evaluate only tokens whose target is now "<unk>", "api_call" or "<eos>"')
 
 opt = parser.parse_args()
 
@@ -112,12 +113,13 @@ if (opt.print_wrong):
 
 evaluator = Evaluator(loss=loss, batch_size=opt.batch_size)
 if (opt.print_wrong):
-    loss, accuracy, seq_accuracy = evaluator.evaluate(seq2seq, test, threshold=opt.print_wrong)
+    loss, accuracy, seq_accuracy = evaluator.evaluate(seq2seq, test, threshold=opt.print_wrong, select_eval=opt.select_eval)
 else:
-    loss, accuracy, seq_accuracy = evaluator.evaluate(seq2seq, test)
+    loss, accuracy, seq_accuracy = evaluator.evaluate(seq2seq, test, select_eval=opt.select_eval)
 
 print("\nLoss: %f, Word accuracy: %f, Sequence accuracy: %f" % (loss, accuracy, seq_accuracy))
 
+raw_input()
 
 #########################################
 #Predict sentences
@@ -136,6 +138,7 @@ if(opt.predict):
         print("Couldn't find matching sample dialog")
         print(opt.test_data)
 
+    path = opt.test_data
 
     f = open(path,"r")
     lines = f.readlines()
@@ -146,8 +149,9 @@ if(opt.predict):
     for line in lines:
         input, exp = line.split("\t")
         output = predictor.predict(input.split())
-        #print("\n", input)
-        print("Output:", " ".join(output), "\nExpected:", exp)
+        print("\n", input)
+        print("Output:", " ".join(output), 'expected output', exp)
+        raw_input()
 
 if(opt.attviz):
     if(not opt.predict):
