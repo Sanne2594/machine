@@ -56,6 +56,8 @@ def train(model, data, criterion,optimizer, out_dir,batch_size=32,num_epoch=6):
             # Possibly add teacher forcing ratio here
             #         32 x     <75     x 2
             # batch size * max lengths * num_class
+            # if step % 10 == 0:
+                # print(output.encode('latin-1', 'replace'))
 
             # Get Loss
             targets_flattened = target_variables.contiguous().view(-1).long()
@@ -104,7 +106,7 @@ def train(model, data, criterion,optimizer, out_dir,batch_size=32,num_epoch=6):
 
     return model
 
-def test(data, model, criterion, batch_size=32):
+def test(data, model, criterion, batch_size=32, wrong=None):
     accuracy_total = 0
     loss_total = 0
     evals = 0
@@ -128,6 +130,7 @@ def test(data, model, criterion, batch_size=32):
 
         # Forward propagation through classifiers
         output = model(input_variables, input_lengths.tolist(), target_variables)
+ #       if(wrong):
 
         # Get Loss
         targets_flattened = target_variables.contiguous().view(-1).long()
@@ -169,7 +172,7 @@ parser.add_argument('--batch_size', type=int, help='Batch size', default=32)
 parser.add_argument('--epochs', type=int, help='Number of epochs', default=6)
 parser.add_argument('--num_class', type=int, help='Number of classes', default=2)
 parser.add_argument('--weight_vec', help='Weight vector', default=[.5,.5])
-#TODO: figure out how to do this argument thing
+parser.add_argument('--print_wrong', type=int, help="provide how often to print",default=100)
 
 opt = parser.parse_args()
 
@@ -189,8 +192,6 @@ output_vocab = checkpoint.output_vocab
 ##################################################################################
 # create diagnostic classifier
 
-#TODO: figure out how to extract hidden layer size from model
-encoder_hidden_dim = 128
 DC = DiagnosticClassifier(seq2seq, numclass=opt.num_class)
 if torch.cuda.is_available():
     DC.cuda()
@@ -211,19 +212,22 @@ max_len = opt.max_len
 def len_filter(example):
     return len(example.src) <= max_len
 
-data = torchtext.data.TabularDataset(
+all_data = torchtext.data.TabularDataset(
     path=opt.mask_data, format='tsv',
     fields=[('src', src), ('msk', msk)],
     filter_pred=len_filter
 )
 
 #TODO: split in train and test?
+#train_data,test_data = all_data.split(split_ratio=0.7)
+train_data = all_data
+test_data = all_data
 
 ###########################################################################
 # Train Classifier
 #TODO: check which hard-coded things should be arguments (see trainer)
 
-#TODO: weight percentages niet hardcoden.
+
 # Prepare loss
 weight_vec = np.fromstring(opt.weight_vec,sep=",")
 loss = CrossEntropyLoss(ignore_index=-1, weight=torch.FloatTensor(weight_vec))
@@ -234,8 +238,7 @@ if torch.cuda.is_available():
     #optimizer.cuda()
 
 # Train the classifier
-train(data=data, model=DC, criterion=loss, optimizer=optimizer, out_dir=opt.output_dir,batch_size=32,num_epoch=opt.epochs)
-
+train(data=train_data, model=DC, criterion=loss, optimizer=optimizer, out_dir=opt.output_dir,batch_size=32,num_epoch=opt.epochs)
 # # arguments to potentially add
 # , expt_dir=opt.output_dir, dev_data=dev, teacher_forcing_ratio=.2, resume=False, checkpoint_path=None)
 
@@ -246,6 +249,6 @@ train(data=data, model=DC, criterion=loss, optimizer=optimizer, out_dir=opt.outp
 #TODO: read in the testset
 # for now use data which is filled with train-data
 
-loss, accuracy = test(data=data, model=DC, criterion=loss,batch_size=32)
+loss, accuracy = test(data=test_data, model=DC, criterion=loss,batch_size=32,wrong=opt.print_wrong)
 
 print("\nLoss: %f, Accuracy: %f" % (loss, accuracy))
