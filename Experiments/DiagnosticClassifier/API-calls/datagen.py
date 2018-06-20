@@ -4,11 +4,11 @@ import numpy as np
 data_in = "../../../data/CLEANED-BABI/babi-dialog/"
 in_file = "task1-trn.txt"
 
-path = "Data-normal/"
-cuis_file = "cuisine_masks.txt"
-loc_file = "location_mask.txt"
-size_file = "party_size_masks.txt"
-price_file = "price_range_masks.txt"
+path = "Data-nomem/"
+cuis_file = "shift4_cuisine_masks.txt"
+loc_file = "shift4_location_masks.txt"
+size_file = "shift4_party_size_masks.txt"
+price_file = "shift4_price_range_masks.txt"
 
 def strip_API(fpath):
     f = open(fpath, 'r')
@@ -40,13 +40,13 @@ for line in api_only:
 
     for i,word in enumerate(sent):
         if word in cuis_slots:
-            cuis_mask[i:] = cuis_slots[word]
+            cuis_mask[i+4:] = cuis_slots[word]
         elif word in loc_slots:
-            loc_mask[i:] = loc_slots[word]
+            loc_mask[i+4:] = loc_slots[word]
         elif word in size_slots:
-            size_mask[i:] = size_slots[word]
+            size_mask[i+4:] = size_slots[word]
         elif word in price_slots:
-            price_mask[i:] = price_slots[word]
+            price_mask[i+4:] = price_slots[word]
 
     cuis_line = " ".join(sent)+ "\t" + ' '.join([str(i) for i in cuis_mask]) + '\n'
     loc_line = " ".join(sent) + "\t" + ' '.join([str(i) for i in loc_mask]) + '\n'

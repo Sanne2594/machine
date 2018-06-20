@@ -23,23 +23,13 @@ Cuda device set to 0
 Loading checkpoints from model-noatt/acc_0.94_seq_acc_0.84_ppl_1.10_s5670
 
 Loss: 2.007507, Word accuracy: 0.597500, Sequence accuracy: 0.003000
-\nbabi plus on babi plus - test set 
-Cuda device set to 0
-Loading checkpoints from model-noatt-plus/acc_0.97_seq_acc_0.90_ppl_1.06_s5040
 
+\nbabi plus on babi plus - test set
 Loss: 1.070347, Word accuracy: 0.969716, Sequence accuracy: 0.894433
-Cuda device set to 0
-Loading checkpoints from model-noatt-plus/acc_0.97_seq_acc_0.90_ppl_1.06_s5040
-
 Loss: 1.987329, Word accuracy: 0.679402, Sequence accuracy: 0.063123
+
 \nbabi on babi plus
-Cuda device set to 0
-Loading checkpoints from model-noatt/acc_0.94_seq_acc_0.84_ppl_1.10_s5670
-
 Loss: 11.291886, Word accuracy: 0.751946, Sequence accuracy: 0.660212
-Cuda device set to 0
-Loading checkpoints from model-noatt/acc_0.94_seq_acc_0.84_ppl_1.10_s5670
-
 Loss: 2.851645, Word accuracy: 0.552326, Sequence accuracy: 0.000000
 \nbabi plus on babi
 Cuda device set to 0

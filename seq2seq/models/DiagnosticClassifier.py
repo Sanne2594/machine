@@ -14,7 +14,7 @@ class DiagnosticClassifier(nn.Module):
         #inner = int(hidden_encoder_dim+numclass/2)
         self.classifier = nn.Sequential(
             nn.Linear(hidden_encoder_dim, numclass),
-            # Use this code when results appear to not regress information properly
+            # Use this code when results appear to not regressinformation properly
             # nn.Linear(hidden_encoder_dim, inner),
             # nn.ReLU(),
             # nn.Linear(inner, numclass),

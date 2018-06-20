@@ -1,0 +1,125 @@
+30/05/2018 13:12:58 
+Cuda device set to 0
+Loading checkpoints from model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000
+Total loss: 24.838023781776428 , Average Loss: 1.3798902100986905 , epoch: 1 accuracy 0.27555129434324066
+Total loss: 24.563960075378418 , Average Loss: 1.3646644486321344 , epoch: 2 accuracy 0.31332694151486096
+Total loss: 24.320931792259216 , Average Loss: 1.3511628773477342 , epoch: 3 accuracy 0.32668584212208374
+Total loss: 24.159002542495728 , Average Loss: 1.3421668079164293 , epoch: 4 accuracy 0.3398529881751358
+Total loss: 24.005825519561768 , Average Loss: 1.3336569733089871 , epoch: 5 accuracy 0.3503355704697987
+Total loss: 23.895934104919434 , Average Loss: 1.3275518947177463 , epoch: 6 accuracy 0.35672738894215406
+Total loss: 23.78865420818329 , Average Loss: 1.321591900454627 , epoch: 7 accuracy 0.3623521891978268
+Total loss: 23.711455583572388 , Average Loss: 1.3173030879762437 , epoch: 8 accuracy 0.367913071268776
+Total loss: 23.581753492355347 , Average Loss: 1.3100974162419636 , epoch: 9 accuracy 0.37066155321188876
+Total loss: 23.48898720741272 , Average Loss: 1.304943733745151 , epoch: 10 accuracy 0.37015020773410034
+Total loss: 23.44194746017456 , Average Loss: 1.3023304144541423 , epoch: 11 accuracy 0.3742409715564078
+Total loss: 23.367964386940002 , Average Loss: 1.298220243718889 , epoch: 12 accuracy 0.3778203899009268
+Total loss: 23.319700598716736 , Average Loss: 1.2955389221509297 , epoch: 13 accuracy 0.37858740811760944
+Total loss: 23.22964382171631 , Average Loss: 1.2905357678731282 , epoch: 14 accuracy 0.3844678811121764
+Total loss: 23.358855962753296 , Average Loss: 1.2977142201529608 , epoch: 15 accuracy 0.38318951741770535
+Total loss: 23.095277905464172 , Average Loss: 1.2830709947480097 , epoch: 16 accuracy 0.38689677213167145
+Total loss: 23.079760789871216 , Average Loss: 1.2822089327706232 , epoch: 17 accuracy 0.38689677213167145
+Total loss: 23.04312026500702 , Average Loss: 1.2801733480559454 , epoch: 18 accuracy 0.38497922658996486
+Total loss: 22.972668170928955 , Average Loss: 1.2762593428293865 , epoch: 19 accuracy 0.38926174496644295
+Total loss: 22.890615701675415 , Average Loss: 1.271700872315301 , epoch: 20 accuracy 0.3919463087248322
+Total loss: 23.00194001197815 , Average Loss: 1.2778855562210083 , epoch: 21 accuracy 0.39028443592201983
+Total loss: 22.823556900024414 , Average Loss: 1.2679753833346896 , epoch: 22 accuracy 0.3925215723873442
+Total loss: 22.762077689170837 , Average Loss: 1.2645598716206021 , epoch: 23 accuracy 0.3932246724193033
+Total loss: 22.749537348747253 , Average Loss: 1.2638631860415142 , epoch: 24 accuracy 0.39271332694151484
+Total loss: 22.645663261413574 , Average Loss: 1.2580924034118652 , epoch: 25 accuracy 0.3917545541706616
+Total loss: 22.61984419822693 , Average Loss: 1.256658011012607 , epoch: 26 accuracy 0.3930968360498562
+Total loss: 22.61368978023529 , Average Loss: 1.2563160989019606 , epoch: 27 accuracy 0.39399169063598594
+Total loss: 22.60873579978943 , Average Loss: 1.2560408777660794 , epoch: 28 accuracy 0.39744327261105783
+Total loss: 22.556870818138123 , Average Loss: 1.2531594898965623 , epoch: 29 accuracy 0.3954618088846277
+Total loss: 22.487886667251587 , Average Loss: 1.2493270370695326 , epoch: 30 accuracy 0.3980824544582934
+Total loss: 22.527151584625244 , Average Loss: 1.2515084213680692 , epoch: 31 accuracy 0.39744327261105783
+Total loss: 22.46677529811859 , Average Loss: 1.2481541832288106 , epoch: 32 accuracy 0.4008948545861298
+Total loss: 22.428037524223328 , Average Loss: 1.2460020846790738 , epoch: 33 accuracy 0.403004154682007
+Total loss: 22.384311318397522 , Average Loss: 1.2435728510220845 , epoch: 34 accuracy 0.40019175455417066
+Total loss: 22.3515202999115 , Average Loss: 1.241751127772861 , epoch: 35 accuracy 0.40134228187919463
+Total loss: 22.458338856697083 , Average Loss: 1.2476854920387268 , epoch: 36 accuracy 0.4010866091403004
+Total loss: 22.4451003074646 , Average Loss: 1.2469500170813665 , epoch: 37 accuracy 0.40076701821668265
+Total loss: 22.336241722106934 , Average Loss: 1.2409023178948297 , epoch: 38 accuracy 0.405305209332055
+Total loss: 22.244776725769043 , Average Loss: 1.2358209292093914 , epoch: 39 accuracy 0.40441035474592524
+Total loss: 22.265364170074463 , Average Loss: 1.236964676115248 , epoch: 40 accuracy 0.4076062639821029
+Total loss: 22.283933997154236 , Average Loss: 1.2379963331752353 , epoch: 41 accuracy 0.4046021093000959
+Total loss: 22.31382429599762 , Average Loss: 1.2396569053332012 , epoch: 42 accuracy 0.4056248002556727
+Total loss: 22.194303512573242 , Average Loss: 1.2330168618096247 , epoch: 43 accuracy 0.4072227548737616
+Total loss: 22.1260107755661 , Average Loss: 1.2292228208647833 , epoch: 44 accuracy 0.41016299137104506
+Total loss: 22.2219500541687 , Average Loss: 1.2345527807871501 , epoch: 45 accuracy 0.4056887184403963
+Total loss: 22.135165810585022 , Average Loss: 1.22973143392139 , epoch: 46 accuracy 0.4121444550974752
+Total loss: 22.11850619316101 , Average Loss: 1.2288058996200562 , epoch: 47 accuracy 0.40894854586129753
+Total loss: 22.098798990249634 , Average Loss: 1.2277110550138686 , epoch: 48 accuracy 0.408309364014062
+Total loss: 22.113715171813965 , Average Loss: 1.2285397317674425 , epoch: 49 accuracy 0.40862895493767976
+Total loss: 22.34292721748352 , Average Loss: 1.24127373430464 , epoch: 50 accuracy 0.4122083732821988
+Total loss: 22.095648646354675 , Average Loss: 1.2275360359085932 , epoch: 51 accuracy 0.4132949824224992
+Total loss: 22.052143573760986 , Average Loss: 1.225119087431166 , epoch: 52 accuracy 0.41406200063918186
+Total loss: 21.96077013015747 , Average Loss: 1.2200427850087483 , epoch: 53 accuracy 0.4150207734100352
+Total loss: 22.08420741558075 , Average Loss: 1.2269004119767084 , epoch: 54 accuracy 0.4122083732821988
+Total loss: 22.001771688461304 , Average Loss: 1.2223206493589613 , epoch: 55 accuracy 0.4150207734100352
+Total loss: 21.87600803375244 , Average Loss: 1.2153337796529133 , epoch: 56 accuracy 0.4159156279961649
+Total loss: 21.876652359962463 , Average Loss: 1.2153695755534701 , epoch: 57 accuracy 0.4158517098114414
+Total loss: 21.976218342781067 , Average Loss: 1.2209010190433927 , epoch: 58 accuracy 0.4142537551933525
+Total loss: 21.95816993713379 , Average Loss: 1.219898329840766 , epoch: 59 accuracy 0.41623521891978266
+Total loss: 21.885181188583374 , Average Loss: 1.215843399365743 , epoch: 60 accuracy 0.4155321188878236
+Total loss: 21.87338435649872 , Average Loss: 1.2151880198054843 , epoch: 61 accuracy 0.4168744007670182
+Total loss: 21.87656331062317 , Average Loss: 1.2153646283679538 , epoch: 62 accuracy 0.42249920102269095
+Total loss: 21.832356333732605 , Average Loss: 1.212908685207367 , epoch: 63 accuracy 0.41642697347395335
+Total loss: 21.84642493724823 , Average Loss: 1.2136902742915683 , epoch: 64 accuracy 0.4186641099392777
+Total loss: 21.78870666027069 , Average Loss: 1.2104837033483717 , epoch: 65 accuracy 0.41834451901565994
+Total loss: 21.797995448112488 , Average Loss: 1.2109997471173604 , epoch: 66 accuracy 0.4173857462448066
+Total loss: 21.74483811855316 , Average Loss: 1.2080465621418424 , epoch: 67 accuracy 0.4182806008309364
+Total loss: 21.764046907424927 , Average Loss: 1.2091137170791626 , epoch: 68 accuracy 0.4176414189837009
+Total loss: 21.848088026046753 , Average Loss: 1.2137826681137085 , epoch: 69 accuracy 0.41860019175455415
+Total loss: 21.9158273935318 , Average Loss: 1.2175459663073223 , epoch: 70 accuracy 0.4181527644614893
+Total loss: 21.74425184726715 , Average Loss: 1.2080139915148418 , epoch: 71 accuracy 0.4203259827420901
+Total loss: 21.713786959648132 , Average Loss: 1.2063214977582295 , epoch: 72 accuracy 0.4189197826781719
+Total loss: 21.832905769348145 , Average Loss: 1.2129392094082303 , epoch: 73 accuracy 0.42198785554490253
+Total loss: 21.68739426136017 , Average Loss: 1.2048552367422316 , epoch: 74 accuracy 0.4187280281240013
+Total loss: 21.688547730445862 , Average Loss: 1.2049193183581035 , epoch: 75 accuracy 0.420773410035155
+Total loss: 21.808228492736816 , Average Loss: 1.21156824959649 , epoch: 76 accuracy 0.4233940556088207
+Total loss: 21.691234707832336 , Average Loss: 1.2050685948795743 , epoch: 77 accuracy 0.42333013742409714
+Total loss: 21.685681700706482 , Average Loss: 1.2047600944836934 , epoch: 78 accuracy 0.42083732821987857
+Total loss: 21.728251695632935 , Average Loss: 1.2071250942018297 , epoch: 79 accuracy 0.4232662192393736
+Total loss: 21.623010396957397 , Average Loss: 1.201278355386522 , epoch: 80 accuracy 0.4228187919463087
+Total loss: 21.673758268356323 , Average Loss: 1.2040976815753512 , epoch: 81 accuracy 0.4247363374880153
+Total loss: 21.71755301952362 , Average Loss: 1.2065307233068678 , epoch: 82 accuracy 0.421348673697667
+Total loss: 21.690460920333862 , Average Loss: 1.2050256066852145 , epoch: 83 accuracy 0.42537551933525086
+Total loss: 21.570459008216858 , Average Loss: 1.1983588337898254 , epoch: 84 accuracy 0.42569511025886864
+Total loss: 21.62720561027527 , Average Loss: 1.2015114227930705 , epoch: 85 accuracy 0.4246724193032918
+Total loss: 21.594464540481567 , Average Loss: 1.199692474471198 , epoch: 86 accuracy 0.4249920102269096
+Total loss: 21.589975714683533 , Average Loss: 1.1994430952601962 , epoch: 87 accuracy 0.4223074464685203
+Total loss: 21.597128868103027 , Average Loss: 1.1998404926723905 , epoch: 88 accuracy 0.4281240012783637
+Total loss: 21.55105769634247 , Average Loss: 1.1972809831301372 , epoch: 89 accuracy 0.42588686481303933
+Total loss: 21.470509886741638 , Average Loss: 1.19280610481898 , epoch: 90 accuracy 0.4304889741131352
+Total loss: 21.42899513244629 , Average Loss: 1.1904997295803494 , epoch: 91 accuracy 0.43234260147011827
+Total loss: 21.440728902816772 , Average Loss: 1.1911516057120428 , epoch: 92 accuracy 0.42665388302972196
+Total loss: 21.69705617427826 , Average Loss: 1.2053920096821256 , epoch: 93 accuracy 0.42793224672419305
+Total loss: 21.507212042808533 , Average Loss: 1.194845113489363 , epoch: 94 accuracy 0.43093640140620004
+Total loss: 21.41747546195984 , Average Loss: 1.1898597478866577 , epoch: 95 accuracy 0.4317034196228827
+Total loss: 21.432955622673035 , Average Loss: 1.1907197568151686 , epoch: 96 accuracy 0.43163950143815916
+Total loss: 21.454999446868896 , Average Loss: 1.1919444137149386 , epoch: 97 accuracy 0.4257590284435922
+Total loss: 21.367238759994507 , Average Loss: 1.1870688199996948 , epoch: 98 accuracy 0.4313199105145414
+Total loss: 21.516082763671875 , Average Loss: 1.1953379313151042 , epoch: 99 accuracy 0.43068072866730583
+Total loss: 21.380083799362183 , Average Loss: 1.187782433297899 , epoch: 100 accuracy 0.430233301374241
+
+Loss: 1.187871, Accuracy: 0.435411
+Made it
+  notice: Q: "...sara_stats": -------------------Begin of SURFsara epilogue----------------------------------
+Q: "...sara_stats": This output was generated by the SURFsara epilogue script
+Q: "...sara_stats": Your job [size.sh] has been executed in queue [gpu] with
+Q: "...sara_stats": the following PBS arguments:
+Q: "...sara_stats":    ncpus=1,neednodes=1,nodes=1,walltime=00:50:00
+Q: "...sara_stats":    .
+Q: "...sara_stats": Resources used in job [1512286.batch1.lisa.surfsara.nl] with name [size.sh]:
+Q: "...sara_stats":    cput=00:00:29,energy_used=0,mem=2199748kb,vmem=42258716kb,walltime=00:00:32
+Q: "...sara_stats":    r32n7.lisa.surfsara.nl
+Q: "...sara_stats":    .
+Q: "...sara_stats": Job start and end time:
+Q: "...sara_stats":   Job start time: Wed May 30 13:12:57 CEST 2018
+Q: "...sara_stats":   Job end time  : Wed May 30 13:13:29 CEST 2018
+Q: "...sara_stats": ---------------------------------------------------------------------------
+Q: "...sara_stats": WARNING: It seems that this job did not use scratch space.
+Q: "...sara_stats": WARNING: It is strongly recommended to do so. See the following URL
+Q: "...sara_stats":          for more information:
+Q: "...sara_stats":  - https://www.surfsara.nl/systems/lisa/filesystems#The_scratch_file_system
+Q: "...sara_stats": ---------------------End of SURFsara epilogue----------------------------------

@@ -10,11 +10,11 @@ cd $HOME/machine/sanne/machine
 
 NUM_EP=100 #Number of Epochs
 MDL_LOC="model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000"
-MDL_DC="Model-DC-loc"
+MDL_DC="Model-DC-size"
 
-M_DATA="data/Data-1/location_mask.txt"
-NUM_CLASS=10
-W_VEC="1,1,1,1,1,10,10,10,10,10"
+M_DATA="data/Data-1/party_size_masks.txt"
+NUM_CLASS=4
+W_VEC="1,1,1,1"
 
 python3 extract.py --checkpoint_path $MDL_LOC --output_dir $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 1 --epochs $NUM_EP --num_class $NUM_CLASS --weight_vec $W_VEC
 

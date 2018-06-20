@@ -1,0 +1,1 @@
+hello hello what can i help you with today can you make a restaurant reservation with french cuisine in a moderate price range in rome i'm on it <SILENCE> how many people would be in your party  we will be eight ok let me look into some options <SILENCE>	api_call french rome eight moderate
