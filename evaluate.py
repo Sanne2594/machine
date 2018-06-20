@@ -61,6 +61,7 @@ parser.add_argument('--predict', action='store_true')
 parser.add_argument('--attviz', help='Give path to image folder')
 parser.add_argument('--print_wrong', type=float, help='Threshold accuracy per sequence')
 parser.add_argument('--select_eval', action='store_true', help='Evaluate only tokens whose target is now "<unk>", "api_call" or "<eos>"')
+parser.add_argument('--hidviz', help='Give path to image folder')
 
 opt = parser.parse_args()
 
@@ -208,3 +209,40 @@ if(opt.attviz):
         count += 1
         # fig.savefig(fig_loc)
         saveAttention(input.split(),tgt_seq,attentions,out_loc)
+
+if opt.hidviz:
+    if(not opt.predict and not opt.attvizz):
+        path = "data/CLEANED-BABI/sample-dialogs/dialog.txt"
+        if ("shorter.txt" in opt.test_data):
+            path = "shorter.txt"
+            print("hacked the system: Train plus dialog")
+        elif ("+dialog" in opt.test_data):
+            path = "data/CLEANED-BABI/sample-dialogs/dialog-plus.txt"
+            print("\nPredicting for Babi plus Dialogs\n")
+        elif ("plus-dialog" in opt.test_data):
+            path = "data/CLEANED-BABI/sample-dialogs/dialog-plus.txt"
+            print("\nPredicting for Babi plus Dialogs\n")
+        elif ("-dialog" in opt.test_data):
+            path = "data/CLEANED-BABI/sample-dialogs/dialog.txt"
+            print("\nPredicting for Babi Dialogs\n")
+        else:
+            print("Couldn't find matching sample dialog")
+            print(opt.test_data)
+        f = open(path, "r")
+        lines = f.readlines()
+        f.close()
+
+    for line in lines2:
+        input, exp = line.split("\t")
+        # output = predictor.predict(input.split())
+        if torch.cuda.is_available():
+            src_id_seq = Variable(torch.cuda.LongTensor([input_vocab.stoi[tok] for tok in input.split()]),
+                                  volatile=True).view(1, -1)
+        else:
+            src_id_seq = Variable(torch.LongTensor([input_vocab.stoi[tok] for tok in input.split()]),
+                                  volatile=True).view(1, -1)
+
+        #Somehow tell the forward to roll out and print or return every encoder attention vector
+        decoder_outputs, decoder_hidden, other = seq2seq(src_id_seq, [len(input.split())])
+
+        #TODO: visualize decoder_hidden
