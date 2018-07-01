@@ -12,12 +12,12 @@ from seq2seq.dataset import SourceField, MaskField
 from seq2seq.evaluator import Evaluator, Predictor
 import sys
 
-# model_loc = "Model/repcoret/Model"
-# data_loc = "DataGeneration/mask-data/corrections_masks.txt"
+model_loc = "Model-DC-ET/acc_0.90_ppl_0.08_s100"
+data_loc = "DataGeneration/disfluency-masks/train_alteration-masks.txt"
 
-print(sys.path)
-model_loc = "API-calls/results/Model-DC-cuis-1/acc_0.46_ppl_1.30_s1000"
-data_loc = "API-calls/Data-1/cuisine_masks.txt"
+# print(sys.path)
+# model_loc = "API-calls/results/Model-DC-cuis-1/acc_0.46_ppl_1.30_s1000"
+# data_loc = "API-calls/Data-1/cuisine_masks.txt"
 
 # Read in model
 checkpoint = Checkpoint.load(model_loc)
@@ -75,9 +75,10 @@ for batch in batch_generator:
     accuracy= (predicted_new == targets_flattened.long()).long().sum().data[0]/len(targets_flattened)
     #loss_value = loss.data[0]
     if accuracy != 0:
-        inputs = [input_vocab.itos[int(tok.data)] for tok in input_variables[0]]
-        print("Input:",inputs)
-        print("Output:",' '.join(['%i' % i for i in predicted[0]]))
-        print("Target:",' '.join(['%i' % i for i in target_variables[0]]))
-        input()
+        if sum(predicted[0]) >0:
+            inputs = [input_vocab.itos[int(tok.data)] for tok in input_variables[0]]
+            print("Input:",inputs)
+            print("Output:",' '.join(['%i' % i for i in predicted[0]]))
+            print("Target:",' '.join(['%i' % i for i in target_variables[0]]))
+            input()
     # input()

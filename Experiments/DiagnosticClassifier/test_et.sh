@@ -10,16 +10,16 @@ echo "$dt "
 #cd $HOME/machine/sanne/machine
 
 
-MDL_DC="Model-DC-alt/acc_0.67_ppl_0.13_s100"
+MDL_DC="Model-DC-ET/acc_0.90_ppl_0.08_s100"
 W_VEC=".01,.99"
 
 echo "Testing for Correction"
-M_DATA="DataGeneration/disfluency-masks/correction_test_alteration-masks.txt"
+M_DATA="DataGeneration/disfluency-masks/correction_test_ET-masks.txt"
 python3 ../../test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC
 python3 ../../test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC --stats
 
 echo "Testing for Restart"
-M_DATA="DataGeneration/disfluency-masks/restart_test_alteration-masks.txt"
+M_DATA="DataGeneration/disfluency-masks/restart_test_ET-masks.txt"
 python3 ../../test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 1 --weight_vec $W_VEC
 python3 ../../test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC --stats
 

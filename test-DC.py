@@ -125,7 +125,7 @@ parser.add_argument('--cuda_device', default=0, type=int, help='set cuda device 
 parser.add_argument('--max_len', type=int, help='Maximum sequence length', default=50)
 parser.add_argument('--batch_size', type=int, help='Batch size', default=32)
 parser.add_argument('--weight_vec', help='Weight vector', default=[.5,.5])
-parser.add_argument('--print_wrong', type=float, help="decide below which value to print",default=.8)
+parser.add_argument('--print_wrong', type=float, help="decide below which value to print",default=None)
 parser.add_argument('--stats', action='store_true')
 
 opt = parser.parse_args()
