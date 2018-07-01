@@ -1,0 +1,10 @@
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'torch.nn.modules.rnn.LSTM' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Traceback (most recent call last):
+  File "extract.py", line 223, in <module>
+    train_data,test_data = all_data.split(split_ratio=0.7)
+TypeError: 'generator' object is not callable

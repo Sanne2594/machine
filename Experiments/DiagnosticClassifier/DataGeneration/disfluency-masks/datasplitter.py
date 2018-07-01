@@ -21,6 +21,7 @@ def split_data(file):
             if num == 2:
                 train_mask[i] = 1
                 correction_test_mask[i] = -1
+                restart_test_mask[i] = 1
             elif num==3:
                 train_mask[i] = 1
                 correction_test_mask[i] = -1

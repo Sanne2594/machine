@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "test-DC.py", line 138, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/home/sanne/machine/sanne/machine/seq2seq/util/checkpoint.py", line 101, in load
+    model.flatten_parameters() # make RNN parameters contiguous
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/module.py", line 398, in __getattr__
+    type(self).__name__, name))
+AttributeError: 'DiagnosticClassifier' object has no attribute 'flatten_parameters'
+Traceback (most recent call last):
+  File "test-DC.py", line 138, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/home/sanne/machine/sanne/machine/seq2seq/util/checkpoint.py", line 101, in load
+    model.flatten_parameters() # make RNN parameters contiguous
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/module.py", line 398, in __getattr__
+    type(self).__name__, name))
+AttributeError: 'DiagnosticClassifier' object has no attribute 'flatten_parameters'

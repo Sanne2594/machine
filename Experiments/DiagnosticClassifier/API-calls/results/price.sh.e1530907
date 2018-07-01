@@ -1,0 +1,18 @@
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'torch.nn.modules.rnn.LSTM' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/container.py:67: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  input = module(input)
+Traceback (most recent call last):
+  File "extract.py", line 243, in <module>
+    train(data=train_data, model=DC, criterion=loss, optimizer=optimizer, out_dir=opt.output_dir,batch_size=32,num_epoch=opt.epochs)
+  File "extract.py", line 95, in train
+    loss, accuracy = test(data=eval_data,model=model, criterion=criterion)
+  File "extract.py", line 133, in test
+    print(output.encode('latin-1', 'replace'))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/autograd/variable.py", line 67, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'Variable' object has no attribute 'encode'

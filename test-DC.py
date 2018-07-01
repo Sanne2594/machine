@@ -42,21 +42,24 @@ def test(data, model, criterion, batch_size=32, wrong=None):
         for i in range(batch_size):
             loss += criterion(output[i],target_variables[i].long())
             predicted = torch.max(output[i],1)
+
             indices = target_variables[i].ne(-1)
             targets = target_variables[i][indices].long()
             predicted = predicted[1][indices]
-            inputs = input_variables[i][indices]
-            thresh = (predicted==targets).long().sum().data[0]/len(targets)
             accuracy += (predicted==targets).long().sum().data[0]
             evals += len(targets)
 
-            if thresh <= wrong:
-                inputs = [input_vocab.itos[int(tok.data)] for tok in inputs]
-                print("Input:", inputs)
-                print("Output:", ' '.join(['%i' % i for i in predicted]))
-                print("Target:", ' '.join(['%i' % i for i in targets]))
-                print("Accuracy:", thresh)
-                input()
+            if wrong:
+                inputs = input_variables[i][indices]
+                thresh = (predicted == targets).long().sum().data[0] / len(targets)
+
+                if thresh <= wrong:
+                    inputs = [input_vocab.itos[int(tok.data)] for tok in inputs]
+                    print("Input:", inputs)
+                    print("Output:", ' '.join(['%i' % i for i in predicted]))
+                    print("Target:", ' '.join(['%i' % i for i in targets]))
+                    print("Accuracy:", thresh)
+                    input()
         accuracy_total += accuracy
         loss_total += loss.data[0]
         evals_tot += evals

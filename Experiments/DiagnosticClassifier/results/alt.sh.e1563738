@@ -1,0 +1,68 @@
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'torch.nn.modules.rnn.LSTM' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/container.py:67: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  input = module(input)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'torch.nn.modules.rnn.LSTM' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Traceback (most recent call last):
+  File "test-DC.py", line 178, in <module>
+    loss, accuracy = test(data=all_data, model=DC, criterion=loss,batch_size=opt.batch_size,wrong=opt.print_wrong)
+  File "test-DC.py", line 43, in test
+    loss += criterion(output[i],target_variables[i].long())
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/module.py", line 357, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/loss.py", line 679, in forward
+    self.ignore_index, self.reduce)
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/nn/functional.py", line 1161, in cross_entropy
+    return nll_loss(log_softmax(input, 1), target, weight, size_average, ignore_index, reduce)
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/nn/functional.py", line 786, in log_softmax
+    return torch._C._nn.log_softmax(input, dim)
+RuntimeError: log_softmax(): argument 'input' (position 1) must be Variable, not list
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b64fe680978>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method DropoutDescriptor.__del__ of <torch.backends.cudnn.DropoutDescriptor object at 0x2b64fe6809b0>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 238, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroyDropoutDescriptor'
+Exception ignored in: <bound method CuDNNHandle.__del__ of <torch.backends.cudnn.CuDNNHandle object at 0x2b64fe680588>>
+Traceback (most recent call last):
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/backends/cudnn/__init__.py", line 114, in __del__
+AttributeError: 'NoneType' object has no attribute 'cudnnDestroy'
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'torch.nn.modules.rnn.LSTM' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Traceback (most recent call last):
+  File "test-DC.py", line 178, in <module>
+    loss, accuracy = test(data=all_data, model=DC, criterion=loss,batch_size=opt.batch_size,wrong=opt.print_wrong)
+  File "test-DC.py", line 37, in test
+    output = model(input_variables, input_lengths.tolist(), target_variables)
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/module.py", line 357, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/sanne/machine/sanne/machine/seq2seq/models/seq2seq.py", line 53, in forward
+    teacher_forcing_ratio=teacher_forcing_ratio)
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/module.py", line 357, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/sanne/machine/sanne/machine/seq2seq/models/DecoderRNN.py", line 156, in forward
+    function=function)
+  File "/home/sanne/machine/sanne/machine/seq2seq/models/DecoderRNN.py", line 96, in forward_step
+    embedded = self.embedding(input_var)
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/module.py", line 357, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/sparse.py", line 103, in forward
+    self.scale_grad_by_freq, self.sparse
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/nn/_functions/thnn/sparse.py", line 59, in forward
+    output = torch.index_select(weight, 0, indices.view(-1))
+TypeError: torch.index_select received an invalid combination of arguments - got (torch.cuda.FloatTensor, int, !torch.cuda.FloatTensor!), but expected (torch.cuda.FloatTensor source, int dim, torch.cuda.LongTensor index)
