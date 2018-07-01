@@ -13,7 +13,7 @@ NUM_EP=33 #Number of Epochs
 MDL_LOC="../Results-Final/model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000"
 
 MDL_DC="Model-DC-cor"
-M_DATA="DataGeneration/mask_data/correction-masks.txt"
+T_DATA="DataGeneration/disfluency_masks/train_alteration-masks.txt"
 
 NUM_CLASS=2
 W_VEC=".9,.1"

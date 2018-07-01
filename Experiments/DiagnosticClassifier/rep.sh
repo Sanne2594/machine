@@ -13,7 +13,7 @@ NUM_EP=30 #Number of Epochs
 MDL_LOC="../Results-Final/model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000"
 
 MDL_DC="Model-DC-rep"
-M_DATA="DataGeneration//mask_data/reperandum-masks.txt"
+M_DATA="DataGeneration/disfluency_masks/reperandum-masks.txt"
 
 NUM_CLASS=2
 W_VEC=".1,.9"

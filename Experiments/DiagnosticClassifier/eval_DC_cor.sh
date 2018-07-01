@@ -4,7 +4,7 @@ echo "$dt "
 
 
 # Correction model
-MDL_LOC="Model-DC-cor/acc_0.90_ppl_0.16_s33"
+MDL_LOC="Model-DC-cor/acc_0.89_ppl_0.25_s30"
 M_DATA="DataGeneration/mask_data/correction-masks.txt"
 #W_VEC="1,.9"
 
@@ -22,10 +22,10 @@ W_VEC=".9,.1"
 
 
 # Compute recall and precision
-python3 ../../test-DC.py --checkpoint_path $MDL_LOC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC --print_wrong 100 --stats
+#python3 ../../test-DC.py --checkpoint_path $MDL_LOC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC --print_wrong 100 --stats
 
 # Show output
-#python3 ../../test-DC.py --checkpoint_path $MDL_LOC --mask_data $M_DATA --max_len 75 --batch_size 32 --num_class $NUM_CLASS --weight_vec $W_VEC --print_wrong 100
+python3 ../../test-DC.py --checkpoint_path $MDL_LOC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC --print_wrong 100
 
 
 echo "Made it"
