@@ -40,7 +40,7 @@ def test(data, model, criterion, batch_size=32, wrong=None):
         loss=0
         evals = 0
         for i in range(batch_size):
-            loss += criterion(output[i],target_variables[i].long())
+            loss += criterion(output[i],target_variables[i].long()) #Error is here! index i is out of range, blijkbaar.
             predicted = torch.max(output[i],1)
 
             indices = target_variables[i].ne(-1)
@@ -48,6 +48,16 @@ def test(data, model, criterion, batch_size=32, wrong=None):
             predicted = predicted[1][indices]
             accuracy += (predicted==targets).long().sum().data[0]
             evals += len(targets)
+
+            # if step>134:
+            #     inputs = input_variables[i]
+            #     inputs = [input_vocab.itos[int(tok.data)] for tok in inputs]
+            #     print("Input:", inputs)
+            #     print("Output:", ' '.join(['%i' % i for i in predicted]))
+            #     print("Target:", ' '.join(['%i' % i for i in targets]))
+            #     #print("Accuracy:", thresh)
+            #     input()
+            # Problem appears to be in computatins of loss??
 
             if wrong:
                 inputs = input_variables[i][indices]
