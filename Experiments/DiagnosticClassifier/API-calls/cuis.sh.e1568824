@@ -1,0 +1,204 @@
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.dropout.Dropout' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.rnn.LSTM' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.container.Sequential' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.activation.LogSoftmax' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/machine/sanne/machine/seq2seq/models/EncoderRNN.py:66: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters().
+  output, hidden = self.rnn(embedded)
+/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/container.py:91: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  input = module(input)
+test-DC.py:49: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  accuracy += (predicted==targets).long().sum().data[0]
+test-DC.py:64: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  loss_total += loss.data[0]
+Traceback (most recent call last):
+  File "test-DC.py", line 181, in <module>
+    loss, accuracy = test(data=all_data, model=DC, criterion=loss,batch_size=opt.batch_size,wrong=opt.print_wrong)
+  File "test-DC.py", line 43, in test
+    loss += criterion(output[i],target_variables[i].long())
+IndexError: index 4 is out of bounds for dimension 0 with size 4
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.dropout.Dropout' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.rnn.LSTM' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.container.Sequential' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.activation.LogSoftmax' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/machine/sanne/machine/seq2seq/models/EncoderRNN.py:66: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters().
+  output, hidden = self.rnn(embedded)
+/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/container.py:91: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  input = module(input)
+test-DC.py:49: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  accuracy += (predicted==targets).long().sum().data[0]
+test-DC.py:64: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  loss_total += loss.data[0]
+Traceback (most recent call last):
+  File "test-DC.py", line 181, in <module>
+    loss, accuracy = test(data=all_data, model=DC, criterion=loss,batch_size=opt.batch_size,wrong=opt.print_wrong)
+  File "test-DC.py", line 43, in test
+    loss += criterion(output[i],target_variables[i].long())
+IndexError: index 4 is out of bounds for dimension 0 with size 4
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.dropout.Dropout' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.rnn.LSTM' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.container.Sequential' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.activation.LogSoftmax' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/machine/sanne/machine/seq2seq/models/EncoderRNN.py:66: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters().
+  output, hidden = self.rnn(embedded)
+/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/container.py:91: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  input = module(input)
+test-DC.py:49: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  accuracy += (predicted==targets).long().sum().data[0]
+test-DC.py:64: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  loss_total += loss.data[0]
+Traceback (most recent call last):
+  File "test-DC.py", line 181, in <module>
+    loss, accuracy = test(data=all_data, model=DC, criterion=loss,batch_size=opt.batch_size,wrong=opt.print_wrong)
+  File "test-DC.py", line 43, in test
+    loss += criterion(output[i],target_variables[i].long())
+IndexError: index 4 is out of bounds for dimension 0 with size 4
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.dropout.Dropout' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.rnn.LSTM' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.container.Sequential' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.activation.LogSoftmax' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/machine/sanne/machine/seq2seq/models/EncoderRNN.py:66: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters().
+  output, hidden = self.rnn(embedded)
+/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/container.py:91: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  input = module(input)
+test-DC.py:49: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  accuracy += (predicted==targets).long().sum().data[0]
+test-DC.py:64: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  loss_total += loss.data[0]
+Traceback (most recent call last):
+  File "test-DC.py", line 181, in <module>
+    loss, accuracy = test(data=all_data, model=DC, criterion=loss,batch_size=opt.batch_size,wrong=opt.print_wrong)
+  File "test-DC.py", line 43, in test
+    loss += criterion(output[i],target_variables[i].long())
+IndexError: index 4 is out of bounds for dimension 0 with size 4
+Exception ignored in: <function WeakValueDictionary.__init__.<locals>.remove at 0x2b8a63672400>
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/weakref.py", line 117, in remove
+TypeError: 'NoneType' object is not callable
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.dropout.Dropout' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.rnn.LSTM' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.container.Sequential' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.activation.LogSoftmax' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Traceback (most recent call last):
+  File "test-DC.py", line 160, in <module>
+    filter_pred=len_filter
+  File "/home/sanne/.local/lib/python3.5/site-packages/torchtext/data/dataset.py", line 161, in __init__
+    with io.open(os.path.expanduser(path), encoding="utf8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/Data-loop/test4_cuisine_masks.txt'
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.dropout.Dropout' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.rnn.LSTM' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.container.Sequential' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.activation.LogSoftmax' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/machine/sanne/machine/seq2seq/models/EncoderRNN.py:66: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters().
+  output, hidden = self.rnn(embedded)
+/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/container.py:91: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  input = module(input)
+test-DC.py:49: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  accuracy += (predicted==targets).long().sum().data[0]
+test-DC.py:64: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  loss_total += loss.data[0]
+Traceback (most recent call last):
+  File "test-DC.py", line 181, in <module>
+    loss, accuracy = test(data=all_data, model=DC, criterion=loss,batch_size=opt.batch_size,wrong=opt.print_wrong)
+  File "test-DC.py", line 43, in test
+    loss += criterion(output[i],target_variables[i].long())
+IndexError: index 4 is out of bounds for dimension 0 with size 4
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.dropout.Dropout' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.rnn.LSTM' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.container.Sequential' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.activation.LogSoftmax' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/machine/sanne/machine/seq2seq/models/EncoderRNN.py:66: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters().
+  output, hidden = self.rnn(embedded)
+/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/container.py:91: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  input = module(input)
+test-DC.py:49: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  accuracy += (predicted==targets).long().sum().data[0]
+test-DC.py:64: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  loss_total += loss.data[0]
+Traceback (most recent call last):
+  File "test-DC.py", line 181, in <module>
+    loss, accuracy = test(data=all_data, model=DC, criterion=loss,batch_size=opt.batch_size,wrong=opt.print_wrong)
+  File "test-DC.py", line 43, in test
+    loss += criterion(output[i],target_variables[i].long())
+IndexError: index 4 is out of bounds for dimension 0 with size 4
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.dropout.Dropout' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.rnn.LSTM' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.container.Sequential' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:367: SourceChangeWarning: source code of class 'torch.nn.modules.activation.LogSoftmax' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/sanne/machine/sanne/machine/seq2seq/models/EncoderRNN.py:66: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters().
+  output, hidden = self.rnn(embedded)
+/home/sanne/.local/lib/python3.5/site-packages/torch/nn/modules/container.py:91: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  input = module(input)
+test-DC.py:49: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  accuracy += (predicted==targets).long().sum().data[0]
+test-DC.py:64: UserWarning: invalid index of a 0-dim tensor. This will be an error in PyTorch 0.5. Use tensor.item() to convert a 0-dim tensor to a Python number
+  loss_total += loss.data[0]
+Traceback (most recent call last):
+  File "test-DC.py", line 181, in <module>
+    loss, accuracy = test(data=all_data, model=DC, criterion=loss,batch_size=opt.batch_size,wrong=opt.print_wrong)
+  File "test-DC.py", line 43, in test
+    loss += criterion(output[i],target_variables[i].long())
+IndexError: index 4 is out of bounds for dimension 0 with size 4

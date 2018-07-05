@@ -1,0 +1,68 @@
+Traceback (most recent call last):
+  File "test-DC.py", line 141, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/home/sanne/machine/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 265, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'Model-DC-cuisacc_0.36_ppl_1.61_s70/trainer_states.pt'
+Exception ignored in: <function WeakValueDictionary.__init__.<locals>.remove at 0x2aab9419fe18>
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/weakref.py", line 117, in remove
+TypeError: 'NoneType' object is not callable
+Traceback (most recent call last):
+  File "test-DC.py", line 141, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/home/sanne/machine/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 265, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'Model-DC-cuisacc_0.36_ppl_1.61_s70/trainer_states.pt'
+Traceback (most recent call last):
+  File "test-DC.py", line 141, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/home/sanne/machine/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 265, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'Model-DC-cuisacc_0.36_ppl_1.61_s70/trainer_states.pt'
+Traceback (most recent call last):
+  File "test-DC.py", line 141, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/home/sanne/machine/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 265, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'Model-DC-cuisacc_0.36_ppl_1.61_s70/trainer_states.pt'
+Traceback (most recent call last):
+  File "test-DC.py", line 141, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/home/sanne/machine/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 265, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'Model-DC-cuisacc_0.36_ppl_1.61_s70/trainer_states.pt'
+Traceback (most recent call last):
+  File "test-DC.py", line 141, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/home/sanne/machine/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 265, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'Model-DC-cuisacc_0.36_ppl_1.61_s70/trainer_states.pt'
+Traceback (most recent call last):
+  File "test-DC.py", line 141, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/home/sanne/machine/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 265, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'Model-DC-cuisacc_0.36_ppl_1.61_s70/trainer_states.pt'
+Traceback (most recent call last):
+  File "test-DC.py", line 141, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/home/sanne/machine/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 265, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'Model-DC-cuisacc_0.36_ppl_1.61_s70/trainer_states.pt'
