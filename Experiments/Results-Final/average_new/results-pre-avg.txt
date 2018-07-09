@@ -87,7 +87,7 @@ Loss: 1.001404, Word accuracy: 0.999865, Sequence accuracy: 0.999797
 Loss: 1.000006, Word accuracy: 1.000000, Sequence accuracy: 1.000000
 Loss: 1.000002, Word accuracy: 1.000000, Sequence accuracy: 1.000000
 
-api-only
+api-only  sequence accuracy (word accuracy)
 Loss: 1.000065, Word accuracy: 1.000000, Sequence accuracy: 1.000000
 Loss: 1.000229, Word accuracy: 1.000000, Sequence accuracy: 1.000000
 Loss: 1.020437, Word accuracy: 0.994500, Sequence accuracy: 0.967000

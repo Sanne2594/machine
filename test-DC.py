@@ -39,7 +39,9 @@ def test(data, model, criterion, batch_size=32, wrong=None):
         accuracy = 0
         loss=0
         evals = 0
-        for i in range(batch_size):
+        # print(len(output), len(target_variables), batch_size)
+        # print()
+        for i in range(len(output)):
             loss += criterion(output[i],target_variables[i].long()) #Error is here! index i is out of range, blijkbaar.
             predicted = torch.max(output[i],1)
 
