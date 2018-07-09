@@ -12,7 +12,7 @@ NUM_EP=100 #Number of Epochs
 MDL_LOC="model-final/acc_1.00_seq_acc_1.00_ppl_1.00_s4600/"
 
 MDL_DC="Model-DC-norm-cuis"
-M_DATA="data/Data-normal/cuisine_masks.txt"
+M_DATA="data/Data-api-forcing/cuisine_masks.txt"
 
 NUM_CLASS=10
 W_VEC=".8,.8,.8,.8,.8,.2,.2,.2,.2,.2"

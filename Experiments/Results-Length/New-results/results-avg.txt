@@ -1,0 +1,64 @@
+Training on long Train-scores
+Loss: 1.000007, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000004, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000006, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000002, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+
+long on long - test set
+Loss: 1.003868, Word accuracy: 0.999727, Sequence accuracy: 0.999410
+Loss: 1.003773, Word accuracy: 0.999591, Sequence accuracy: 0.999017
+Loss: 1.000086, Word accuracy: 0.999945, Sequence accuracy: 0.999607
+Loss: 1.000297, Word accuracy: 0.999945, Sequence accuracy: 0.999607
+
+Training on mid
+Loss: 1.000006, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000001, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000003, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000004, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+mid on mid - test set
+Loss: 1.003191, Word accuracy: 0.999630, Sequence accuracy: 0.999045
+Loss: 1.000003, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000049, Word accuracy: 0.999974, Sequence accuracy: 0.999809
+Loss: 1.000404, Word accuracy: 0.999947, Sequence accuracy: 0.999618
+
+HERE
+HERE
+TEsting strats here
+HERE
+
+long on shortmid - test set
+Loss: 1.006916, Word accuracy: 0.999161, Sequence accuracy: 0.995074
+Loss: 1.008286, Word accuracy: 0.999030, Sequence accuracy: 0.994695
+Loss: 1.005661, Word accuracy: 0.999240, Sequence accuracy: 0.994505
+Loss: 1.040772, Word accuracy: 0.996200, Sequence accuracy: 0.992990
+
+mid on shortlong - test set
+Loss: 1.055749, Word accuracy: 0.995077, Sequence accuracy: 0.990398
+Loss: 1.015865, Word accuracy: 0.998297, Sequence accuracy: 0.994239
+Loss: 1.032210, Word accuracy: 0.997152, Sequence accuracy: 0.992894
+Loss: 1.011071, Word accuracy: 0.998589, Sequence accuracy: 0.990205
+09/07/2018 09:04:31
+
+short on midlong test set
+Loss: 1.108377, Word accuracy: 0.990271, Sequence accuracy: 0.973136
+Loss: 1.209486, Word accuracy: 0.985811, Sequence accuracy: 0.971384
+Loss: 1.114773, Word accuracy: 0.991027, Sequence accuracy: 0.974109
+Loss: 1.124227, Word accuracy: 0.989108, Sequence accuracy: 0.969048
+
+midlong on short - test set
+Loss: 1.004708, Word accuracy: 0.999127, Sequence accuracy: 0.994042
+Loss: 1.006658, Word accuracy: 0.999178, Sequence accuracy: 0.995159
+Loss: 1.005508, Word accuracy: 0.999075, Sequence accuracy: 0.993297
+Loss: 1.002036, Word accuracy: 0.999538, Sequence accuracy: 0.996649
+
+shortlong on mid - test set
+Loss: 1.002106, Word accuracy: 0.999657, Sequence accuracy: 0.999045
+Loss: 1.000170, Word accuracy: 0.999947, Sequence accuracy: 0.999618
+Loss: 1.025419, Word accuracy: 0.989485, Sequence accuracy: 0.926839
+Loss: 1.001955, Word accuracy: 0.999709, Sequence accuracy: 0.998472
+
+shortmid on long - test set
+Loss: 1.005391, Word accuracy: 0.999509, Sequence accuracy: 0.998624
+Loss: 1.024548, Word accuracy: 0.997599, Sequence accuracy: 0.993118
+Loss: 1.042005, Word accuracy: 0.996290, Sequence accuracy: 0.990956
+Loss: 1.016884, Word accuracy: 0.998118, Sequence accuracy: 0.993512

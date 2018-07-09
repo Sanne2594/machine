@@ -1,0 +1,132 @@
+05/07/2018 22:52:29 
+Training Diagnostic Classifier on Alteration
+Cuda device set to 0
+Loading checkpoints from model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000
+Total loss: tensor(96.9442, device='cuda:0') , Average Loss: tensor(0.5770, device='cuda:0') , epoch: 1 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(85.3153, device='cuda:0') , Average Loss: tensor(0.5078, device='cuda:0') , epoch: 2 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(81.2436, device='cuda:0') , Average Loss: tensor(0.4836, device='cuda:0') , epoch: 3 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(77.6341, device='cuda:0') , Average Loss: tensor(0.4621, device='cuda:0') , epoch: 4 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(75.0075, device='cuda:0') , Average Loss: tensor(0.4465, device='cuda:0') , epoch: 5 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(73.1249, device='cuda:0') , Average Loss: tensor(0.4353, device='cuda:0') , epoch: 6 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(71.1656, device='cuda:0') , Average Loss: tensor(0.4236, device='cuda:0') , epoch: 7 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(70.1060, device='cuda:0') , Average Loss: tensor(0.4173, device='cuda:0') , epoch: 8 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(68.7133, device='cuda:0') , Average Loss: tensor(0.4090, device='cuda:0') , epoch: 9 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(67.6179, device='cuda:0') , Average Loss: tensor(0.4025, device='cuda:0') , epoch: 10 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(66.2190, device='cuda:0') , Average Loss: tensor(0.3942, device='cuda:0') , epoch: 11 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(65.1116, device='cuda:0') , Average Loss: tensor(0.3876, device='cuda:0') , epoch: 12 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(65.1906, device='cuda:0') , Average Loss: tensor(0.3880, device='cuda:0') , epoch: 13 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(63.9531, device='cuda:0') , Average Loss: tensor(0.3807, device='cuda:0') , epoch: 14 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(63.5467, device='cuda:0') , Average Loss: tensor(0.3783, device='cuda:0') , epoch: 15 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(62.9501, device='cuda:0') , Average Loss: tensor(0.3747, device='cuda:0') , epoch: 16 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(62.3566, device='cuda:0') , Average Loss: tensor(0.3712, device='cuda:0') , epoch: 17 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(61.5545, device='cuda:0') , Average Loss: tensor(0.3664, device='cuda:0') , epoch: 18 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(60.9573, device='cuda:0') , Average Loss: tensor(0.3628, device='cuda:0') , epoch: 19 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(60.7618, device='cuda:0') , Average Loss: tensor(0.3617, device='cuda:0') , epoch: 20 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(60.4150, device='cuda:0') , Average Loss: tensor(0.3596, device='cuda:0') , epoch: 21 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(59.4733, device='cuda:0') , Average Loss: tensor(0.3540, device='cuda:0') , epoch: 22 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(59.7431, device='cuda:0') , Average Loss: tensor(0.3556, device='cuda:0') , epoch: 23 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(58.8541, device='cuda:0') , Average Loss: tensor(0.3503, device='cuda:0') , epoch: 24 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(58.7050, device='cuda:0') , Average Loss: tensor(0.3494, device='cuda:0') , epoch: 25 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(58.2199, device='cuda:0') , Average Loss: tensor(0.3465, device='cuda:0') , epoch: 26 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(57.8532, device='cuda:0') , Average Loss: tensor(0.3444, device='cuda:0') , epoch: 27 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(57.4034, device='cuda:0') , Average Loss: tensor(0.3417, device='cuda:0') , epoch: 28 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(57.1302, device='cuda:0') , Average Loss: tensor(0.3401, device='cuda:0') , epoch: 29 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(56.8059, device='cuda:0') , Average Loss: tensor(0.3381, device='cuda:0') , epoch: 30 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(56.6946, device='cuda:0') , Average Loss: tensor(0.3375, device='cuda:0') , epoch: 31 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(56.4084, device='cuda:0') , Average Loss: tensor(0.3358, device='cuda:0') , epoch: 32 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(55.8118, device='cuda:0') , Average Loss: tensor(0.3322, device='cuda:0') , epoch: 33 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(55.8104, device='cuda:0') , Average Loss: tensor(0.3322, device='cuda:0') , epoch: 34 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(55.4635, device='cuda:0') , Average Loss: tensor(0.3301, device='cuda:0') , epoch: 35 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(55.3679, device='cuda:0') , Average Loss: tensor(0.3296, device='cuda:0') , epoch: 36 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(55.0540, device='cuda:0') , Average Loss: tensor(0.3277, device='cuda:0') , epoch: 37 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(54.7651, device='cuda:0') , Average Loss: tensor(0.3260, device='cuda:0') , epoch: 38 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(54.8369, device='cuda:0') , Average Loss: tensor(0.3264, device='cuda:0') , epoch: 39 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(54.1994, device='cuda:0') , Average Loss: tensor(0.3226, device='cuda:0') , epoch: 40 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(53.8672, device='cuda:0') , Average Loss: tensor(0.3206, device='cuda:0') , epoch: 41 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(54.2934, device='cuda:0') , Average Loss: tensor(0.3232, device='cuda:0') , epoch: 42 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(53.4410, device='cuda:0') , Average Loss: tensor(0.3181, device='cuda:0') , epoch: 43 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(53.5258, device='cuda:0') , Average Loss: tensor(0.3186, device='cuda:0') , epoch: 44 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(53.6150, device='cuda:0') , Average Loss: tensor(0.3191, device='cuda:0') , epoch: 45 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(53.2108, device='cuda:0') , Average Loss: tensor(0.3167, device='cuda:0') , epoch: 46 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(52.3672, device='cuda:0') , Average Loss: tensor(0.3117, device='cuda:0') , epoch: 47 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(52.2295, device='cuda:0') , Average Loss: tensor(0.3109, device='cuda:0') , epoch: 48 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(52.1468, device='cuda:0') , Average Loss: tensor(0.3104, device='cuda:0') , epoch: 49 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(52.2586, device='cuda:0') , Average Loss: tensor(0.3111, device='cuda:0') , epoch: 50 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(51.8460, device='cuda:0') , Average Loss: tensor(0.3086, device='cuda:0') , epoch: 51 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(51.7251, device='cuda:0') , Average Loss: tensor(0.3079, device='cuda:0') , epoch: 52 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(52.0513, device='cuda:0') , Average Loss: tensor(0.3098, device='cuda:0') , epoch: 53 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(51.5703, device='cuda:0') , Average Loss: tensor(0.3070, device='cuda:0') , epoch: 54 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(51.5033, device='cuda:0') , Average Loss: tensor(0.3066, device='cuda:0') , epoch: 55 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(50.8076, device='cuda:0') , Average Loss: tensor(0.3024, device='cuda:0') , epoch: 56 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(50.8492, device='cuda:0') , Average Loss: tensor(0.3027, device='cuda:0') , epoch: 57 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(51.1010, device='cuda:0') , Average Loss: tensor(0.3042, device='cuda:0') , epoch: 58 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(51.2839, device='cuda:0') , Average Loss: tensor(0.3053, device='cuda:0') , epoch: 59 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(50.6034, device='cuda:0') , Average Loss: tensor(0.3012, device='cuda:0') , epoch: 60 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(50.4770, device='cuda:0') , Average Loss: tensor(0.3005, device='cuda:0') , epoch: 61 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(50.3231, device='cuda:0') , Average Loss: tensor(0.2995, device='cuda:0') , epoch: 62 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(50.6875, device='cuda:0') , Average Loss: tensor(0.3017, device='cuda:0') , epoch: 63 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(50.0651, device='cuda:0') , Average Loss: tensor(0.2980, device='cuda:0') , epoch: 64 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(50.1386, device='cuda:0') , Average Loss: tensor(0.2984, device='cuda:0') , epoch: 65 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(50.0508, device='cuda:0') , Average Loss: tensor(0.2979, device='cuda:0') , epoch: 66 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(49.7099, device='cuda:0') , Average Loss: tensor(0.2959, device='cuda:0') , epoch: 67 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(49.8194, device='cuda:0') , Average Loss: tensor(0.2965, device='cuda:0') , epoch: 68 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(49.1592, device='cuda:0') , Average Loss: tensor(0.2926, device='cuda:0') , epoch: 69 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(49.1795, device='cuda:0') , Average Loss: tensor(0.2927, device='cuda:0') , epoch: 70 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(49.2723, device='cuda:0') , Average Loss: tensor(0.2933, device='cuda:0') , epoch: 71 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(49.2851, device='cuda:0') , Average Loss: tensor(0.2934, device='cuda:0') , epoch: 72 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(49.1734, device='cuda:0') , Average Loss: tensor(0.2927, device='cuda:0') , epoch: 73 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(48.9271, device='cuda:0') , Average Loss: tensor(0.2912, device='cuda:0') , epoch: 74 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(48.9609, device='cuda:0') , Average Loss: tensor(0.2914, device='cuda:0') , epoch: 75 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(48.9121, device='cuda:0') , Average Loss: tensor(0.2911, device='cuda:0') , epoch: 76 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(48.9472, device='cuda:0') , Average Loss: tensor(0.2914, device='cuda:0') , epoch: 77 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(48.6777, device='cuda:0') , Average Loss: tensor(0.2897, device='cuda:0') , epoch: 78 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(48.4985, device='cuda:0') , Average Loss: tensor(0.2887, device='cuda:0') , epoch: 79 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(48.6560, device='cuda:0') , Average Loss: tensor(0.2896, device='cuda:0') , epoch: 80 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(48.3225, device='cuda:0') , Average Loss: tensor(0.2876, device='cuda:0') , epoch: 81 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(48.8670, device='cuda:0') , Average Loss: tensor(0.2909, device='cuda:0') , epoch: 82 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(48.2109, device='cuda:0') , Average Loss: tensor(0.2870, device='cuda:0') , epoch: 83 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(48.0807, device='cuda:0') , Average Loss: tensor(0.2862, device='cuda:0') , epoch: 84 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(47.6630, device='cuda:0') , Average Loss: tensor(0.2837, device='cuda:0') , epoch: 85 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(47.9854, device='cuda:0') , Average Loss: tensor(0.2856, device='cuda:0') , epoch: 86 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(48.0146, device='cuda:0') , Average Loss: tensor(0.2858, device='cuda:0') , epoch: 87 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(47.6263, device='cuda:0') , Average Loss: tensor(0.2835, device='cuda:0') , epoch: 88 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(46.9843, device='cuda:0') , Average Loss: tensor(0.2797, device='cuda:0') , epoch: 89 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(47.3086, device='cuda:0') , Average Loss: tensor(0.2816, device='cuda:0') , epoch: 90 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(47.2854, device='cuda:0') , Average Loss: tensor(0.2815, device='cuda:0') , epoch: 91 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(46.7810, device='cuda:0') , Average Loss: tensor(0.2785, device='cuda:0') , epoch: 92 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(47.0187, device='cuda:0') , Average Loss: tensor(0.2799, device='cuda:0') , epoch: 93 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(47.3100, device='cuda:0') , Average Loss: tensor(0.2816, device='cuda:0') , epoch: 94 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(47.2402, device='cuda:0') , Average Loss: tensor(0.2812, device='cuda:0') , epoch: 95 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(46.9571, device='cuda:0') , Average Loss: tensor(0.2795, device='cuda:0') , epoch: 96 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(46.7702, device='cuda:0') , Average Loss: tensor(0.2784, device='cuda:0') , epoch: 97 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(47.1452, device='cuda:0') , Average Loss: tensor(0.2806, device='cuda:0') , epoch: 98 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(46.7928, device='cuda:0') , Average Loss: tensor(0.2785, device='cuda:0') , epoch: 99 accuracy tensor(0, device='cuda:0')
+Total loss: tensor(46.5314, device='cuda:0') , Average Loss: tensor(0.2770, device='cuda:0') , epoch: 100 accuracy tensor(0, device='cuda:0')
+
+Loss: 0.280517, Accuracy: 0.000000
+Testing for Correction
+Cuda device set to 0
+Loading checkpoints from Model-DC-alttrainer_states.pt
+Testing for Restart
+Cuda device set to 0
+Loading checkpoints from trainer_states.pt
+05/07/2018 22:54:38 
+  notice: Q: "...sara_stats": -------------------Begin of SURFsara epilogue----------------------------------
+Q: "...sara_stats": This output was generated by the SURFsara epilogue script
+Q: "...sara_stats": Your job [alt.sh] has been executed in queue [gpu] with
+Q: "...sara_stats": the following PBS arguments:
+Q: "...sara_stats":    ncpus=1,neednodes=1,nodes=1,walltime=00:20:00
+Q: "...sara_stats":    .
+Q: "...sara_stats": Resources used in job [1572091.batch1.lisa.surfsara.nl] with name [alt.sh]:
+Q: "...sara_stats":    cput=00:02:00,energy_used=0,mem=2285944kb,vmem=42360100kb,walltime=00:02:14
+Q: "...sara_stats":    r33n2.lisa.surfsara.nl
+Q: "...sara_stats":    .
+Q: "...sara_stats": Job start and end time:
+Q: "...sara_stats":   Job start time: Thu Jul  5 22:52:28 CEST 2018
+Q: "...sara_stats":   Job end time  : Thu Jul  5 22:54:42 CEST 2018
+Q: "...sara_stats": ---------------------------------------------------------------------------
+Q: "...sara_stats": WARNING: It seems that this job did not use scratch space.
+Q: "...sara_stats": WARNING: It is strongly recommended to do so. See the following URL
+Q: "...sara_stats":          for more information:
+Q: "...sara_stats":  - https://www.surfsara.nl/systems/lisa/filesystems#The_scratch_file_system
+Q: "...sara_stats": ---------------------End of SURFsara epilogue----------------------------------

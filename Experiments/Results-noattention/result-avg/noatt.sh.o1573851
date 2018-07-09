@@ -1,0 +1,345 @@
+08/07/2018 22:41:09 
+Training on babi no attention
+Cuda device set to 0
+Train-scores
+Cuda device set to 0
+Loading checkpoints from model-noatt-new/acc_0.95_seq_acc_0.84_ppl_1.11_s5600
+
+Loss: 1.102785, Word accuracy: 0.952069, Sequence accuracy: 0.839475
+Training on babi+ no attention
+Cuda device set to 0
+Train-scores
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.98_seq_acc_0.91_ppl_1.05_s5040
+
+Loss: 1.017003, Word accuracy: 0.994116, Sequence accuracy: 0.963157
+ 
+ 
+All the test sets
+ 
+\nbabi on babi
+Cuda device set to 0
+Loading checkpoints from model-noatt-new/acc_0.95_seq_acc_0.84_ppl_1.11_s5600
+
+Loss: 1.116579, Word accuracy: 0.944866, Sequence accuracy: 0.834063
+Cuda device set to 0
+Loading checkpoints from model-noatt-new/acc_0.95_seq_acc_0.84_ppl_1.11_s5600
+
+Loss: 1.000020, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Cuda device set to 0
+Loading checkpoints from model-noatt-new/acc_0.95_seq_acc_0.84_ppl_1.11_s5600
+
+Loss: 2.203151, Word accuracy: 0.605000, Sequence accuracy: 0.015000
+ 
+ 
+\nbabi plus on babi plus - test set 
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.98_seq_acc_0.91_ppl_1.05_s5040
+
+Loss: 1.043999, Word accuracy: 0.983715, Sequence accuracy: 0.906721
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.98_seq_acc_0.91_ppl_1.05_s5040
+
+Loss: 1.001126, Word accuracy: 0.999858, Sequence accuracy: 0.999790
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.98_seq_acc_0.91_ppl_1.05_s5040
+
+Loss: 1.573168, Word accuracy: 0.825858, Sequence accuracy: 0.169435
+ 
+ 
+\nbabi on babi plus
+Cuda device set to 0
+Loading checkpoints from model-noatt-new/acc_0.95_seq_acc_0.84_ppl_1.11_s5600
+
+Loss: 6.572312, Word accuracy: 0.816547, Sequence accuracy: 0.730590
+Cuda device set to 0
+Loading checkpoints from model-noatt-new/acc_0.95_seq_acc_0.84_ppl_1.11_s5600
+
+Loss: 7.087738, Word accuracy: 0.844305, Sequence accuracy: 0.822395
+Cuda device set to 0
+Loading checkpoints from model-noatt-new/acc_0.95_seq_acc_0.84_ppl_1.11_s5600
+
+Loss: 3.141261, Word accuracy: 0.545127, Sequence accuracy: 0.003322
+ 
+ 
+\nbabi plus on babi
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.98_seq_acc_0.91_ppl_1.05_s5040
+
+Loss: 1.055526, Word accuracy: 0.978481, Sequence accuracy: 0.866914
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.98_seq_acc_0.91_ppl_1.05_s5040
+
+Loss: 1.000049, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.98_seq_acc_0.91_ppl_1.05_s5040
+
+Loss: 1.472344, Word accuracy: 0.845833, Sequence accuracy: 0.210000
+ 
+ 
+ 
+ 
+Next one
+ 
+ 
+Training on babi no attention
+Cuda device set to 0
+Train-scores
+Cuda device set to 0
+Loading checkpoints from model-noatt-2/acc_0.95_seq_acc_0.83_ppl_1.11_s5670
+
+Loss: 1.106452, Word accuracy: 0.952435, Sequence accuracy: 0.840637
+Training on babi+ no attention
+Cuda device set to 0
+Train-scores
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.99_seq_acc_0.93_ppl_1.02_s5040
+
+Loss: 1.012470, Word accuracy: 0.995123, Sequence accuracy: 0.965214
+ 
+ 
+All the test sets
+ 
+\nbabi on babi
+Cuda device set to 0
+Loading checkpoints from model-noatt-2/acc_0.95_seq_acc_0.83_ppl_1.11_s5670
+
+Loss: 1.113591, Word accuracy: 0.947611, Sequence accuracy: 0.831368
+Cuda device set to 0
+Loading checkpoints from model-noatt-2/acc_0.95_seq_acc_0.83_ppl_1.11_s5670
+
+Loss: 1.000693, Word accuracy: 0.999865, Sequence accuracy: 0.999797
+Cuda device set to 0
+Loading checkpoints from model-noatt-2/acc_0.95_seq_acc_0.83_ppl_1.11_s5670
+
+Loss: 2.152309, Word accuracy: 0.625500, Sequence accuracy: 0.000000
+ 
+ 
+\nbabi plus on babi plus - test set 
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.99_seq_acc_0.93_ppl_1.02_s5040
+
+Loss: 1.027703, Word accuracy: 0.988287, Sequence accuracy: 0.921430
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.99_seq_acc_0.93_ppl_1.02_s5040
+
+Loss: 1.000793, Word accuracy: 0.999887, Sequence accuracy: 0.999790
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.99_seq_acc_0.93_ppl_1.02_s5040
+
+Loss: 1.332130, Word accuracy: 0.874862, Sequence accuracy: 0.300664
+ 
+ 
+\nbabi on babi plus
+Cuda device set to 0
+Loading checkpoints from model-noatt-2/acc_0.95_seq_acc_0.83_ppl_1.11_s5670
+
+Loss: 5.919093, Word accuracy: 0.800545, Sequence accuracy: 0.730218
+Cuda device set to 0
+Loading checkpoints from model-noatt-2/acc_0.95_seq_acc_0.83_ppl_1.11_s5670
+
+Loss: 6.225851, Word accuracy: 0.825618, Sequence accuracy: 0.822395
+Cuda device set to 0
+Loading checkpoints from model-noatt-2/acc_0.95_seq_acc_0.83_ppl_1.11_s5670
+
+Loss: 3.611536, Word accuracy: 0.555371, Sequence accuracy: 0.000000
+ 
+ 
+\nbabi plus on babi
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.99_seq_acc_0.93_ppl_1.02_s5040
+
+Loss: 1.037726, Word accuracy: 0.983413, Sequence accuracy: 0.884602
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.99_seq_acc_0.93_ppl_1.02_s5040
+
+Loss: 1.001054, Word accuracy: 0.999811, Sequence accuracy: 0.999797
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.99_seq_acc_0.93_ppl_1.02_s5040
+
+Loss: 1.295399, Word accuracy: 0.882333, Sequence accuracy: 0.316000
+ 
+ 
+ 
+ 
+Next one
+ 
+ 
+Training on babi no attention
+Cuda device set to 0
+Train-scores
+Cuda device set to 0
+Loading checkpoints from model-noatt-3/acc_0.97_seq_acc_0.84_ppl_1.07_s5670
+
+Loss: 1.063985, Word accuracy: 0.971104, Sequence accuracy: 0.862052
+Training on babi+ no attention
+Cuda device set to 0
+Train-scores
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.98_seq_acc_0.92_ppl_1.04_s5040
+
+Loss: 1.025345, Word accuracy: 0.988619, Sequence accuracy: 0.935852
+ 
+ 
+All the test sets
+ 
+\nbabi on babi
+Cuda device set to 0
+Loading checkpoints from model-noatt-3/acc_0.97_seq_acc_0.84_ppl_1.07_s5670
+
+Loss: 1.074539, Word accuracy: 0.965198, Sequence accuracy: 0.840128
+Cuda device set to 0
+Loading checkpoints from model-noatt-3/acc_0.97_seq_acc_0.84_ppl_1.07_s5670
+
+Loss: 1.000011, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Cuda device set to 0
+Loading checkpoints from model-noatt-3/acc_0.97_seq_acc_0.84_ppl_1.07_s5670
+
+Loss: 1.673616, Word accuracy: 0.750667, Sequence accuracy: 0.051000
+ 
+ 
+\nbabi plus on babi plus - test set 
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.98_seq_acc_0.92_ppl_1.04_s5040
+
+Loss: 1.041698, Word accuracy: 0.981557, Sequence accuracy: 0.906535
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.98_seq_acc_0.92_ppl_1.04_s5040
+
+Loss: 1.000032, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.98_seq_acc_0.92_ppl_1.04_s5040
+
+Loss: 1.552699, Word accuracy: 0.801218, Sequence accuracy: 0.166113
+ 
+ 
+\nbabi on babi plus
+Cuda device set to 0
+Loading checkpoints from model-noatt-3/acc_0.97_seq_acc_0.84_ppl_1.07_s5670
+
+Loss: 9.971688, Word accuracy: 0.788087, Sequence accuracy: 0.683299
+Cuda device set to 0
+Loading checkpoints from model-noatt-3/acc_0.97_seq_acc_0.84_ppl_1.07_s5670
+
+Loss: 10.774139, Word accuracy: 0.804100, Sequence accuracy: 0.768295
+Cuda device set to 0
+Loading checkpoints from model-noatt-3/acc_0.97_seq_acc_0.84_ppl_1.07_s5670
+
+Loss: 4.678311, Word accuracy: 0.631506, Sequence accuracy: 0.009967
+ 
+ 
+\nbabi plus on babi
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.98_seq_acc_0.92_ppl_1.04_s5040
+
+Loss: 1.056472, Word accuracy: 0.973736, Sequence accuracy: 0.863713
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.98_seq_acc_0.92_ppl_1.04_s5040
+
+Loss: 1.000018, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.98_seq_acc_0.92_ppl_1.04_s5040
+
+Loss: 1.482094, Word accuracy: 0.811833, Sequence accuracy: 0.191000
+ 
+ 
+ 
+ 
+Next one
+ 
+ 
+Training on babi no attention
+Cuda device set to 0
+Train-scores
+Cuda device set to 0
+Loading checkpoints from model-noatt-4/acc_0.96_seq_acc_0.84_ppl_1.09_s5670
+
+Loss: 1.068036, Word accuracy: 0.966277, Sequence accuracy: 0.857570
+Training on babi+ no attention
+Cuda device set to 0
+Train-scores
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.97_seq_acc_0.90_ppl_1.06_s5040
+
+Loss: 1.035585, Word accuracy: 0.983071, Sequence accuracy: 0.919394
+ 
+ 
+All the test sets
+ 
+\nbabi on babi
+Cuda device set to 0
+Loading checkpoints from model-noatt-4/acc_0.96_seq_acc_0.84_ppl_1.09_s5670
+
+Loss: 1.090274, Word accuracy: 0.954497, Sequence accuracy: 0.833389
+Cuda device set to 0
+Loading checkpoints from model-noatt-4/acc_0.96_seq_acc_0.84_ppl_1.09_s5670
+
+Loss: 1.000077, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Cuda device set to 0
+Loading checkpoints from model-noatt-4/acc_0.96_seq_acc_0.84_ppl_1.09_s5670
+
+Loss: 1.856574, Word accuracy: 0.674000, Sequence accuracy: 0.011000
+ 
+ 
+\nbabi plus on babi plus - test set 
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.97_seq_acc_0.90_ppl_1.06_s5040
+
+Loss: 1.062350, Word accuracy: 0.973260, Sequence accuracy: 0.898157
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.97_seq_acc_0.90_ppl_1.06_s5040
+
+Loss: 1.005703, Word accuracy: 0.998811, Sequence accuracy: 0.998742
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.97_seq_acc_0.90_ppl_1.06_s5040
+
+Loss: 1.815388, Word accuracy: 0.723422, Sequence accuracy: 0.101329
+ 
+ 
+\nbabi on babi plus
+Cuda device set to 0
+Loading checkpoints from model-noatt-4/acc_0.96_seq_acc_0.84_ppl_1.09_s5670
+
+Loss: 4.279610, Word accuracy: 0.833629, Sequence accuracy: 0.749209
+Cuda device set to 0
+Loading checkpoints from model-noatt-4/acc_0.96_seq_acc_0.84_ppl_1.09_s5670
+
+Loss: 4.435239, Word accuracy: 0.856027, Sequence accuracy: 0.843363
+Cuda device set to 0
+Loading checkpoints from model-noatt-4/acc_0.96_seq_acc_0.84_ppl_1.09_s5670
+
+Loss: 3.018019, Word accuracy: 0.614618, Sequence accuracy: 0.003322
+ 
+ 
+\nbabi plus on babi
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.97_seq_acc_0.90_ppl_1.06_s5040
+
+Loss: 1.084012, Word accuracy: 0.960196, Sequence accuracy: 0.848214
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.97_seq_acc_0.90_ppl_1.06_s5040
+
+Loss: 1.001117, Word accuracy: 0.999784, Sequence accuracy: 0.999797
+Cuda device set to 0
+Loading checkpoints from model-noatt-plus/acc_0.97_seq_acc_0.90_ppl_1.06_s5040
+
+Loss: 1.770140, Word accuracy: 0.716167, Sequence accuracy: 0.100000
+  notice: Q: "...sara_stats": -------------------Begin of SURFsara epilogue----------------------------------
+Q: "...sara_stats": This output was generated by the SURFsara epilogue script
+Q: "...sara_stats": Your job [noatt.sh] has been executed in queue [gpu] with
+Q: "...sara_stats": the following PBS arguments:
+Q: "...sara_stats":    ncpus=1,neednodes=1,nodes=1,walltime=12:00:00
+Q: "...sara_stats":    .
+Q: "...sara_stats": Resources used in job [1573851.batch1.lisa.surfsara.nl] with name [noatt.sh]:
+Q: "...sara_stats":    cput=01:26:25,energy_used=0,mem=2116688kb,vmem=42383160kb,walltime=01:26:02
+Q: "...sara_stats":    r31n2.lisa.surfsara.nl
+Q: "...sara_stats":    .
+Q: "...sara_stats": Job start and end time:
+Q: "...sara_stats":   Job start time: Sun Jul  8 22:41:09 CEST 2018
+Q: "...sara_stats":   Job end time  : Mon Jul  9 00:07:11 CEST 2018
+Q: "...sara_stats": ---------------------------------------------------------------------------
+Q: "...sara_stats": WARNING: It seems that this job did not use scratch space.
+Q: "...sara_stats": WARNING: It is strongly recommended to do so. See the following URL
+Q: "...sara_stats":          for more information:
+Q: "...sara_stats":  - https://www.surfsara.nl/systems/lisa/filesystems#The_scratch_file_system
+Q: "...sara_stats": ---------------------End of SURFsara epilogue----------------------------------

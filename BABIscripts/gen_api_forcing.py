@@ -69,7 +69,7 @@ for line in lines:
     newlines.append(newline)
 
 
-path = "../Experiments/DiagnosticClassifier/API-calls/Data-normal/"
+path = "../Experiments/DiagnosticClassifier/API-calls/Data-api-forcing/"
 out_file = "min_tst_aug.txt"
 fpath = os.path.join(path,out_file)
 f = open(fpath, "w")

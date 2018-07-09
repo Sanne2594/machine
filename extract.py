@@ -71,7 +71,7 @@ def train(model, data, criterion,optimizer, out_dir,batch_size=32,num_epoch=6):
             optimizer.step()
 
             # Record average loss
-            epoch_loss_total += loss.data[0]
+            epoch_loss_total += loss.data.item()[0]
 
             # Compute softmax
             _, predicted = torch.max(outputs_flattened.data, 1)
