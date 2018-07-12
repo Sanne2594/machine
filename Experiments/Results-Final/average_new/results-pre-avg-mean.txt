@@ -1,0 +1,83 @@
+Train-scores mean = 1.0 (0.0)
+Loss: 1.000001, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000001, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000001, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000001, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+
+Training on babi+ mean = 1.0 (0.0)
+Loss: 1.000005, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000027, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000001, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000003, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+
+babi on babi: Full mean = 1.0 (0.0)
+Loss: 1.000001, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000001, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000001, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000001, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+
+No api mean = 1.0 (0.0)
+Loss: 1.000000, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000000, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000000, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000000, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+
+Api-only mean = 1.0 (0.0)
+Loss: 1.000003, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000004, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000004, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000004, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+
+babi plus on babi plus - test set : Full: mean = 0.9982315 (0.00112867854148)
+Loss: 1.000155, Word accuracy: 0.999974, Sequence accuracy: 0.999814
+Loss: 1.001075, Word accuracy: 0.999820, Sequence accuracy: 0.998697
+Loss: 1.004359, Word accuracy: 0.999306, Sequence accuracy: 0.996835
+Loss: 1.005693, Word accuracy: 0.999461, Sequence accuracy: 0.997580
+
+no api: mean = 0.9996855 (0.000347793401318)
+Loss: 1.000001, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000001, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.003342, Word accuracy: 0.999632, Sequence accuracy: 0.999161
+Loss: 1.003595, Word accuracy: 0.999717, Sequence accuracy: 0.999581
+
+api only mean = 0.986711 (0.00761231288768)
+Loss: 1.001658, Word accuracy: 0.999723, Sequence accuracy: 0.998339
+Loss: 1.011628, Word accuracy: 0.998062, Sequence accuracy: 0.988372
+Loss: 1.014366, Word accuracy: 0.996124, Sequence accuracy: 0.978405
+Loss: 1.026433, Word accuracy: 0.996955, Sequence accuracy: 0.981728
+
+babi on babi plus : Full mean = 0.87651275 (0.0352100823158)
+Loss: 1.529747, Word accuracy: 0.969125, Sequence accuracy: 0.919568
+Loss: 5.235685, Word accuracy: 0.877553, Sequence accuracy: 0.829641
+Loss: 2.480567, Word accuracy: 0.936837, Sequence accuracy: 0.899646
+Loss: 2.733472, Word accuracy: 0.918368, Sequence accuracy: 0.857196
+
+no api mean = 0.92362125 (0.0355005016752)
+Loss: 1.377048, Word accuracy: 0.975679, Sequence accuracy: 0.971063
+Loss: 2.404076, Word accuracy: 0.938956, Sequence accuracy: 0.940868
+Loss: 2.596616, Word accuracy: 0.920807, Sequence accuracy: 0.905431
+Loss: 5.278520, Word accuracy: 0.876582, Sequence accuracy: 0.877123
+
+Api-only mean = 0.50373775 (0.0448716357311)
+Loss: 4.280017, Word accuracy: 0.905039, Sequence accuracy: 0.511628
+Loss: 4.835794, Word accuracy: 0.887320, Sequence accuracy: 0.455150
+Loss: 3.369058, Word accuracy: 0.916113, Sequence accuracy: 0.573090
+Loss: 4.517774, Word accuracy: 0.894518, Sequence accuracy: 0.475083
+
+babi plus on babi : Full mean = 0.998526 (0.0024570054945)
+Loss: 1.000010, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.001240, Word accuracy: 0.999884, Sequence accuracy: 0.999832
+Loss: 1.002842, Word accuracy: 0.999209, Sequence accuracy: 0.994272
+Loss: 1.000015, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+
+no api mean = 0.99994925 (8.79015784841e-05)
+Loss: 1.000001, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.001404, Word accuracy: 0.999865, Sequence accuracy: 0.999797
+Loss: 1.000006, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000002, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+
+api-only  sequence accuracy (word accuracy) mean = 0.99175 (0.0142894191624)
+Loss: 1.000065, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.000229, Word accuracy: 1.000000, Sequence accuracy: 1.000000
+Loss: 1.020437, Word accuracy: 0.994500, Sequence accuracy: 0.967000
+Loss: 1.000094, Word accuracy: 1.000000, Sequence accuracy: 1.000000
