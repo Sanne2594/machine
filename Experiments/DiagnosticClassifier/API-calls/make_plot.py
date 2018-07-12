@@ -16,3 +16,28 @@ plt.legend()
 plt.ylabel('accuracy')
 plt.xlabel('relative position')
 plt.show()
+
+
+
+f = open("output.txt", "r")
+lines = f.readlines()
+f.close()
+prec=0.0
+rec=0.0
+for line in lines:
+    if line == "\n":
+        print(prec/5, rec/5)
+        prec = 0
+        rec = 0
+    elif("Precision" in line):
+        prec += float(line.split()[1])
+        rec += float(line.split()[3])
+    else:
+        print(line)
+
+
+result = [line.split()[-1] for line in lines if "Accuracy:" in line]
+
+float(result[1]) + float(result[3]) + float(result[5]) + float(result[7]) +float( result[9])
+
+float(result[0]) + float(result[1]) + float(result[2]) + float(result[3]) + float(result[4])

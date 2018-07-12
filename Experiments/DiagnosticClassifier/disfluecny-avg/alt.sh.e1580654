@@ -1,0 +1,64 @@
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Exception ignored in: <function WeakValueDictionary.__init__.<locals>.remove at 0x2ad10a2a8e18>
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/weakref.py", line 117, in remove
+TypeError: 'NoneType' object is not callable
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero

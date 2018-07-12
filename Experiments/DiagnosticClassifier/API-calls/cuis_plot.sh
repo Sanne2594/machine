@@ -19,30 +19,46 @@ MDL_DC="Model-DC-cuis-loop0/"
 NUM_CLASS=10
 W_VEC=".1,.1,.1,.1,.1,.8,.8,.8,.8,.8"
 
+python3 extract.py --checkpoint_path $MDL_LOC --output_dir $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --epochs $NUM_EP --num_class $NUM_CLASS --weight_vec $W_VEC
 
 echo "Testing Sequence"
 
-M_DATA="data/Data-loop/train_cuisine_masks.txt"
+M_DATA="data/Data-loop/test0_cuisine_masks.txt"
 python3 extract.py --checkpoint_path $MDL_LOC --output_dir $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --epochs $NUM_EP --num_class $NUM_CLASS --weight_vec $W_VEC
 python3 test-DC.py --checkpoint_path $MDL_DC$(ls -t $MDL_DC | head -1) --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC
 
 MDL_DC="Model-DC-cuis-loop1/"
-M_DATA="data/Data-loop/train_cuisine_masks.txt"
+M_DATA="data/Data-loop/test1_cuisine_masks.txt"
 python3 extract.py --checkpoint_path $MDL_LOC --output_dir $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --epochs $NUM_EP --num_class $NUM_CLASS --weight_vec $W_VEC
 python3 test-DC.py --checkpoint_path $MDL_DC$(ls -t $MDL_DC | head -1) --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC
 
 MDL_DC="Model-DC-cuis-loop2/"
-M_DATA="data/Data-loop/train_cuisine_masks.txt"
+M_DATA="data/Data-loop/test2_cuisine_masks.txt"
 python3 extract.py --checkpoint_path $MDL_LOC --output_dir $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --epochs $NUM_EP --num_class $NUM_CLASS --weight_vec $W_VEC
 python3 test-DC.py --checkpoint_path $MDL_DC$(ls -t $MDL_DC | head -1) --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC
 
 MDL_DC="Model-DC-cuis-loop3/"
-M_DATA="data/Data-loop/train_cuisine_masks.txt"
+M_DATA="data/Data-loop/test3_cuisine_masks.txt"
 python3 extract.py --checkpoint_path $MDL_LOC --output_dir $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --epochs $NUM_EP --num_class $NUM_CLASS --weight_vec $W_VEC
 python3 test-DC.py --checkpoint_path $MDL_DC$(ls -t $MDL_DC | head -1) --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC
 
 MDL_DC="Model-DC-cuis-loop4/"
-M_DATA="data/Data-loop/train_cuisine_masks.txt"
+M_DATA="data/Data-loop/test4_cuisine_masks.txt"
+python3 extract.py --checkpoint_path $MDL_LOC --output_dir $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --epochs $NUM_EP --num_class $NUM_CLASS --weight_vec $W_VEC
+python3 test-DC.py --checkpoint_path $MDL_DC$(ls -t $MDL_DC | head -1) --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC
+
+MDL_DC="Model-DC-cuis-loop5/"
+M_DATA="data/Data-loop/test5_cuisine_masks.txt"
+python3 extract.py --checkpoint_path $MDL_LOC --output_dir $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --epochs $NUM_EP --num_class $NUM_CLASS --weight_vec $W_VEC
+python3 test-DC.py --checkpoint_path $MDL_DC$(ls -t $MDL_DC | head -1) --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC
+
+MDL_DC="Model-DC-cuis-loop6/"
+M_DATA="data/Data-loop/test6_cuisine_masks.txt"
+python3 extract.py --checkpoint_path $MDL_LOC --output_dir $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --epochs $NUM_EP --num_class $NUM_CLASS --weight_vec $W_VEC
+python3 test-DC.py --checkpoint_path $MDL_DC$(ls -t $MDL_DC | head -1) --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC
+
+MDL_DC="Model-DC-cuis-loop7/"
+M_DATA="data/Data-loop/test7_cuisine_masks.txt"
 python3 extract.py --checkpoint_path $MDL_LOC --output_dir $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --epochs $NUM_EP --num_class $NUM_CLASS --weight_vec $W_VEC
 python3 test-DC.py --checkpoint_path $MDL_DC$(ls -t $MDL_DC | head -1) --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC
 

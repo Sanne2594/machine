@@ -7,7 +7,7 @@
 dt=$(date '+%d/%m/%Y %H:%M:%S');
 echo "$dt "
 
-cd $HOME/machine/sanne/machine
+#cd $HOME/machine/sanne/machine
 
 NUM_EP=100 #Number of Epochs
 MDL_LOC="model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000"
@@ -23,12 +23,12 @@ MDL_DC="Model-DC-rep/acc_0.75_ppl_0.40_s100"
 
 echo "Testing for Correction"
 M_DATA="data/disfluency-masks/correction_tst_reperandum-masks.txt"
-python3 test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC --stats
+python3 ../../../test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC --stats
 
 
 echo "Testing for Restart"
 M_DATA="data/disfluency-masks/restart_tst_reperandum-masks.txt"
-python3 test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 1 --weight_vec $W_VEC --stats
+python3 ../../../test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 1 --weight_vec $W_VEC --stats
 
 dt=$(date '+%d/%m/%Y %H:%M:%S');
 echo "$dt "
@@ -41,12 +41,12 @@ MDL_DC="Model-DC-rep-1/acc_0.75_ppl_0.40_s100"
 
 echo "Testing for Correction"
 M_DATA="data/disfluency-masks/correction_tst_reperandum-masks.txt"
-python3 test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC --stats
+python3 ../../../test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC --stats
 
 
 echo "Testing for Restart"
 M_DATA="data/disfluency-masks/restart_tst_reperandum-masks.txt"
-python3 test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 1 --weight_vec $W_VEC --stats
+python3 ../../../test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 1 --weight_vec $W_VEC --stats
 
 dt=$(date '+%d/%m/%Y %H:%M:%S');
 echo "$dt"
@@ -59,12 +59,12 @@ MDL_DC="Model-DC-rep-2/acc_0.75_ppl_0.40_s100"
 
 echo "Testing for Correction"
 M_DATA="data/disfluency-masks/correction_tst_reperandum-masks.txt"
-python3 test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC --stats
+python3 ../../../test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC --stats
 
 
 echo "Testing for Restart"
 M_DATA="data/disfluency-masks/restart_tst_reperandum-masks.txt"
-python3 test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 1 --weight_vec $W_VEC --stats
+python3 ../../../test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 1 --weight_vec $W_VEC --stats
 
 dt=$(date '+%d/%m/%Y %H:%M:%S');
 echo "$dt"
@@ -77,12 +77,12 @@ MDL_DC="Model-DC-rep-3/acc_0.75_ppl_0.40_s100"
 
 echo "Testing for Correction"
 M_DATA="data/disfluency-masks/correction_tst_reperandum-masks.txt"
-python3 test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC --stats
+python3 ../../../test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC --stats
 
 
 echo "Testing for Restart"
 M_DATA="data/disfluency-masks/restart_tst_reperandum-masks.txt"
-python3 test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 1 --weight_vec $W_VEC --stats
+python3 ../../../test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 1 --weight_vec $W_VEC --stats
 
 dt=$(date '+%d/%m/%Y %H:%M:%S');
 echo "$dt"
@@ -95,12 +95,12 @@ MDL_DC="Model-DC-rep-4/acc_0.75_ppl_0.40_s100"
 
 echo "Testing for Correction"
 M_DATA="data/disfluency-masks/correction_tst_reperandum-masks.txt"
-python3 test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC --stats
+python3 ../../../test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 32 --weight_vec $W_VEC --stats
 
 
 echo "Testing for Restart"
 M_DATA="data/disfluency-masks/restart_tst_reperandum-masks.txt"
-python3 test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 1 --weight_vec $W_VEC --stats
+python3 ../../../test-DC.py --checkpoint_path $MDL_DC --mask_data $M_DATA --max_len 75 --batch_size 1 --weight_vec $W_VEC --stats
 
 dt=$(date '+%d/%m/%Y %H:%M:%S');
 echo "$dt"

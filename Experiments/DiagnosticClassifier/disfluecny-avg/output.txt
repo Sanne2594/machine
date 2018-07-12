@@ -1,0 +1,42 @@
+Alteration:
+Testing for Correction
+Precision: 0.212210 Recall: 0.935477
+Precision: 0.213067 Recall: 0.934298
+Precision: 0.214365 Recall: 0.935048
+Precision: 0.212268 Recall: 0.935048
+
+Restart:
+Precision: 0.350931 Recall: 0.949830
+Precision: 0.354948 Recall: 0.949073
+Precision: 0.348728 Recall: 0.949938
+Precision: 0.353603 Recall: 0.945342
+
+ET
+Correction
+Precision: 0.374005 Recall: 0.995533
+Precision: 0.373937 Recall: 0.994380
+Precision: 0.373388 Recall: 0.992651
+Precision: 0.374410 Recall: 0.994236
+Precision: 0.370738 Recall: 0.994957
+
+Restart
+Precision: 0.556432 Recall: 0.991611
+Precision: 0.558191 Recall: 0.991816
+Precision: 0.554077 Recall: 0.991270
+Precision: 0.560502 Recall: 0.992634
+Precision: 0.556461 Recall: 0.992157
+
+Rep
+Correction
+Precision: 0.150717 Recall: 0.890782
+Precision: 0.149600 Recall: 0.895820
+Precision: 0.149050 Recall: 0.893676
+Precision: 0.150384 Recall: 0.892069
+Precision: 0.151503 Recall: 0.896141
+
+Restart
+Precision: 0.273425 Recall: 0.922573
+Precision: 0.273698 Recall: 0.926213
+Precision: 0.273302 Recall: 0.929905
+Precision: 0.274090 Recall: 0.924445
+Precision: 0.275163 Recall: 0.925433

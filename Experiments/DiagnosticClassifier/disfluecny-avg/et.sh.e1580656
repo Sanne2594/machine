@@ -1,0 +1,64 @@
+Traceback (most recent call last):
+  File "test-DC.py", line 153, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/home/sanne/machine/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 265, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000trainer_states.pt/trainer_states.pt'
+Traceback (most recent call last):
+  File "test-DC.py", line 153, in <module>
+    checkpoint = Checkpoint.load(opt.checkpoint_path)
+  File "/home/sanne/machine/sanne/machine/seq2seq/util/checkpoint.py", line 95, in load
+    resume_checkpoint = torch.load(os.path.join(path, cls.TRAINER_STATE_NAME))
+  File "/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py", line 265, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'model-final-plus/acc_1.00_seq_acc_1.00_ppl_1.00_s4000trainer_states.pt/trainer_states.pt'
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero

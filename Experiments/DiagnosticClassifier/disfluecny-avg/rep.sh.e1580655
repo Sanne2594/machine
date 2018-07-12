@@ -1,0 +1,60 @@
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
