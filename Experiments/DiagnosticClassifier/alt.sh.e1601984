@@ -1,0 +1,80 @@
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'seq2seq.models.DiagnosticClassifier.DiagnosticClassifier' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'seq2seq.models.DiagnosticClassifier.DiagnosticClassifier' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'seq2seq.models.DiagnosticClassifier.DiagnosticClassifier' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'seq2seq.models.DiagnosticClassifier.DiagnosticClassifier' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'seq2seq.models.DiagnosticClassifier.DiagnosticClassifier' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'seq2seq.models.DiagnosticClassifier.DiagnosticClassifier' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'seq2seq.models.DiagnosticClassifier.DiagnosticClassifier' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'seq2seq.models.DiagnosticClassifier.DiagnosticClassifier' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'seq2seq.models.DiagnosticClassifier.DiagnosticClassifier' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
+/home/sanne/.local/lib/python3.5/site-packages/torch/serialization.py:325: SourceChangeWarning: source code of class 'seq2seq.models.DiagnosticClassifier.DiagnosticClassifier' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Traceback (most recent call last):
+  File "test-DC.py", line 190, in <module>
+    precision,recall = add_stats(data=all_data,model=DC,batch_size=32)
+  File "test-DC.py", line 123, in add_stats
+    precision = true_pos/(out_pos)
+ZeroDivisionError: division by zero
